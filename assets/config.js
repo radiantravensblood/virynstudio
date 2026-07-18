@@ -35,8 +35,8 @@ window.VIRYN_STUDIO_CONFIG = {
       id: "signal",
       name: "Signal",
       audience: "Musicians, bands, performers, and creative professionals",
-      promise: "Turn scattered releases, media, dates, and booking links into one stage-ready home.",
-      includes: ["Featured work", "Press kit", "Events", "Booking path"],
+      promise: "Turn releases, private listening rooms, archives, media, and professional access into one stage-ready home.",
+      includes: ["Featured release", "Private listening room", "EPK", "Archive mode"],
       href: "frameworks/signal/",
       accent: "plum"
     },

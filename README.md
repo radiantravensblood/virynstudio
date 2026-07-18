@@ -75,3 +75,10 @@ Large video libraries, authenticated downloads, payments, private client data, a
 - No client names, testimonials, credentials, outcomes, music, or curriculum should be published without permission and verification.
 - The sample Ledger PDFs are educational interface props, not clinical guidance or Rory's curriculum.
 - Formal service agreements and legal language should be reviewed by qualified counsel before commercial launch.
+
+## Signal demonstration
+
+The Signal mini-site now includes a real-music proof of concept with three full-length tracks supplied by Ravensblood, original concept artwork, waveform graphics, an invitation-gate flow, a listening room, permitted downloads, EPK presentation, and archive-mode positioning.
+
+The included access phrase is intentionally visible for portfolio review. Because GitHub Pages is a public static host, this gate is not secure authentication and must not be used to protect confidential or commercially unreleased masters in production.
+

@@ -80,3 +80,9 @@ The practice name, founder, training, credentials, curriculum, and outcomes are 
 ## Static-site limits
 
 GitHub Pages does not provide private storage, authentication, server-side form handling, protected curriculum, secure payments, CRM logic, or autonomous support operations. Those features require separately reviewed services and backend architecture.
+
+## Signal media architecture
+
+Signal owns its artist-specific interaction layer in `frameworks/signal/signal.js` and stores demonstration media beneath `frameworks/signal/assets/`. The public static access phrase is an interaction prototype only. A production private listening room must move audio to protected object storage or a media platform and authorize requests server-side with revocable or expiring access.
+
+Audio controls remain native HTML5 controls for keyboard and assistive-technology reliability. Track switching, session-only room state, downloads, and listening-note preparation are progressive enhancements.

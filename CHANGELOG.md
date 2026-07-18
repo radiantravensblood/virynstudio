@@ -1,5 +1,32 @@
 # Changelog
 
+## v0.3 - Signal listening-stage expansion
+
+### Changed
+
+- Rebuilt Signal as a complete artist mini-site rather than a framework explainer.
+- Expanded the Studio framework description to include private listening rooms, EPKs, and archive mode.
+- Standardized the public artist display as `Ravensblood` across the demonstration.
+
+### Added
+
+- Three full-length user-supplied MP3 tracks: `SNP`, `I Hate The Rain`, and `Vintage`.
+- Original concept cover art and audio-derived waveform graphics for each track.
+- A portfolio access-gate flow with session-based room state.
+- A focused listening room with track queue, native accessible audio controls, previous/next controls, and permitted downloads.
+- A listening-note email flow.
+- Release, archive, EPK, and three-mode commercial demonstrations.
+- Explicit disclosure that static-site password gates are not production authentication.
+
+### Still simulated
+
+- The release campaign, cover artwork, artist biography, invitation process, booking, press, licensing, and professional contacts.
+- No server-side account, protected storage, analytics, mailing list, or access log is active.
+
+### Rights note
+
+- Music and credits were supplied by the artist for this portfolio build, with full-track playback and downloads permitted.
+
 ## v0.2 - Framework mini-site migration
 
 ### Changed

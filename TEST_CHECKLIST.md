@@ -47,3 +47,16 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - [ ] No unapproved client identity, curriculum, credential, testimonial, or result appears.
 - [ ] No API key or private data exists in the repository.
 - [ ] No page implies that educational consultation is clinical treatment.
+
+## Signal listening-stage checks
+
+- [ ] Signal loads at `/frameworks/signal/` with no missing CSS, JavaScript, artwork, waveform, or audio files.
+- [ ] The portfolio phrase `NOBODYKING` opens the listening room; an incorrect phrase returns a readable error.
+- [ ] The room remains open during the current browser tab session and closes when “Close transmission” is activated.
+- [ ] Each queue button loads the correct track, artwork, description, credits, and download filename.
+- [ ] Native audio controls work by keyboard and do not autoplay on page load or room entry.
+- [ ] Previous and next controls wrap through all three tracks.
+- [ ] All three full MP3 downloads work.
+- [ ] The listening-note action refuses an empty note and prepares a mailto message when text is present.
+- [ ] The static-site security disclosure remains visible and accurate.
+- [ ] Mobile widths do not overflow; the navigation, gate, queue, and player remain usable at 320px.
