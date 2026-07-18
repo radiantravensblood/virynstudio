@@ -303,12 +303,12 @@ html[data-theme="chocolate"] .signal-site {
 
 .cover-stage {
   position: relative;
-  min-height: 580px;
+  min-height: 650px;
 }
 
 .cover-card {
   position: absolute;
-  width: min(70%, 390px);
+  width: min(55%, 330px);
   margin: 0;
   border: 1px solid rgba(255,255,255,.14);
   border-radius: 0.65rem;
@@ -360,6 +360,24 @@ html[data-theme="chocolate"] .signal-site {
 }
 
 .cover-card-three:hover { transform: rotate(2deg) translateY(-8px); }
+
+.cover-card-four {
+  left: 0;
+  bottom: 2%;
+  z-index: 1;
+  transform: rotate(5deg);
+}
+
+.cover-card-four:hover { transform: rotate(2deg) translateY(-8px); }
+
+.cover-card-five {
+  top: 29%;
+  right: 1%;
+  z-index: 4;
+  transform: rotate(-5deg);
+}
+
+.cover-card-five:hover { transform: rotate(-2deg) translateY(-8px); }
 
 .signal-marquee {
   display: flex;
@@ -442,16 +460,21 @@ html[data-theme="chocolate"] .signal-site {
 
 .transmission-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 1rem;
 }
 
 .transmission-card {
+  grid-column: span 2;
   overflow: hidden;
   border: 1px solid var(--signal-line);
   border-radius: 1.1rem;
   background: var(--signal-panel);
   box-shadow: 0 18px 50px rgba(0,0,0,.2);
+}
+
+.transmission-card:nth-last-child(-n + 2) {
+  grid-column: span 3;
 }
 
 .track-art {
@@ -922,7 +945,9 @@ html[data-theme="chocolate"] .signal-site {
 
 .vault-card-a { top: 10%; left: 9%; transform: rotate(-7deg); }
 .vault-card-b { top: 34%; right: 7%; transform: rotate(6deg); }
-.vault-card-c { bottom: 9%; left: 14%; transform: rotate(-1deg); }
+.vault-card-c { bottom: 8%; left: 17%; transform: rotate(-1deg); }
+.vault-card-d { top: 8%; right: 6%; transform: rotate(5deg); }
+.vault-card-e { bottom: 8%; right: 7%; transform: rotate(-5deg); }
 
 .vault-caption {
   position: absolute;
@@ -1086,6 +1111,11 @@ html[data-theme="chocolate"] .signal-site {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .transmission-card,
+  .transmission-card:nth-last-child(-n + 2) {
+    grid-column: auto;
+  }
+
   .transmission-card:last-child {
     grid-column: span 2;
     display: grid;
@@ -1160,7 +1190,7 @@ html[data-theme="chocolate"] .signal-site {
 
   .cover-stage {
     width: min(100%, 720px);
-    min-height: 650px;
+    min-height: 700px;
     margin-inline: auto;
   }
 
@@ -1208,11 +1238,11 @@ html[data-theme="chocolate"] .signal-site {
   }
 
   .cover-stage {
-    min-height: 500px;
+    min-height: 620px;
   }
 
   .cover-card {
-    width: 68%;
+    width: 56%;
   }
 
   .disclosure-grid,
@@ -1226,6 +1256,11 @@ html[data-theme="chocolate"] .signal-site {
   .transmission-card:last-child {
     grid-column: auto;
     display: block;
+  }
+
+  .transmission-card,
+  .transmission-card:nth-last-child(-n + 2) {
+    grid-column: auto;
   }
 
   .mode-grid article + article {
@@ -1288,11 +1323,11 @@ html[data-theme="chocolate"] .signal-site {
   }
 
   .cover-stage {
-    min-height: 390px;
+    min-height: 520px;
   }
 
   .cover-card {
-    width: 72%;
+    width: 59%;
   }
 
   .track-card-body,

@@ -1,5 +1,22 @@
 # Changelog
 
+## v0.4 - Ravensblood five-pack
+
+### Added
+
+- Two full-length artist-supplied tracks: `Devils and Demons` and `Where R U Going?`.
+- Original concept cover art and audio-derived waveform graphics for both additions.
+- Five-track queue, downloads, listening-note selection, release cards, hero collage, and archive-vault presentation.
+
+### Changed
+
+- Expanded the Signal proof of concept from a three-track listening session into a five-record private transmission.
+- Rebalanced desktop and mobile layouts so the larger catalog remains navigable without crowding the listening room.
+
+### Rights note
+
+- Music and credits were supplied by the artist for this portfolio build, with full-track playback and downloads permitted.
+
 ## v0.3 - Signal listening-stage expansion
 
 ### Changed

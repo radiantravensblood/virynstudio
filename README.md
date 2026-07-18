@@ -78,7 +78,7 @@ Large video libraries, authenticated downloads, payments, private client data, a
 
 ## Signal demonstration
 
-The Signal mini-site now includes a real-music proof of concept with three full-length tracks supplied by Ravensblood, original concept artwork, waveform graphics, an invitation-gate flow, a listening room, permitted downloads, EPK presentation, and archive-mode positioning.
+The Signal mini-site now includes a real-music proof of concept with five full-length tracks supplied by Ravensblood, original concept artwork, waveform graphics, an invitation-gate flow, a listening room, permitted downloads, EPK presentation, and archive-mode positioning.
 
 The included access phrase is intentionally visible for portfolio review. Because GitHub Pages is a public static host, this gate is not secure authentication and must not be used to protect confidential or commercially unreleased masters in production.
 

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1200" role="img" aria-labelledby="t d">
+<title id="t">Where R U Going cover concept</title>
+<desc id="d">A midnight road bends toward a pale blue moon while a broken trail of question marks fades into the distance.</desc>
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0b1020"/><stop offset=".55" stop-color="#191229"/><stop offset="1" stop-color="#08070c"/></linearGradient>
+  <radialGradient id="moon"><stop stop-color="#f3eadb"/><stop offset=".68" stop-color="#8fb4d5"/><stop offset="1" stop-color="#8fb4d5" stop-opacity="0"/></radialGradient>
+  <linearGradient id="road" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c78eb0" stop-opacity=".2"/><stop offset="1" stop-color="#8fb4d5" stop-opacity=".72"/></linearGradient>
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".58" numOctaves="4" seed="27"/><feColorMatrix values=".8 0 0 0 .1 0 .8 0 0 .12 0 0 .8 0 .18 0 0 0 .22 0"/></filter>
+</defs>
+<rect width="1200" height="1200" fill="url(#sky)"/>
+<rect width="1200" height="1200" filter="url(#grain)" opacity=".35"/>
+<circle cx="780" cy="300" r="190" fill="url(#moon)"/>
+<circle cx="780" cy="300" r="91" fill="#dbe6ef" opacity=".8"/>
+<path d="M140 1200C280 930 560 910 585 690c13-116-90-194-34-305 40-79 139-115 229-84" fill="none" stroke="url(#road)" stroke-width="188" stroke-linecap="round"/>
+<path d="M140 1200C280 930 560 910 585 690c13-116-90-194-34-305 40-79 139-115 229-84" fill="none" stroke="#f3eadb" stroke-width="8" stroke-dasharray="24 48" stroke-linecap="round" opacity=".8"/>
+<g fill="#c78eb0" font-family="Georgia,serif" font-weight="700" text-anchor="middle">
+  <text x="247" y="970" font-size="118" transform="rotate(-22 247 970)">?</text>
+  <text x="432" y="820" font-size="91" transform="rotate(11 432 820)">?</text>
+  <text x="548" y="650" font-size="64" transform="rotate(-7 548 650)">?</text>
+  <text x="560" y="493" font-size="44">?</text>
+</g>
+<text x="82" y="155" fill="#f3eadb" font-family="Georgia,serif" font-size="100" font-weight="700">WHERE R U</text>
+<text x="85" y="260" fill="#8fb4d5" font-family="Georgia,serif" font-size="138" font-weight="700">GOING?</text>
+<text x="1110" y="1120" text-anchor="end" fill="#c78eb0" font-family="monospace" font-size="36" letter-spacing="11">WHERE DID I GO?</text>
+</svg>

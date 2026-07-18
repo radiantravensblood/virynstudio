@@ -7,6 +7,8 @@ These full-length MP3 files were supplied by the artist for the Viryn Studio Sig
 | `snp.mp3` | SNP | Ravensblood | Unreleased | Produced & mixed by CJ Morse | 05:36 |
 | `i-hate-the-rain.mp3` | I Hate The Rain | Ravensblood | Unreleased | Produced by CJ Morse | 02:43 |
 | `vintage.mp3` | Vintage | Ravensblood | Unreleased | Produced, performed, and written by CJ Morse | 04:22 |
+| `devils-and-demons.mp3` | Devils and Demons | Ravensblood | Unreleased | Produced, written, and performed by CJ Morse | 04:46 |
+| `where-r-u-going.mp3` | Where R U Going? | Ravensblood | Unreleased | Produced, performed, and written by CJ Morse | 02:35 |
 
 The public site standardizes the artist display as **Ravensblood**. The supplied metadata for SNP used the singular form `Ravenblood`; revise the site and this manifest if that distinction is intentional.
 

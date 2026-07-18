@@ -85,4 +85,4 @@ GitHub Pages does not provide private storage, authentication, server-side form 
 
 Signal owns its artist-specific interaction layer in `frameworks/signal/signal.js` and stores demonstration media beneath `frameworks/signal/assets/`. The public static access phrase is an interaction prototype only. A production private listening room must move audio to protected object storage or a media platform and authorize requests server-side with revocable or expiring access.
 
-Audio controls remain native HTML5 controls for keyboard and assistive-technology reliability. Track switching, session-only room state, downloads, and listening-note preparation are progressive enhancements.
+Audio controls remain native HTML5 controls for keyboard and assistive-technology reliability. The five-track queue, track switching, session-only room state, downloads, and listening-note preparation are progressive enhancements.

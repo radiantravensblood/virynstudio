@@ -43,6 +43,30 @@
       artwork: "./assets/artwork/vintage.svg",
       artworkAlt: "Vintage concept cover with a fractured gold crown on black and parchment",
       downloadName: "Ravensblood - Vintage.mp3"
+    },
+    {
+      slug: "devils-and-demons",
+      title: "Devils and Demons",
+      artist: "Ravensblood",
+      duration: "04:46",
+      description: "Go on and speak your truth.",
+      credit: "Produced, written, and performed by CJ Morse",
+      audio: "./assets/audio/devils-and-demons.mp3",
+      artwork: "./assets/artwork/devils-and-demons.svg",
+      artworkAlt: "Devils and Demons concept cover with mirrored crimson profiles and a gold voice-line",
+      downloadName: "Ravensblood - Devils and Demons.mp3"
+    },
+    {
+      slug: "where-r-u-going",
+      title: "Where R U Going?",
+      artist: "Ravensblood",
+      duration: "02:35",
+      description: "Where did I go?",
+      credit: "Produced, performed, and written by CJ Morse",
+      audio: "./assets/audio/where-r-u-going.mp3",
+      artwork: "./assets/artwork/where-r-u-going.svg",
+      artworkAlt: "Where R U Going? concept cover with a midnight road bending toward a pale blue moon",
+      downloadName: "Ravensblood - Where R U Going.mp3"
     }
   ];
 

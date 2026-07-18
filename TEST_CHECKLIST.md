@@ -1,4 +1,4 @@
-# Viryn Studio v0.2 Manual Test Checklist
+# Viryn Studio v0.4 Manual Test Checklist
 
 ## Public paths
 
@@ -55,8 +55,8 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - [ ] The room remains open during the current browser tab session and closes when “Close transmission” is activated.
 - [ ] Each queue button loads the correct track, artwork, description, credits, and download filename.
 - [ ] Native audio controls work by keyboard and do not autoplay on page load or room entry.
-- [ ] Previous and next controls wrap through all three tracks.
-- [ ] All three full MP3 downloads work.
+- [ ] Previous and next controls wrap through all five tracks.
+- [ ] All five full MP3 downloads work.
 - [ ] The listening-note action refuses an empty note and prepares a mailto message when text is present.
 - [ ] The static-site security disclosure remains visible and accurate.
 - [ ] Mobile widths do not overflow; the navigation, gate, queue, and player remain usable at 320px.
