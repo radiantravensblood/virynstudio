@@ -37,7 +37,7 @@ window.VIRYN_STUDIO_CONFIG = {
       audience: "Musicians, bands, performers, and creative professionals",
       promise: "Turn scattered releases, media, dates, and booking links into one stage-ready home.",
       includes: ["Featured work", "Press kit", "Events", "Booking path"],
-      href: "frameworks/signal.html",
+      href: "frameworks/signal/",
       accent: "plum"
     },
     {
@@ -46,7 +46,7 @@ window.VIRYN_STUDIO_CONFIG = {
       audience: "Nonprofits, ministries, mutual-aid groups, and community organizations",
       promise: "Make the mission clear, the next action visible, and the organization easier to trust.",
       includes: ["Mission and programs", "Volunteer path", "Events", "Donation readiness"],
-      href: "frameworks/gathering.html",
+      href: "frameworks/gathering/",
       accent: "moss"
     },
     {
@@ -55,7 +55,7 @@ window.VIRYN_STUDIO_CONFIG = {
       audience: "Consultants, educators, coaches, and professional services",
       promise: "Translate expertise into a clear offer that earns the right conversations.",
       includes: ["Positioning", "Services", "Process", "Lead intake"],
-      href: "frameworks/ledger.html",
+      href: "frameworks/ledger/",
       accent: "ember"
     }
   ],

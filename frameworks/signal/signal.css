@@ -1,1 +1,90 @@
 
+.signal-site {
+  --signal-ink: #0d0b12;
+  --signal-panel: #17121f;
+  --signal-paper: #f3eee8;
+  --signal-plum: #8c4f7a;
+  --signal-pink: #d99ac3;
+  --signal-line: #4e3a50;
+}
+
+.signal-site .site-header {
+  border-color: color-mix(in srgb, var(--signal-plum) 35%, transparent);
+}
+
+.signal-site .framework-hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 82% 18%, color-mix(in srgb, var(--signal-pink) 25%, transparent), transparent 30%),
+    linear-gradient(145deg, var(--signal-ink), #24172b 58%, #3e1f39);
+  color: var(--signal-paper);
+}
+
+.signal-site .framework-hero::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(90deg, transparent 0 42px, rgba(255,255,255,.025) 42px 43px);
+  content: "";
+}
+
+.signal-site .framework-hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.signal-site .framework-hero .lede,
+.signal-site .framework-hero .muted,
+.signal-site .framework-hero .framework-nav a {
+  color: color-mix(in srgb, var(--signal-paper) 74%, transparent);
+}
+
+.signal-site .framework-hero .eyebrow,
+.signal-site .framework-visual-label {
+  color: var(--signal-pink);
+}
+
+.signal-site .framework-hero .button {
+  border-color: var(--signal-paper);
+  background: var(--signal-paper);
+  color: var(--signal-ink);
+}
+
+.signal-site .framework-hero .button-secondary,
+.signal-site .framework-hero .framework-nav a {
+  background: transparent;
+  color: var(--signal-paper);
+}
+
+.signal-site .framework-visual {
+  border-color: var(--signal-line);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.08), transparent 45%),
+    var(--signal-panel);
+}
+
+.signal-site .framework-visual-card {
+  border-color: var(--signal-line);
+  background: rgba(13, 11, 18, .86);
+  color: var(--signal-paper);
+  backdrop-filter: blur(12px);
+}
+
+.signal-site .feature-item {
+  border-top-color: var(--signal-plum);
+}
+
+.signal-site .sample-panel.emphasis {
+  background: color-mix(in srgb, var(--plum-soft) 70%, var(--paper-strong));
+}
+
+@media (max-width: 680px) {
+  .signal-site .framework-hero { padding-top: 3.5rem; }
+}
+
+.signal-disabled {
+  cursor: not-allowed;
+  opacity: .62;
+  transform: none !important;
+}

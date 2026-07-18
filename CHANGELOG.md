@@ -1,47 +1,34 @@
 # Changelog
 
-## 0.1.0 — Initial Viryn Studio release
+## v0.2 - Framework mini-site migration
+
+### Changed
+
+- Made `assets/shared/` the canonical shared asset location.
+- Updated framework configuration and portfolio links to clean directory URLs.
+- Migrated Gathering into `frameworks/gathering/` with repaired relative paths.
+- Migrated Signal into `frameworks/signal/` and added a distinct creative visual layer.
+- Replaced legacy flat framework pages with redirect shims.
+- Added Ledger to the Studio portfolio section.
 
 ### Added
 
-- flagship Viryn Studio homepage;
-- responsive desktop and mobile navigation;
-- Day, Night, and Chocolate themes;
-- animated hand-drawn underline for “Familiar” with reduced-motion support;
-- Signal, Gathering, and Ledger framework demonstrations;
-- config-driven framework, package, care-plan, founding-offer, and inquiry content;
-- productized starting prices and scope language;
-- founding-client section with a single configuration switch;
-- care-plan section for recurring support;
-- concept portfolio labels that avoid fictional client claims;
-- human-led and AI-accelerated operating statement;
-- future service-agent boundary;
-- GitHub Pages upload instructions;
-- architecture and testing documentation.
+- A fully expanded midnight-and-gold Ledger mini-site.
+- Synthetic consultant practice presentation for training and curriculum-led work.
+- Accessible HTML5 training-video preview with captions and transcript.
+- Three downloadable synthetic curriculum PDFs.
+- Curriculum filtering and video-status interactions.
+- Clear educational, consultative, and referral-boundary language.
+- Updated repository documentation and migration checks.
 
-### Remains simulated or configurable
+### Still simulated
 
-- inquiry delivery uses email or optional external form links;
-- all framework client names and examples are synthetic;
-- portfolio results and testimonials are intentionally absent;
-- scheduling, analytics, CRM, payments, and automation are not connected;
-- the default contact inbox must be confirmed before public launch.
+- Practice name, founder, credentials, testimonials, outcomes, pricing, booking, curriculum, and training content.
+- Contact actions route to Viryn Studio rather than a real consultant practice.
+- No private content, payment system, CRM, analytics, or course platform is active.
 
 ### Known limitations
 
-- no live backend;
-- no formal accessibility certification;
-- no automated visual regression tests;
-- Google Fonts require a network connection;
-- `color-mix()` requires a modern browser;
-- legal and contractual language still requires qualified review.
-
-### Recommended next work
-
-1. Configure a monitored inbox or Google Form.
-2. Replace one synthetic concept with an approved nonprofit brief.
-3. Replace one synthetic concept with an approved musician or band brief.
-4. Add a lightweight intake form and CRM route.
-5. Add a real case-study structure after the first commissioned launch.
-6. Conduct a screen-reader and keyboard audit.
-7. Create contracts, proposals, invoices, and change-order templates.
+- Google Fonts are loaded from a public CDN.
+- GitHub Pages is not suitable for protected curriculum or sensitive intake.
+- Root-level asset copies remain as migration compatibility mirrors.

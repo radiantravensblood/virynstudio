@@ -1,147 +1,82 @@
 # Viryn Studio Architecture
 
-## Operating structure
+## Operating model
 
-Viryn Systems has two public operating wings:
+**Studio earns. Labs invents.**
 
-- **Viryn Studio** — client services, implementation, recurring care plans, portfolio growth, and near-term revenue.
-- **Viryn Labs** — longer-horizon product development, including Care-Tech, WardenWear, and consent-directed systems.
+Viryn Studio is the commercial web-design wing of Viryn Systems. Viryn Labs holds longer-horizon product work such as Care-Tech and WardenWear.
 
-The commercial principle is:
+## One house, three furnished rooms
 
-> Studio earns. Labs invents.
-
-## Recommended URL structure
-
-For the current release, keep Viryn Studio in its own repository and publish it through the repository’s GitHub Pages project URL.
-
-Recommended near-term structure:
+The framework library stays in one repository while the products share infrastructure and remain portfolio demonstrations.
 
 ```text
-radiantravensblood.github.io/virynstudio/
+index.html                       # Studio commercial threshold
+assets/shared/config.js          # package, framework, contact, and policy data
+assets/shared/studio.css         # shared design tokens and common components
+assets/shared/studio.js          # theme, navigation, contact, and rendering logic
+frameworks/signal/               # creative-industry mini-site
+frameworks/gathering/            # community-organization mini-site
+frameworks/ledger/               # expertise and curriculum mini-site
 ```
 
-Recommended future custom-domain structure:
+Each framework can later be cloned into a client repository or template repository when it gains its own domain, backend, collaborators, release schedule, private content, or substantially divergent code.
+
+## URL migration
+
+Canonical URLs:
 
 ```text
-virynsystems.online/              Viryn Systems doorway
-virynsystems.online/studio/       Viryn Studio
-virynsystems.online/labs/         Labs overview
-virynsystems.online/care-tech/    Care-Tech demonstration
+/frameworks/signal/
+/frameworks/gathering/
+/frameworks/ledger/
 ```
 
-Do not overwrite the current Care-Tech deployment until its files are backed up and the migration is planned deliberately.
+Compatibility redirects:
 
-## Technical model
+```text
+/frameworks/signal.html
+/frameworks/gathering.html
+/frameworks/ledger.html
+```
 
-The site uses:
+Nested pages use explicit relative paths. No `<base>` element is used.
 
-- semantic HTML;
-- one shared stylesheet;
-- one central configuration file;
-- one shared behavior script;
-- GitHub Pages-compatible relative paths;
-- no build tooling;
-- no live backend;
-- no API keys;
-- no client data collection.
+## Shared versus local responsibility
 
-## Central source of truth
+Shared assets own:
 
-`assets/config.js` stores:
+- theme persistence;
+- mobile navigation behavior;
+- contact routing;
+- package and framework data;
+- reusable typography and accessibility primitives.
 
-- brand labels;
-- contact routes;
-- framework metadata;
-- package pricing and inclusions;
-- care plans;
-- inquiry categories;
-- public business expectations;
-- future service-agent boundaries.
+Framework-local assets own:
 
-This file is public. It must never contain secrets.
+- visual atmosphere;
+- information architecture;
+- page-specific components;
+- framework-only interactions;
+- approved media and downloads.
 
-## Rendering model
+## Ledger demonstration
 
-The flagship `index.html` contains the semantic page structure. `assets/studio.js` renders repeated commercial data from `config.js`, including:
+Ledger now demonstrates:
 
-- framework cards;
-- pricing cards;
-- care plans;
-- the founding-client offer;
-- inquiry categories.
+- an expertise-led hero;
+- audience segmentation;
+- an accessible HTML5 video module with captions and transcript;
+- downloadable sample curriculum;
+- resource filtering;
+- bounded service offers;
+- method, scope, and referral language;
+- a learning pathway;
+- credentials placeholders;
+- booking and FAQ thresholds.
 
-The framework pages remain mostly static because each vertical needs a distinct information hierarchy and emotional rhythm.
+The practice name, founder, training, credentials, curriculum, and outcomes are synthetic until a real client approves replacement content.
 
-## Theme system
+## Static-site limits
 
-`assets/studio.css` defines three themes through CSS custom properties:
-
-- Day
-- Night
-- Chocolate
-
-`assets/studio.js` cycles the theme and stores the preference in browser-local storage. No user identity or analytics data is stored.
-
-## Accessibility decisions
-
-The current release includes:
-
-- skip links;
-- semantic landmarks;
-- native links, buttons, and disclosure elements;
-- visible focus states;
-- responsive navigation;
-- reduced-motion support;
-- color tokens designed for theme-level contrast review;
-- text alternatives for decorative or conceptual regions.
-
-A formal accessibility audit has not yet been performed.
-
-## Framework strategy
-
-The framework library aims for roughly:
-
-- 80% reusable engineering and production structure;
-- 20% client-specific identity, copy, content, hierarchy, imagery, and integrations.
-
-The client pays for judgment, transformation, reliability, and the finished result—not for the number of times a shared component has been reused internally.
-
-## Future customer-service agent
-
-A future agent may:
-
-- answer documented package questions;
-- collect project requirements;
-- explain standard timelines;
-- schedule conversations;
-- summarize support requests;
-- draft replies for review.
-
-It may not:
-
-- negotiate custom pricing;
-- sign agreements;
-- promise undocumented deadlines;
-- issue refunds;
-- handle serious disputes alone;
-- claim to be human;
-- invent services or commitments.
-
-The governing rule remains:
-
-> The agent receives, organizes, and routes. A human commits the company.
-
-## Deferred work
-
-Not included in this static release:
-
-- a live inquiry backend;
-- CRM integration;
-- online payments;
-- authentication;
-- client portals;
-- analytics beyond future configuration placeholders;
-- a live autonomous customer-service agent;
-- production legal documents;
-- a custom-domain migration.
+GitHub Pages does not provide private storage, authentication, server-side form handling, protected curriculum, secure payments, CRM logic, or autonomous support operations. Those features require separately reviewed services and backend architecture.

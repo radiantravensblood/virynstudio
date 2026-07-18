@@ -19,13 +19,15 @@
     return themes.includes(value) ? value : "day";
   }
 
-  function applyTheme(theme) {
+  function applyTheme(theme, persist = true) {
     const next = safeTheme(theme);
     document.documentElement.dataset.theme = next;
-    try {
-      localStorage.setItem("viryn-studio-theme", next);
-    } catch (error) {
-      console.warn("Theme preference could not be saved.", error);
+    if (persist) {
+      try {
+        localStorage.setItem("viryn-studio-theme", next);
+      } catch (error) {
+        console.warn("Theme preference could not be saved.", error);
+      }
     }
 
     document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
@@ -36,13 +38,14 @@
   }
 
   function initializeTheme() {
-    let saved = "day";
+    let saved = "";
     try {
-      saved = localStorage.getItem("viryn-studio-theme") || "day";
+      saved = localStorage.getItem("viryn-studio-theme") || "";
     } catch (error) {
       console.warn("Theme preference could not be read.", error);
     }
-    applyTheme(saved);
+    const pageDefault = safeTheme(document.documentElement.dataset.theme || "day");
+    applyTheme(saved || pageDefault, false);
 
     document.querySelectorAll("[data-theme-toggle]").forEach((button) => {
       button.addEventListener("click", () => {

@@ -1,109 +1,77 @@
 # Viryn Studio
 
-**Viryn Studio. Let’s Get Familiar.**
+Viryn Studio is the commercial design and implementation wing of Viryn Systems.
+The repository contains the Studio flagship and three reusable framework mini-sites:
 
-Viryn Studio is the commercial web-design and implementation wing of Viryn Systems. This repository contains the public flagship site and three reusable framework demonstrations:
+- **Signal** for musicians, bands, performers, and creative professionals.
+- **Gathering** for nonprofits, ministries, mutual-aid groups, and community organizations.
+- **Ledger** for consultants, educators, trainers, and curriculum-led practices.
 
-- **Signal** — musicians, bands, performers, and creative professionals
-- **Gathering** — nonprofits, ministries, mutual-aid groups, and community organizations
-- **Ledger** — consultants, educators, coaches, and professional services
-
-The source is intentionally plain HTML, CSS, and JavaScript so it can be reviewed, edited, and deployed through GitHub Pages without a build system.
-
-## Repository structure
+## Public structure
 
 ```text
-virynstudio/
+/
 ├── index.html
 ├── assets/
-│   ├── config.js
-│   ├── studio.css
-│   └── studio.js
-├── frameworks/
-│   ├── signal.html
-│   ├── gathering.html
-│   └── ledger.html
-├── README.md
-├── STUDIO_ARCHITECTURE.md
-├── CHANGELOG.md
-├── TEST_CHECKLIST.md
-└── .nojekyll
+│   └── shared/
+│       ├── config.js
+│       ├── studio.css
+│       └── studio.js
+└── frameworks/
+    ├── signal/
+    ├── gathering/
+    └── ledger/
 ```
 
-## First launch edits
+Legacy URLs such as `frameworks/ledger.html` remain as redirect shims so previously shared links continue to work.
 
-Open `assets/config.js` and update:
+## Editing the shared source of truth
 
-1. `contact.email`
-2. `contact.schedulingUrl`, when available
-3. `contact.googleFormUrl`, when available
-4. pricing and package details
-5. the founding-client offer
-
-Do not place passwords, private client information, API keys, or secrets in `config.js`. Everything in a public GitHub Pages repository is publicly readable.
-
-## Local preview
-
-The pages can be opened directly in a modern browser. For the most accurate relative-link behavior, use any simple static server when one is available. No package installation is required.
-
-## GitHub Pages setup without Terminal
-
-1. Open the `radiantravensblood/virynstudio` repository on GitHub.
-2. Replace each blank file with the matching file from the release ZIP.
-3. Keep the `assets` and `frameworks` folder names exactly as written.
-4. Open **Settings** → **Pages**.
-5. Under **Build and deployment**, choose **Deploy from a branch**.
-6. Select the `main` branch and the `/ (root)` folder.
-7. Save.
-8. Wait for GitHub to publish the site.
-
-The default address should be:
+Change packages, framework paths, care plans, and contact routing in:
 
 ```text
-https://radiantravensblood.github.io/virynstudio/
+assets/shared/config.js
 ```
 
-Relative links are designed to work from that project address and from a future custom domain.
+The files directly inside `assets/` are compatibility mirrors retained during the migration. New pages should use `assets/shared/`.
 
-## Updating files through GitHub’s website
+Before public sales outreach, replace:
 
-For each existing blank file:
+```js
+email: "hello@virynsystems.online"
+```
 
-1. Open the file.
-2. Select the pencil icon to edit.
-3. Paste the full replacement contents.
-4. Select **Commit changes**.
-5. Use a clear message, such as `Build Viryn Studio flagship`.
+with an inbox that is actively monitored. Optional Google Form and scheduling URLs also live in the contact object.
 
-For a faster batch upload:
+## Framework ownership
 
-1. Select **Add file** → **Upload files** from the repository root.
-2. Drag the contents of the release folder into the upload area.
-3. Confirm that the folder structure is preserved.
-4. Commit the upload.
+Each framework owns its visual atmosphere and page-specific interactions:
 
-GitHub may require replacing existing blank files individually if a browser upload reports filename conflicts.
+```text
+frameworks/ledger/
+├── index.html
+├── ledger.css
+├── ledger.js
+├── assets/
+└── resources/
+```
 
-## Commercial launch checklist
+Large video libraries, authenticated downloads, payments, private client data, and real customer-service automation require infrastructure beyond GitHub Pages.
 
-Before accepting payment:
+## GitHub Pages upload without Terminal
 
-- replace the placeholder inbox with a monitored address;
-- use a written service agreement;
-- confirm deposits and cancellation terms;
-- define revision limits and change-order handling;
-- confirm permission for all client-supplied media;
-- verify accessibility and mobile behavior;
-- test every inquiry link;
-- ensure concept work is labeled honestly;
-- have contract language reviewed by qualified counsel.
+1. Download and extract the release ZIP.
+2. Open the extracted folder.
+3. Select everything **inside** it.
+4. In GitHub, choose **Add file → Upload files**.
+5. Drag the selected files and folders into the repository root.
+6. Confirm that `index.html`, `assets/`, and `frameworks/` appear at the root.
+7. Commit the changes.
+8. In **Settings → Pages**, publish from the `main` branch and repository root.
 
-This repository and its documentation are not legal advice.
+## Integrity notes
 
-## AI use
-
-Viryn Studio is human-led and AI-accelerated. AI may support research, drafting, code iteration, and quality checks. A human approves scope, pricing, commitments, client communication, review, and final delivery.
-
-Core service-agent boundary:
-
-> The agent receives, organizes, and routes. A human commits the company.
+- Portfolio examples are clearly labeled synthetic concept demonstrations.
+- No client names, testimonials, credentials, outcomes, music, or curriculum should be published without permission and verification.
+- The sample Ledger PDFs are educational interface props, not clinical guidance or Rory's curriculum.
+- Formal service agreements and legal language should be reviewed by qualified counsel before commercial launch.

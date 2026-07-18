@@ -973,3 +973,11 @@ h3 {
     transition-duration: 0.01ms !important;
   }
 }
+
+
+.preview-surface-ledger {
+  background:
+    radial-gradient(circle at 75% 20%, color-mix(in srgb, var(--gold) 26%, transparent), transparent 34%),
+    linear-gradient(145deg, #111b35, #201936 58%, #f2e6c8 160%);
+  color: #f5e7bf;
+}
