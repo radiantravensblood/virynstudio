@@ -532,3 +532,119 @@ input:focus, textarea:focus { outline: 3px solid color-mix(in srgb, var(--clay) 
     width: 100%;
   }
 }
+
+
+/* v0.6.2 — Human Hands art-direction pass */
+.hero-art {
+  min-height: 575px;
+  contain: layout paint;
+}
+
+/* Explicit safe area: the mantra remains a contained artifact, not a clipped overlay. */
+.hero-art .hero-mantra {
+  inset: auto 2rem 2rem auto;
+  width: min(72%, 19rem);
+  max-width: 19rem;
+  margin: 0;
+  padding: 1.15rem 1.25rem 1.2rem;
+  overflow: visible;
+  border: 1px solid color-mix(in srgb, var(--moss-deep) 20%, transparent);
+  border-radius: 18px;
+  background: color-mix(in srgb, var(--surface) 96%, transparent);
+  box-shadow: var(--shadow-soft);
+  color: var(--moss-deep);
+  font-size: clamp(1.2rem, 1.7vw, 1.58rem);
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.hero-mantra span {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero-mantra span + span {
+  margin-top: .18rem;
+}
+
+/* Supporting collage pieces remain outside the copy rectangle. */
+.memory-card-one {
+  top: 29%;
+  left: 12%;
+}
+
+.memory-card-two {
+  top: 18%;
+  right: 14%;
+}
+
+.leaf-one {
+  right: 6%;
+  bottom: 41%;
+}
+
+.leaf-two {
+  right: 29%;
+  bottom: 34%;
+}
+
+.leaf-three {
+  left: 45%;
+  bottom: 43%;
+}
+
+@media (max-width: 820px) {
+  .hero-art {
+    min-height: 470px;
+  }
+
+  .hero-art .hero-mantra {
+    inset: auto 1.4rem 1.4rem auto;
+    width: min(70%, 18rem);
+    padding: 1rem 1.1rem;
+    font-size: 1.28rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-art {
+    min-height: 420px;
+  }
+
+  .hero-art .hero-mantra {
+    inset: auto 1rem 1rem 1rem;
+    width: auto;
+    max-width: none;
+    padding: .92rem 1rem;
+    font-size: 1.12rem;
+    line-height: 1.1;
+  }
+
+  .memory-card-one {
+    top: 24%;
+    left: 1%;
+  }
+
+  .memory-card-two {
+    top: 14%;
+    right: 1%;
+  }
+
+  .leaf-one {
+    right: 3%;
+    bottom: 46%;
+    transform: rotate(-32deg) scale(.66);
+  }
+
+  .leaf-two {
+    right: 29%;
+    bottom: 40%;
+    transform: rotate(28deg) scale(.46);
+  }
+
+  .leaf-three {
+    left: 42%;
+    bottom: 50%;
+    transform: rotate(62deg) scale(.38);
+  }
+}

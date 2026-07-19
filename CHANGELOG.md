@@ -1,4 +1,23 @@
-# Viryn Studio v0.6.1 — Credibility Pass
+# Changelog
+
+## v0.6.2 — Human Hands
+
+### Changed
+- Re-art-directed the Table hero collage around a protected text safe area and a quieter, non-obscuring garnish.
+- Reduced the Table concept disclaimer to true caption scale and removed the oversized pill treatment.
+- Smoothed Table's service-flow color transition into a warm, readable room instead of an abrupt dark section.
+- Rebuilt the Table dashboard hierarchy so quoted value is the primary metric and operational counts remain supporting information.
+- Rebuilt the Gathering Commons hero mantra as a contained three-line artifact with responsive safe-area rules.
+- Moved Commons collage accents away from the mantra's protected copy rectangle.
+- Added cache-busting stylesheet versions for the two corrected pages.
+
+### Fixed
+- Decorative elements crossing or obscuring headline text.
+- Commons mantra clipping at desktop and mobile breakpoints.
+- Inconsistent dashboard metric emphasis.
+- Oversized Table disclaimer treatment on smaller screens.
+
+## v0.6.1 — Credibility Pass
 
 - Added a near-top framework directory that shows Signal, Gathering, Ledger, and Table together; the rail becomes horizontally swipeable on smaller screens.
 - Changed the detailed framework library to a four-card desktop grid so Table no longer appears visually secondary.
@@ -7,7 +26,7 @@
 - Reworked Table dashboard hierarchy so quoted value is a primary metric and dashboard labels/supporting copy follow one typography scale.
 - Recontained Gathering Commons’ hero mantra in a readable panel, corrected mobile crops, and normalized button alignment and mobile widths.
 
-# Viryn Studio v0.6 — Table
+## v0.6 — Table
 
 - Added Framework 04: **Table**, a hospitality framework for restaurants, cafés, food trucks, pop-ups, caterers, and private chefs.
 - Added switchable Hearth, Route, and Feast configurations.
@@ -17,7 +36,7 @@
 - Added Table to the flagship framework library, portfolio, and inquiry routing.
 - Added internal framework notes for the shared hospitality record, integration order, and private Lawrence Hometown Hero founding cohort.
 
-# Viryn Studio v0.5
+## v0.5
 
 - Added Studio Editions to the flagship site.
 - Added Edition 01: **Gathering Commons / Active Brain Community**.
@@ -25,8 +44,6 @@
 - Added interactive self-orientation, resource filtering, private check-in, consent summary, and prototype registration flows.
 - Updated Studio contact email to `siegelumiere@gmail.com` across public pages and configuration.
 - Added explicit fictional-content and no-data-collection disclosures.
-
-# Changelog
 
 ## v0.4 - Ravensblood five-pack
 

@@ -85,3 +85,13 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - [ ] `$7,840` is presented as the quoted-value metric; metric labels and supporting text use a consistent hierarchy.
 - [ ] Gathering Commons’ three-line hero mantra is fully visible at 320px, 390px, and desktop widths.
 - [ ] Gathering Commons’ primary and secondary hero actions are centered and full-width on small screens.
+
+
+## v0.6.2 Human Hands checks
+- Table: switch Hearth, Route, and Feast; the garnish never covers the ticket heading at desktop or mobile widths.
+- Table: the concept caption reads as secondary fine print and does not compete with the receipt.
+- Table: the service-flow section remains readable in every configuration without an abrupt near-black transition.
+- Table: `$7,840` is visually primary; `08`, `03`, and `06` are supporting metrics.
+- Commons: the complete three-line mantra remains inside the hero safe area at 1440px, 820px, 390px, and 320px widths.
+- Commons: leaves and memory cards do not intersect the mantra.
+- Both pages: no horizontal overflow, clipped copy, or inaccessible focus states.

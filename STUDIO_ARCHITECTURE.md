@@ -109,3 +109,8 @@ Table demonstrates three front-of-house configurations over one service spine:
 - Feast for catering and event service
 
 The static demonstration models inquiry, human review, quote, deposit, calendar, production, and fulfillment states. In production, those states must be backed by a reviewed source of truth such as a spreadsheet, CRM, database, or payment platform. Google Calendar and hosted payment links may be integrated after human approval; GitHub Pages must never contain private credentials or sensitive customer records.
+
+
+## Human Hands visual QA (v0.6.2)
+
+Hero compositions use an explicit object hierarchy: ground, supporting geometry, primary artifact, organic accent, micro-detail. Decorative elements may overlap one another, but they may not enter protected copy rectangles, obscure operational information, or create accidental tangent edges. Responsive layouts are art-directed at each breakpoint rather than treated as compressed desktop compositions.

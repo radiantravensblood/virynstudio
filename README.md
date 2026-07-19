@@ -8,9 +8,9 @@ The repository contains the Studio flagship and four reusable framework mini-sit
 - **Ledger** for consultants, educators, trainers, and curriculum-led practices.
 - **Table** for restaurants, cafés, food trucks, caterers, and private chefs.
 
-## v0.6.1 credibility pass
+## v0.6.2 — Human Hands
 
-The flagship now places a complete framework directory near the top of the page. It displays all four offerings at once on wider screens and becomes a scroll-snapped swipe rail on mobile. Table and Gathering Commons also received visual containment, hierarchy, and responsive-alignment corrections based on live human review.
+The flagship framework directory remains near the top of the page, while Table and Gathering Commons receive a focused art-direction pass based on live human review: protected copy safe areas, quieter collage accents, calmer color rhythm, clearer metric hierarchy, and responsive compositions that are authored rather than merely compressed.
 
 ## Public structure
 
@@ -98,3 +98,8 @@ The included access phrase is intentionally visible for portfolio review. Becaus
 ## Table hospitality framework
 
 `frameworks/table/` contains three switchable configurations—Hearth, Route, and Feast—plus a filterable menu demonstration, a seven-stage service workflow, a no-storage intake prototype, and a synthetic operating dashboard. `FRAMEWORK_NOTES.md` documents the shared record model, suggested integration order, and the private Lawrence Hometown Hero founding-cohort concept.
+
+
+## v0.6.2 — Human Hands
+
+This release is an art-direction pass focused on protected copy safe areas, editorial object hierarchy, responsive hero composition, calmer color rhythm, and consistent dashboard hierarchy. It adds no new product surface.
