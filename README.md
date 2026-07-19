@@ -8,6 +8,10 @@ The repository contains the Studio flagship and four reusable framework mini-sit
 - **Ledger** for consultants, educators, trainers, and curriculum-led practices.
 - **Table** for restaurants, cafés, food trucks, caterers, and private chefs.
 
+## v0.6.1 credibility pass
+
+The flagship now places a complete framework directory near the top of the page. It displays all four offerings at once on wider screens and becomes a scroll-snapped swipe rail on mobile. Table and Gathering Commons also received visual containment, hierarchy, and responsive-alignment corrections based on live human review.
+
 ## Public structure
 
 ```text

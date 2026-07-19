@@ -1,4 +1,4 @@
-# Viryn Studio v0.4 Manual Test Checklist
+# Viryn Studio v0.6.1 Manual Test Checklist
 
 ## Public paths
 
@@ -72,3 +72,16 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - [ ] Contact buttons route to the configured Studio inbox.
 - [ ] Mobile navigation opens, closes, and does not create horizontal overflow.
 - [ ] The flagship homepage renders four framework cards and a Table portfolio card.
+
+
+## v0.6.1 credibility-pass checks
+
+- [ ] The near-top framework directory contains exactly four working shortcuts: Signal, Gathering, Ledger, and Table.
+- [ ] At mobile width, the framework directory scrolls horizontally without causing page-level horizontal overflow.
+- [ ] Table’s plate and decorative leaves remain visually behind the receipt at desktop and mobile widths.
+- [ ] Table’s small concept caption remains visible and does not cover receipt text.
+- [ ] Table uses a plain cream page field rather than a dotted background texture.
+- [ ] The service-flow section retains readable contrast without an abrupt near-black transition.
+- [ ] `$7,840` is presented as the quoted-value metric; metric labels and supporting text use a consistent hierarchy.
+- [ ] Gathering Commons’ three-line hero mantra is fully visible at 320px, 390px, and desktop widths.
+- [ ] Gathering Commons’ primary and secondary hero actions are centered and full-width on small screens.

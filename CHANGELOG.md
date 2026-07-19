@@ -1,3 +1,12 @@
+# Viryn Studio v0.6.1 — Credibility Pass
+
+- Added a near-top framework directory that shows Signal, Gathering, Ledger, and Table together; the rail becomes horizontally swipeable on smaller screens.
+- Changed the detailed framework library to a four-card desktop grid so Table no longer appears visually secondary.
+- Rebuilt Table’s hero layering so decorative food elements remain behind the receipt, added a small vegetable-style pin, and moved the concept disclosure into a restrained caption.
+- Removed Table’s dotted page texture and softened the service-flow section from near-black espresso to a warmer configuration-aware tone.
+- Reworked Table dashboard hierarchy so quoted value is a primary metric and dashboard labels/supporting copy follow one typography scale.
+- Recontained Gathering Commons’ hero mantra in a readable panel, corrected mobile crops, and normalized button alignment and mobile widths.
+
 # Viryn Studio v0.6 — Table
 
 - Added Framework 04: **Table**, a hospitality framework for restaurants, cafés, food trucks, pop-ups, caterers, and private chefs.

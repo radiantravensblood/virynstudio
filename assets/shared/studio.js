@@ -118,6 +118,34 @@
     }
   }
 
+  function renderFrameworkRail() {
+    const rail = byId("framework-rail");
+    if (!rail || !Array.isArray(config.frameworks)) return;
+    rail.replaceChildren();
+
+    config.frameworks.forEach((item, index) => {
+      const link = document.createElement("a");
+      link.className = `framework-jump ${item.accent || ""}`.trim();
+      link.href = item.href;
+      link.setAttribute("aria-label", `Open ${item.name}, ${item.audience}`);
+
+      const top = document.createElement("span");
+      top.className = "framework-jump-top";
+      top.append(
+        text("span", String(index + 1).padStart(2, "0"), "framework-jump-number"),
+        text("span", "↗", "framework-jump-arrow")
+      );
+
+      link.append(
+        top,
+        text("strong", item.name),
+        text("small", item.audience),
+        text("span", item.promise, "framework-jump-copy")
+      );
+      rail.append(link);
+    });
+  }
+
   function renderFrameworks() {
     const grid = byId("framework-grid");
     if (!grid || !Array.isArray(config.frameworks)) return;
@@ -276,6 +304,7 @@
     initializeTheme();
     initializeNavigation();
     wireContactLinks();
+    renderFrameworkRail();
     renderFrameworks();
     renderPackages();
     renderCarePlans();
