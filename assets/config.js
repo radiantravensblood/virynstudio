@@ -57,6 +57,15 @@ window.VIRYN_STUDIO_CONFIG = {
       includes: ["Positioning", "Services", "Process", "Lead intake"],
       href: "frameworks/ledger/",
       accent: "ember"
+    },
+    {
+      id: "table",
+      name: "Table",
+      audience: "Restaurants, cafés, food trucks, caterers, and private chefs",
+      promise: "Carry guests from first craving to ordering, booking, visiting, or planning an event without losing the operational thread.",
+      includes: ["Live menu", "Visit and order paths", "Catering intake", "Service workflow"],
+      href: "frameworks/table/",
+      accent: "gold"
     }
   ],
 
@@ -146,6 +155,7 @@ window.VIRYN_STUDIO_CONFIG = {
     "I am interested in Gathering",
     "I am interested in Gathering Commons",
     "I am interested in Ledger",
+    "I am interested in Table",
     "I need ongoing support",
     "I want to discuss a custom system"
   ],

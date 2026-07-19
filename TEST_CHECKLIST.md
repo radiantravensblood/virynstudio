@@ -60,3 +60,15 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - [ ] The listening-note action refuses an empty note and prepares a mailto message when text is present.
 - [ ] The static-site security disclosure remains visible and accurate.
 - [ ] Mobile widths do not overflow; the navigation, gate, queue, and player remain usable at 320px.
+
+
+## v0.6 Table checks
+
+- [ ] `frameworks/table/` loads from the repository root and nested URL.
+- [ ] Hearth, Route, and Feast buttons update hero, ticket, feature list, colors, and planner options.
+- [ ] Menu filters show only matching synthetic menu items and remain keyboard operable.
+- [ ] All seven service-flow stages update the panel and status data.
+- [ ] Service planner validates required fields, advances in both directions, shows a local summary, and transmits/stores nothing.
+- [ ] Contact buttons route to the configured Studio inbox.
+- [ ] Mobile navigation opens, closes, and does not create horizontal overflow.
+- [ ] The flagship homepage renders four framework cards and a Table portfolio card.

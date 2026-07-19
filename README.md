@@ -1,11 +1,12 @@
 # Viryn Studio
 
 Viryn Studio is the commercial design and implementation wing of Viryn Systems.
-The repository contains the Studio flagship and three reusable framework mini-sites:
+The repository contains the Studio flagship and four reusable framework mini-sites:
 
 - **Signal** for musicians, bands, performers, and creative professionals.
 - **Gathering** for nonprofits, ministries, mutual-aid groups, and community organizations.
 - **Ledger** for consultants, educators, trainers, and curriculum-led practices.
+- **Table** for restaurants, cafés, food trucks, caterers, and private chefs.
 
 ## Public structure
 
@@ -20,7 +21,8 @@ The repository contains the Studio flagship and three reusable framework mini-si
 └── frameworks/
     ├── signal/
     ├── gathering/
-    └── ledger/
+    ├── ledger/
+    └── table/
 ```
 
 Legacy URLs such as `frameworks/ledger.html` remain as redirect shims so previously shared links continue to work.
@@ -87,3 +89,8 @@ The included access phrase is intentionally visible for portfolio review. Becaus
 ## Studio Edition 01 — Gathering Commons
 
 `editions/gathering-commons/` contains **Active Brain Community**, a static concept demonstrating a caregiver resource commons with self-orientation, resource filtering, private-by-design check-in, consent-based story intake, support-circle registration concepts, and three visual atmosphere modes. All health/community content is fictional demonstration copy and no data is transmitted or stored.
+
+
+## Table hospitality framework
+
+`frameworks/table/` contains three switchable configurations—Hearth, Route, and Feast—plus a filterable menu demonstration, a seven-stage service workflow, a no-storage intake prototype, and a synthetic operating dashboard. `FRAMEWORK_NOTES.md` documents the shared record model, suggested integration order, and the private Lawrence Hometown Hero founding-cohort concept.

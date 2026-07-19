@@ -6,7 +6,7 @@
 
 Viryn Studio is the commercial web-design wing of Viryn Systems. Viryn Labs holds longer-horizon product work such as Care-Tech and WardenWear.
 
-## One house, three furnished rooms
+## One house, four furnished rooms
 
 The framework library stays in one repository while the products share infrastructure and remain portfolio demonstrations.
 
@@ -18,6 +18,7 @@ assets/shared/studio.js          # theme, navigation, contact, and rendering log
 frameworks/signal/               # creative-industry mini-site
 frameworks/gathering/            # community-organization mini-site
 frameworks/ledger/               # expertise and curriculum mini-site
+frameworks/table/                # hospitality and service-flow mini-site
 ```
 
 Each framework can later be cloned into a client repository or template repository when it gains its own domain, backend, collaborators, release schedule, private content, or substantially divergent code.
@@ -30,6 +31,7 @@ Canonical URLs:
 /frameworks/signal/
 /frameworks/gathering/
 /frameworks/ledger/
+/frameworks/table/
 ```
 
 Compatibility redirects:
@@ -38,6 +40,7 @@ Compatibility redirects:
 /frameworks/signal.html
 /frameworks/gathering.html
 /frameworks/ledger.html
+/frameworks/table.html
 ```
 
 Nested pages use explicit relative paths. No `<base>` element is used.
@@ -95,3 +98,14 @@ Studio Editions live under `editions/`. They are focused demonstrations that ext
 Current edition:
 
 - `editions/gathering-commons/` — Active Brain Community
+
+
+## Table hospitality architecture
+
+Table demonstrates three front-of-house configurations over one service spine:
+
+- Hearth for fixed-location restaurants and cafés
+- Route for trucks, pop-ups, and rotating vendors
+- Feast for catering and event service
+
+The static demonstration models inquiry, human review, quote, deposit, calendar, production, and fulfillment states. In production, those states must be backed by a reviewed source of truth such as a spreadsheet, CRM, database, or payment platform. Google Calendar and hosted payment links may be integrated after human approval; GitHub Pages must never contain private credentials or sensitive customer records.

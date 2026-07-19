@@ -1,3 +1,13 @@
+# Viryn Studio v0.6 — Table
+
+- Added Framework 04: **Table**, a hospitality framework for restaurants, cafés, food trucks, pop-ups, caterers, and private chefs.
+- Added switchable Hearth, Route, and Feast configurations.
+- Added a filterable, mobile-readable menu demonstration.
+- Added a seven-stage hospitality service workflow from inquiry through fulfillment.
+- Added a three-step no-storage service-planner prototype and synthetic operations dashboard.
+- Added Table to the flagship framework library, portfolio, and inquiry routing.
+- Added internal framework notes for the shared hospitality record, integration order, and private Lawrence Hometown Hero founding cohort.
+
 # Viryn Studio v0.5
 
 - Added Studio Editions to the flagship site.
