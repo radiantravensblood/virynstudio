@@ -14,7 +14,7 @@ window.VIRYN_STUDIO_CONFIG = {
 
   contact: {
     /* Replace this address with the inbox you actually monitor. */
-    email: "hello@virynsystems.online",
+    email: "siegelumiere@gmail.com",
     defaultSubject: "Viryn Studio project inquiry",
     schedulingUrl: "",
     googleFormUrl: "",
@@ -144,6 +144,7 @@ window.VIRYN_STUDIO_CONFIG = {
     "I need my current website improved",
     "I am interested in Signal",
     "I am interested in Gathering",
+    "I am interested in Gathering Commons",
     "I am interested in Ledger",
     "I need ongoing support",
     "I want to discuss a custom system"

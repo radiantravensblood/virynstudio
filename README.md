@@ -38,7 +38,7 @@ The files directly inside `assets/` are compatibility mirrors retained during th
 Before public sales outreach, replace:
 
 ```js
-email: "hello@virynsystems.online"
+email: "siegelumiere@gmail.com"
 ```
 
 with an inbox that is actively monitored. Optional Google Form and scheduling URLs also live in the contact object.
@@ -82,3 +82,8 @@ The Signal mini-site now includes a real-music proof of concept with five full-l
 
 The included access phrase is intentionally visible for portfolio review. Because GitHub Pages is a public static host, this gate is not secure authentication and must not be used to protect confidential or commercially unreleased masters in production.
 
+
+
+## Studio Edition 01 — Gathering Commons
+
+`editions/gathering-commons/` contains **Active Brain Community**, a static concept demonstrating a caregiver resource commons with self-orientation, resource filtering, private-by-design check-in, consent-based story intake, support-circle registration concepts, and three visual atmosphere modes. All health/community content is fictional demonstration copy and no data is transmitted or stored.

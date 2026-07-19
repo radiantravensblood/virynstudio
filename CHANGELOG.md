@@ -1,3 +1,12 @@
+# Viryn Studio v0.5
+
+- Added Studio Editions to the flagship site.
+- Added Edition 01: **Gathering Commons / Active Brain Community**.
+- Added Hearth, Grove, and Dusk atmosphere selection to the Commons.
+- Added interactive self-orientation, resource filtering, private check-in, consent summary, and prototype registration flows.
+- Updated Studio contact email to `siegelumiere@gmail.com` across public pages and configuration.
+- Added explicit fictional-content and no-data-collection disclosures.
+
 # Changelog
 
 ## v0.4 - Ravensblood five-pack

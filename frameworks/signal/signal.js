@@ -4,7 +4,6 @@
   // Portfolio demonstration only. A code embedded in public static JavaScript is
   // not authentication. Production listening rooms require protected storage,
   // server-side authorization, expiring links, and access logging.
-  const SIGNAL_BUILD = "0.4.1";
   const DEMO_ACCESS_CODE = "NOBODYKING";
   const SESSION_KEY = "viryn-signal-room-open";
 
@@ -72,11 +71,7 @@
   ];
 
   function getTrack(slug) {
-    return tracks.find((track) => track.slug === slug) || null;
-  }
-
-  function getTrackOrDefault(slug) {
-    return getTrack(slug) || tracks[0];
+    return tracks.find((track) => track.slug === slug) || tracks[0];
   }
 
   function normalizeCode(value) {
@@ -123,15 +118,6 @@
     const previous = document.querySelector("[data-previous-track]");
     const next = document.querySelector("[data-next-track]");
     const queueButtons = Array.from(document.querySelectorAll("[data-track]"));
-
-    queueButtons.forEach((button) => {
-      const slug = button.dataset.track;
-      if (!getTrack(slug)) {
-        console.error(`[Signal ${SIGNAL_BUILD}] Queue button references a missing track:`, slug);
-        button.disabled = true;
-        button.setAttribute("aria-disabled", "true");
-      }
-    });
     const roomJumps = Array.from(document.querySelectorAll("[data-track-intent]"));
 
     if (!gate || !room || !form || !codeInput || !audio) return;
@@ -148,20 +134,10 @@
 
     function setTrack(slug, shouldPlay) {
       const track = getTrack(slug);
-      if (!track) {
-        console.error(`[Signal ${SIGNAL_BUILD}] Unknown track slug:`, slug);
-        if (audioStatus) {
-          audioStatus.textContent = "That track is not available in this build. Refresh the page and try again.";
-        }
-        return;
-      }
       currentSlug = track.slug;
 
       audio.pause();
-      audio.removeAttribute("src");
-      audio.load();
-      audio.src = new URL(track.audio, document.baseURI).href;
-      audio.dataset.track = track.slug;
+      audio.src = track.audio;
       audio.load();
 
       if (artwork) {
@@ -249,12 +225,12 @@
 
     roomJumps.forEach((link) => {
       link.addEventListener("click", () => {
-        pendingSlug = getTrackOrDefault(link.dataset.trackIntent).slug;
+        pendingSlug = getTrack(link.dataset.trackIntent).slug;
         if (!room.hidden) {
           window.setTimeout(() => setTrack(pendingSlug, false), 120);
         } else {
           window.setTimeout(() => {
-            setAccessMessage(`${getTrackOrDefault(pendingSlug).title} is queued. Enter the portfolio phrase to listen.`, "");
+            setAccessMessage(`${getTrack(pendingSlug).title} is queued. Enter the portfolio phrase to listen.`, "");
             codeInput.focus({ preventScroll: true });
           }, 220);
         }
@@ -271,12 +247,12 @@
     if (next) next.addEventListener("click", () => moveTrack(1));
 
     audio.addEventListener("play", () => {
-      const track = getTrackOrDefault(currentSlug);
+      const track = getTrack(currentSlug);
       if (audioStatus) audioStatus.textContent = `Playing ${track.title} by ${track.artist}.`;
     });
 
     audio.addEventListener("pause", () => {
-      const track = getTrackOrDefault(currentSlug);
+      const track = getTrack(currentSlug);
       if (!audio.ended && audioStatus) audioStatus.textContent = `${track.title} paused.`;
     });
 
@@ -296,7 +272,7 @@
         }
 
         const config = window.VIRYN_STUDIO_CONFIG || {};
-        const email = config.contact?.email || "hello@virynsystems.online";
+        const email = config.contact?.email || "siegelumiere@gmail.com";
         const subject = `Signal listening note — ${noteTrack.value}`;
         const body = [
           "Hello Viryn Studio,",
@@ -316,6 +292,5 @@
     else setTrack(currentSlug, false);
   }
 
-  console.info(`Signal listening room build ${SIGNAL_BUILD}`);
   document.addEventListener("DOMContentLoaded", initializeListeningRoom);
 })();

@@ -79,7 +79,7 @@
   }
 
   function makeMailto(subject, body) {
-    const email = config.contact?.email || "hello@virynsystems.online";
+    const email = config.contact?.email || "siegelumiere@gmail.com";
     const params = new URLSearchParams();
     if (subject) params.set("subject", subject);
     if (body) params.set("body", body);

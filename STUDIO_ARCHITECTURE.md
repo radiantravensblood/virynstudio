@@ -86,3 +86,12 @@ GitHub Pages does not provide private storage, authentication, server-side form 
 Signal owns its artist-specific interaction layer in `frameworks/signal/signal.js` and stores demonstration media beneath `frameworks/signal/assets/`. The public static access phrase is an interaction prototype only. A production private listening room must move audio to protected object storage or a media platform and authorize requests server-side with revocable or expiring access.
 
 Audio controls remain native HTML5 controls for keyboard and assistive-technology reliability. The five-track queue, track switching, session-only room state, downloads, and listening-note preparation are progressive enhancements.
+
+
+## Studio Editions
+
+Studio Editions live under `editions/`. They are focused demonstrations that extend a framework around a real-world workflow or community need. Unlike the core framework pages, an Edition may include domain-specific interaction patterns, editorial policies, and a documented production spine.
+
+Current edition:
+
+- `editions/gathering-commons/` — Active Brain Community
