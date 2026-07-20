@@ -979,11 +979,155 @@ h3 {
 }
 
 
-.preview-surface-ledger {
+
+/* v0.6.3 — framework identities: same structure, authored atmospheres */
+.work-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.work-grid .portfolio-card {
+  min-width: 0;
+}
+
+.preview-surface {
+  isolation: isolate;
+}
+
+.preview-surface > span {
+  position: relative;
+  z-index: 6;
+  text-shadow: 0 2px 20px color-mix(in srgb, currentColor 18%, transparent);
+}
+
+/* Gathering: a communal threshold built from nested arches and a held ember. */
+.preview-surface-gathering {
+  position: relative;
+  overflow: hidden;
   background:
-    radial-gradient(circle at 75% 20%, color-mix(in srgb, var(--gold) 26%, transparent), transparent 34%),
-    linear-gradient(145deg, #111b35, #201936 58%, #f2e6c8 160%);
+    linear-gradient(180deg, #eadfca 0 46%, #839079 46% 100%);
+  color: #344331;
+}
+
+.preview-surface-gathering::before {
+  position: absolute;
+  left: 50%;
+  bottom: -2.4rem;
+  z-index: 1;
+  width: 76%;
+  height: 105%;
+  border: 1px solid rgba(52, 67, 49, .42);
+  border-bottom: 0;
+  border-radius: 48% 48% 0 0 / 38% 38% 0 0;
+  background:
+    radial-gradient(circle at 50% 37%, #c06f4f 0 9%, transparent 9.5%),
+    linear-gradient(180deg, #f7efe2 0 62%, #53664e 62% 100%);
+  box-shadow:
+    0 0 0 1.15rem rgba(247, 239, 226, .34),
+    0 0 0 2.3rem rgba(83, 102, 78, .11);
+  content: "";
+  transform: translateX(-50%);
+}
+
+.preview-surface-gathering::after {
+  position: absolute;
+  right: 11%;
+  top: 14%;
+  z-index: 2;
+  width: 2.4rem;
+  height: 4.4rem;
+  border-radius: 100% 0 100% 0;
+  background: #b97b62;
+  box-shadow: -7.7rem 5.6rem 0 -0.65rem #75616e;
+  content: "";
+  transform: rotate(31deg);
+}
+
+/* Ledger: paper, midnight structure, and one measured gold datum. */
+.preview-surface-ledger {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(242, 230, 200, .12) 1px, transparent 1px) 0 0 / 34px 100%,
+    linear-gradient(180deg, rgba(242, 230, 200, .09) 1px, transparent 1px) 0 0 / 100% 34px,
+    radial-gradient(circle at 78% 18%, #c5a45c 0 10%, transparent 10.6%),
+    linear-gradient(145deg, #111b35, #201936 64%, #3b2a54 100%);
   color: #f5e7bf;
+}
+
+.preview-surface-ledger::before {
+  position: absolute;
+  left: 10%;
+  top: 18%;
+  width: 43%;
+  height: 64%;
+  border: 1px solid rgba(245, 231, 191, .42);
+  background: rgba(17, 27, 53, .48);
+  box-shadow: 1.2rem 1.2rem 0 rgba(197, 164, 92, .16);
+  content: "";
+  transform: rotate(-4deg);
+}
+
+/* Signal: stage darkness, record geometry, and a controlled beam of release light. */
+.preview-surface-signal {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 77% 44%, transparent 0 16%, rgba(221, 176, 207, .34) 16.5% 17.2%, transparent 17.7% 27%, rgba(221, 176, 207, .18) 27.5% 28.2%, transparent 28.7%),
+    linear-gradient(108deg, transparent 0 48%, rgba(239, 142, 112, .2) 48.5% 58%, transparent 58.5%),
+    linear-gradient(145deg, #0d0b11, #211527 55%, #3a1833 100%);
+  color: #fff1f8;
+}
+
+.preview-surface-signal::before {
+  position: absolute;
+  right: 17%;
+  top: 23%;
+  z-index: 2;
+  width: 5.7rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(255, 241, 248, .4);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #0d0b11 0 8%, #d4a7c7 8.5% 11%, #2a182b 11.5% 100%);
+  box-shadow: 0 0 2.6rem rgba(212, 167, 199, .24);
+  content: "";
+}
+
+.preview-surface-signal::after {
+  position: absolute;
+  left: 9%;
+  bottom: 17%;
+  z-index: 3;
+  width: 45%;
+  height: .3rem;
+  border-radius: 999px;
+  background: #ef8e70;
+  box-shadow:
+    0 -.8rem 0 -.05rem rgba(245, 240, 230, .7),
+    0 .8rem 0 -.08rem rgba(212, 167, 199, .6);
+  content: "";
+}
+
+/* Table retains its appetite-first geometry. */
+.preview-surface-table {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 72% 25%, #e9ac31 0 12%, transparent 12.5%),
+    radial-gradient(circle at 30% 74%, #f5f0e6 0 15%, #b9432f 15.5% 25%, transparent 25.5%),
+    linear-gradient(135deg, #b9432f 0 56%, #2b211d 56% 100%);
+  color: #fffaf1;
+}
+
+.preview-surface-table::after {
+  content: "MENU · ORDER · VISIT · CATER";
+  position: absolute;
+  right: 1rem;
+  bottom: 0.8rem;
+  color: #fffaf1;
+  font-family: var(--mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.08em;
 }
 
 
@@ -1092,27 +1236,6 @@ h3 {
 body[data-framework="table"] {
   --page-accent: var(--gold);
   --page-soft: color-mix(in srgb, var(--gold) 15%, var(--paper));
-}
-
-.preview-surface-table {
-  position: relative;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at 72% 25%, #e9ac31 0 12%, transparent 12.5%),
-    radial-gradient(circle at 30% 74%, #f5f0e6 0 15%, #b9432f 15.5% 25%, transparent 25.5%),
-    linear-gradient(135deg, #b9432f 0 56%, #2b211d 56% 100%);
-  color: #fffaf1;
-}
-
-.preview-surface-table::after {
-  content: "MENU · ORDER · VISIT · CATER";
-  position: absolute;
-  right: 1rem;
-  bottom: 0.8rem;
-  color: #fffaf1;
-  font-family: var(--mono);
-  font-size: 0.55rem;
-  letter-spacing: 0.08em;
 }
 
 /* v0.6.1 — credibility pass: visible, swipeable framework directory */
@@ -1278,5 +1401,22 @@ body[data-framework="table"] {
 
   #framework-grid.cards {
     grid-template-columns: 1fr;
+  }
+}
+
+
+@media (max-width: 1080px) {
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 680px) {
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-grid .preview-surface {
+    min-height: 210px;
   }
 }

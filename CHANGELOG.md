@@ -1,5 +1,21 @@
 # Changelog
 
+## v0.6.3 — Theme & Identity
+
+### Changed
+- Rebuilt Gathering Commons atmosphere tokens as complete contrast systems rather than simple palette swaps.
+- Replaced the harsh Dusk yellow text treatment with a muted rose-clay semantic accent while preserving accessible contrast.
+- Removed the Viryn Studio self-card from the framework demonstrations; the flagship no longer repeats what the page already communicates.
+- Gave Gathering and Signal bespoke portfolio-card art direction equal in identity to Ledger and Table.
+- Reordered the four portfolio demonstrations as Gathering, Ledger, Signal, and Table in a balanced responsive grid.
+- Removed the remaining Table plate leaves and receipt pin instead of decorating unresolved intersections.
+- Added v0.6.3 cache-busting stylesheet references to the corrected pages.
+
+### Fixed
+- Theme accent colors that changed emotional function or became visually harsh in Dusk.
+- Portfolio cards whose generic preview treatment underrepresented their framework identity.
+- Decorative Table elements that read as cover-ups rather than deliberate composition.
+
 ## v0.6.2 — Human Hands
 
 ### Changed

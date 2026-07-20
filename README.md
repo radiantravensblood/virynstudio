@@ -8,9 +8,9 @@ The repository contains the Studio flagship and four reusable framework mini-sit
 - **Ledger** for consultants, educators, trainers, and curriculum-led practices.
 - **Table** for restaurants, cafés, food trucks, caterers, and private chefs.
 
-## v0.6.2 — Human Hands
+## v0.6.3 — Theme & Identity
 
-The flagship framework directory remains near the top of the page, while Table and Gathering Commons receive a focused art-direction pass based on live human review: protected copy safe areas, quieter collage accents, calmer color rhythm, clearer metric hierarchy, and responsive compositions that are authored rather than merely compressed.
+This release turns live critique into system rules: themes now carry complete semantic contrast tokens, each framework demonstration receives an authored identity, redundant self-promotion is removed, and unresolved decoration is deleted rather than disguised. Gathering, Ledger, Signal, and Table now appear as four distinct worlds held by one consistent Studio structure.
 
 ## Public structure
 
@@ -100,6 +100,6 @@ The included access phrase is intentionally visible for portfolio review. Becaus
 `frameworks/table/` contains three switchable configurations—Hearth, Route, and Feast—plus a filterable menu demonstration, a seven-stage service workflow, a no-storage intake prototype, and a synthetic operating dashboard. `FRAMEWORK_NOTES.md` documents the shared record model, suggested integration order, and the private Lawrence Hometown Hero founding-cohort concept.
 
 
-## v0.6.2 — Human Hands
+## v0.6.3 — Theme & Identity
 
-This release is an art-direction pass focused on protected copy safe areas, editorial object hierarchy, responsive hero composition, calmer color rhythm, and consistent dashboard hierarchy. It adds no new product surface.
+This release adds no product surface. It hardens theme semantics, portfolio identity, and ruthless editing before the Viryn Studio Principles are formalized.

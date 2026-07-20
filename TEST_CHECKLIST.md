@@ -1,4 +1,4 @@
-# Viryn Studio v0.6.1 Manual Test Checklist
+# Viryn Studio v0.6.3 Manual Test Checklist
 
 ## Public paths
 
@@ -95,3 +95,13 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - Commons: the complete three-line mantra remains inside the hero safe area at 1440px, 820px, 390px, and 320px widths.
 - Commons: leaves and memory cards do not intersect the mantra.
 - Both pages: no horizontal overflow, clipped copy, or inaccessible focus states.
+
+
+## v0.6.3 Theme & Identity checks
+- [ ] Commons Hearth, Grove, and Dusk each preserve readable labels, body text, controls, borders, and focus states.
+- [ ] Dusk uses a muted rose-clay label accent rather than the previous harsh yellow treatment.
+- [ ] The flagship work grid contains exactly four cards: Gathering, Ledger, Signal, and Table.
+- [ ] The flagship does not contain a redundant Viryn Studio portfolio card.
+- [ ] Gathering and Signal have bespoke preview artwork that remains legible in Day, Night, and Chocolate themes.
+- [ ] Table’s hero contains no plate leaves or receipt pin, and no decorative object intersects the ticket.
+- [ ] At 1440px, 820px, 390px, and 320px, the four-card work grid does not overflow or clip copy.
