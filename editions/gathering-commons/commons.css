@@ -688,3 +688,210 @@ input:focus, textarea:focus { outline: 3px solid color-mix(in srgb, var(--clay) 
     transform: rotate(62deg) scale(.38);
   }
 }
+
+/* v0.6.4 — semantic atmosphere roles: Dusk is warm, not seafoam-led */
+:root {
+  --action-bg: var(--moss-deep);
+  --action-fg: var(--paper);
+  --dark-field: var(--moss-deep);
+  --dark-field-fg: var(--paper);
+  --link-color: var(--moss-deep);
+  --icon-ink: var(--moss-deep);
+  --mantra-ink: var(--moss-deep);
+}
+
+html[data-atmosphere="grove"] {
+  --action-bg: #344331;
+  --action-fg: #f7f8ef;
+  --dark-field: #344331;
+  --dark-field-fg: #f7f8ef;
+  --link-color: #344331;
+  --icon-ink: #344331;
+  --mantra-ink: #344331;
+}
+
+html[data-atmosphere="dusk"] {
+  --paper: #241f20;
+  --paper-deep: #2f2828;
+  --surface: #342c2c;
+  --surface-soft: #403534;
+  --ink: #f4e8d8;
+  --ink-soft: #cfbeae;
+  --moss: #8f967f;
+  --moss-deep: #a7ac94;
+  --sage: #7f8876;
+  --sage-light: #494940;
+  --clay: #d18d70;
+  --clay-deep: #e9a487;
+  --rust: #bd765b;
+  --plum: #9f8291;
+  --gold: #b68f62;
+  --sun: #b68f62;
+  --label-accent: #e2ad96;
+  --label-accent-soft: #d3947a;
+  --focus-ring: #e2ad96;
+  --action-bg: #d69a80;
+  --action-fg: #251b1a;
+  --dark-field: #4a302c;
+  --dark-field-fg: #f7eadb;
+  --link-color: #e5b09a;
+  --icon-ink: #f4e8d8;
+  --mantra-ink: #efbba5;
+  --line: rgba(244, 232, 216, .18);
+}
+
+.demo-ribbon,
+.principles,
+.share {
+  background: var(--dark-field);
+  color: var(--dark-field-fg);
+}
+
+.atmosphere-picker button[aria-pressed="true"],
+.button,
+.filter-button.active,
+.filter-button[aria-pressed="true"] {
+  border-color: var(--action-bg);
+  background: var(--action-bg);
+  color: var(--action-fg);
+}
+
+.button-secondary {
+  border-color: var(--line);
+  background: transparent;
+  color: var(--ink);
+}
+
+.hero-art p,
+.hero-art .hero-mantra {
+  color: var(--mantra-ink);
+}
+
+.orientation-icon,
+.circle-date {
+  color: var(--icon-ink);
+}
+
+.path-result {
+  background: var(--dark-field);
+  color: var(--dark-field-fg);
+}
+
+.path-result p,
+.principle-list p,
+.share-grid > div > p {
+  color: color-mix(in srgb, var(--dark-field-fg) 80%, transparent);
+}
+
+.path-result .button {
+  border-color: var(--dark-field-fg);
+  background: var(--dark-field-fg);
+  color: var(--dark-field);
+}
+
+.path-result .text-button {
+  color: var(--dark-field-fg);
+}
+
+.consent-principle p {
+  color: var(--dark-field-fg) !important;
+}
+
+.resource-card a,
+.story-card a {
+  color: var(--link-color);
+}
+
+.toolkit-art {
+  background: var(--dark-field);
+}
+
+html[data-atmosphere="dusk"] .principles .eyebrow,
+html[data-atmosphere="dusk"] .principle-list article > span,
+html[data-atmosphere="dusk"] .share .eyebrow,
+html[data-atmosphere="dusk"] .path-result .utility-label {
+  color: #edbca7;
+}
+
+html[data-atmosphere="dusk"] .studio-note .button {
+  border-color: #fff8ed;
+  background: #fff8ed;
+  color: #4c352b;
+}
+
+html[data-atmosphere="dusk"] .studio-note .button-secondary {
+  border-color: rgba(255,248,237,.5);
+  background: transparent;
+  color: #fff8ed;
+}
+
+/* v0.6.4 contrast closure: clay fields read in dark ink; dark fields use light labels. */
+:root {
+  --clay-ink: #251b1a;
+  --dark-label: #f0c9b7;
+}
+
+.principles .eyebrow,
+.principle-list article > span,
+.share .eyebrow {
+  color: var(--dark-label);
+}
+
+.check-in,
+.studio-note {
+  color: var(--clay-ink);
+}
+
+.check-in h2,
+.check-in .eyebrow,
+.check-in-copy > p,
+.check-in .privacy-note,
+.check-in .privacy-note p,
+.studio-note h2,
+.studio-note .eyebrow,
+.studio-note p:not(.eyebrow) {
+  color: var(--clay-ink);
+}
+
+.studio-note .button-secondary {
+  border-color: color-mix(in srgb, var(--clay-ink) 56%, transparent);
+  background: transparent;
+  color: var(--clay-ink);
+}
+
+.story-card-large .utility-label,
+.story-card-large .story-meta {
+  color: #fff8ed;
+}
+
+html[data-atmosphere="dusk"] .story-card-large .utility-label,
+html[data-atmosphere="dusk"] .story-card-large .story-meta {
+  color: #251b1a;
+}
+
+html[data-atmosphere="dusk"] .studio-note .button-secondary {
+  border-color: color-mix(in srgb, var(--clay-ink) 56%, transparent);
+  color: var(--clay-ink);
+}
+
+/* Small labels keep full AA contrast on parchment and clay fields. */
+:root {
+  --label-accent: #83513e;
+}
+
+.tool-list span {
+  color: #83513e;
+}
+
+html[data-atmosphere="grove"] .tool-list span {
+  color: #754e3d;
+}
+
+html[data-atmosphere="dusk"] .check-in .eyebrow,
+html[data-atmosphere="dusk"] .studio-note .eyebrow {
+  color: var(--clay-ink);
+}
+
+html[data-atmosphere="dusk"] .tool-list span {
+  color: #e2ad96;
+}

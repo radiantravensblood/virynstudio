@@ -1,4 +1,4 @@
-# Viryn Studio v0.6.3 Manual Test Checklist
+# Viryn Studio v0.6.4 Manual Test Checklist
 
 ## Public paths
 
@@ -33,8 +33,8 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 
 ## Functional checks
 
-- [ ] Day, Night, and Chocolate themes cycle on every page.
-- [ ] Theme choice persists after refresh.
+- [ ] The flagship remains locked to Chocolate and exposes no theme control.
+- [ ] Day, Night, and Chocolate continue to cycle and persist on framework pages that intentionally demonstrate themes.
 - [ ] Contact links use the address or form set in `assets/shared/config.js`.
 - [ ] Ledger resource filters show the correct number of cards.
 - [ ] All three Ledger PDFs download and render.
@@ -105,3 +105,35 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - [ ] Gathering and Signal have bespoke preview artwork that remains legible in Day, Night, and Chocolate themes.
 - [ ] Table’s hero contains no plate leaves or receipt pin, and no decorative object intersects the ticket.
 - [ ] At 1440px, 820px, 390px, and 320px, the four-card work grid does not overflow or clip copy.
+
+
+## v0.6.4 Comprehension & Composition checks
+
+### Flagship threshold and structure
+- [ ] The flagship loads in Chocolate with no visible theme toggle.
+- [ ] Every flagship primary CTA reads **Start a project** and remains legible at rest, hover, focus, and active states.
+- [ ] The repeated Framework Directory is absent.
+- [ ] The Framework Library contains exactly four framework cards and working links.
+- [ ] The capability bridge explains that capabilities can travel across framework spines.
+- [ ] Framework demonstrations appear before pricing.
+- [ ] The trust rail uses consistent separators and wraps without isolated or uneven entries.
+- [ ] Founding-client copy uses one text color, line height, paragraph rhythm, and measure.
+
+### Framework authorship and readability
+- [ ] Gathering’s hero presents one community illustration rather than a field of unrelated shapes.
+- [ ] Gathering program cards use food, route, and care-fund illustrations that remain understandable in Day, Night, and Chocolate.
+- [ ] Gathering’s featured need card, mission values, “Start the threshold” action, “Saturday pantry,” and “I can offer time” pathways remain readable in all three themes.
+- [ ] Gathering’s three action-card buttons share a consistent baseline at desktop widths and become full-width at mobile widths.
+- [ ] Ledger contains no internal collaborator names and uses one ledger/path visual metaphor.
+- [ ] Signal queue items expose complete accessible labels containing title, duration, and status without concatenation.
+- [ ] Table contains no garnish that intersects the ticket and the final CTA reads **Start a Table project**.
+
+### Commons atmospheres
+- [ ] Hearth, Grove, and Dusk each preserve readable body copy, labels, links, buttons, fields, borders, and focus states.
+- [ ] Dusk uses parchment for reading, rose clay for action/emphasis, and umber for structure rather than body text.
+- [ ] No atmosphere relies on color alone to communicate state.
+
+### Composition architecture
+- [ ] `STUDIO_ARCHITECTURE.md` documents Framework → Capability → Edition → Client Build.
+- [ ] Package copy includes baseline accessibility checks for Framework Launch.
+- [ ] No public copy implies that accessibility is available only as a premium upgrade.

@@ -8,9 +8,16 @@ The repository contains the Studio flagship and four reusable framework mini-sit
 - **Ledger** for consultants, educators, trainers, and curriculum-led practices.
 - **Table** for restaurants, cafés, food trucks, caterers, and private chefs.
 
-## v0.6.3 — Theme & Identity
+## v0.6.4 — Comprehension & Composition
 
-This release turns live critique into system rules: themes now carry complete semantic contrast tokens, each framework demonstration receives an authored identity, redundant self-promotion is removed, and unresolved decoration is deleted rather than disguised. Gathering, Ledger, Signal, and Table now appear as four distinct worlds held by one consistent Studio structure.
+This release applies the Viryn Studio Principles to the public house. The flagship now holds one canonical Chocolate atmosphere, its repeated framework directory is removed, proof appears before pricing, and one accessible **Start a project** action replaces competing start labels. The framework pages receive a readability and authorship pass, while the architecture now separates the visitor journey from reusable capabilities.
+
+The result is a clearer four-layer model:
+
+1. **Framework** — the primary visitor journey and trust conditions.
+2. **Capability** — reusable machinery such as audio, video, events, scheduling, commerce, resources, updates, or gated access.
+3. **Edition** — a studied domain composition built from one framework spine and selected capabilities.
+4. **Client Build** — the tailored implementation, content, integrations, and operating reality.
 
 ## Public structure
 
@@ -79,7 +86,7 @@ Large video libraries, authenticated downloads, payments, private client data, a
 
 - Portfolio examples are clearly labeled synthetic concept demonstrations.
 - No client names, testimonials, credentials, outcomes, music, or curriculum should be published without permission and verification.
-- The sample Ledger PDFs are educational interface props, not clinical guidance or Rory's curriculum.
+- The sample Ledger PDFs are educational interface props, not clinical guidance or material from a real practitioner’s curriculum.
 - Formal service agreements and legal language should be reviewed by qualified counsel before commercial launch.
 
 ## Signal demonstration
@@ -100,6 +107,9 @@ The included access phrase is intentionally visible for portfolio review. Becaus
 `frameworks/table/` contains three switchable configurations—Hearth, Route, and Feast—plus a filterable menu demonstration, a seven-stage service workflow, a no-storage intake prototype, and a synthetic operating dashboard. `FRAMEWORK_NOTES.md` documents the shared record model, suggested integration order, and the private Lawrence Hometown Hero founding-cohort concept.
 
 
-## v0.6.3 — Theme & Identity
+## v0.6.4 release notes
 
-This release adds no product surface. It hardens theme semantics, portfolio identity, and ruthless editing before the Viryn Studio Principles are formalized.
+- The flagship is intentionally Chocolate-only; local framework themes remain available where atmosphere demonstrates a real framework capability.
+- Accessibility has a baseline in every package. Deeper review and remediation scope scale with the engagement, but accessibility itself is not an upgrade.
+- Portfolio demonstrations remain synthetic unless a named collaborator or client has explicitly approved public use.
+- v0.6.4 is a static front-end release. Production forms, private storage, payments, authentication, and protected media still require reviewed infrastructure.

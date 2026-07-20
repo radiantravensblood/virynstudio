@@ -1360,3 +1360,14 @@ html[data-theme="chocolate"] .signal-site {
     transform: none;
   }
 }
+
+/* Accessible foregrounds outrank the site's inherited anchor color. */
+.signal-site a.signal-button-primary,
+.signal-site button.signal-button-primary {
+  color: #171018;
+}
+
+.signal-site .skip-link {
+  background: #f3eee8;
+  color: #171018;
+}

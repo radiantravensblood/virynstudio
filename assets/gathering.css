@@ -950,3 +950,243 @@
     padding: 0.8rem 1rem;
   }
 }
+
+/* v0.6.4 — Comprehension & Composition: fewer shapes, stronger semantic contrast */
+.gathering-site {
+  --g-primary-bg: #24483a;
+  --g-primary-fg: #fffdf7;
+  --g-section-dark: #153329;
+  --g-section-dark-fg: #fbf6ea;
+  --g-secondary-text: #4d5b55;
+  --g-warm-ink: #30251f;
+}
+
+[data-theme="night"] .gathering-site {
+  --g-primary-bg: #d7ecdb;
+  --g-primary-fg: #101814;
+  --g-section-dark: #1b2a24;
+  --g-section-dark-fg: #eef5ee;
+  --g-secondary-text: #c4cec7;
+  --g-warm-ink: #2d271d;
+}
+
+[data-theme="chocolate"] .gathering-site {
+  --g-primary-bg: #eef1d7;
+  --g-primary-fg: #281e19;
+  --g-section-dark: #3d2c24;
+  --g-section-dark-fg: #f7ecdc;
+  --g-secondary-text: #d6c8b8;
+  --g-warm-ink: #30241d;
+}
+
+.g-donate-button,
+.g-primary-button {
+  border-color: var(--g-primary-bg);
+  background: var(--g-primary-bg);
+  color: var(--g-primary-fg);
+}
+
+.g-nav-links a.g-donate-button,
+a.g-primary-button {
+  color: var(--g-primary-fg);
+}
+
+.g-donate-button:hover,
+.g-primary-button:hover {
+  border-color: var(--g-coral);
+  background: var(--g-coral);
+  color: #241a16;
+}
+
+.g-secondary-button,
+.g-event-row .button-secondary,
+.g-studio-cta .button-secondary {
+  border-color: var(--g-line);
+  background: transparent;
+  color: var(--g-ink);
+}
+
+.g-hero::after {
+  content: none;
+}
+
+.g-hero-lede,
+.g-assurance-list,
+.g-impact-float span,
+.g-section-heading > p:last-child,
+.g-need-card p:not(.g-utility),
+.g-program-content > p:not(.g-utility),
+.g-program-content ul,
+.g-story-quote figcaption,
+.g-event-row p:not(.g-utility),
+.g-action-card > p:not(.g-utility),
+.g-transparency-grid > div > p:last-child,
+.g-transparency-list p,
+.g-studio-cta-inner > div:first-child > p:last-child {
+  color: var(--g-secondary-text);
+}
+
+/* The hero is now one painted scene instead of a pile of unrelated primitives. */
+.g-table-illustration {
+  filter: drop-shadow(0 28px 42px rgba(24, 48, 41, .15));
+}
+
+.g-art-bg { fill: var(--g-sky); }
+.g-art-sun { fill: var(--g-sun); }
+.g-art-ground { fill: var(--g-leaf-soft); }
+.g-art-table { fill: var(--g-forest); }
+.g-art-neighbor-heads { fill: var(--g-coral); }
+.g-art-neighbor-bodies { fill: none; stroke: var(--g-forest-deep); stroke-width: 18; stroke-linecap: round; }
+.g-art-share { fill: var(--g-sun); stroke: var(--g-forest-deep); stroke-width: 5; }
+.g-art-plant { fill: none; stroke: var(--g-leaf); stroke-width: 12; stroke-linecap: round; }
+
+.g-impact-float {
+  background: var(--g-paper);
+}
+
+.g-impact-float strong {
+  color: var(--g-forest);
+}
+
+.g-need-card-featured {
+  background: var(--g-primary-bg);
+  color: var(--g-primary-fg);
+}
+
+.g-need-card-featured h3,
+.g-need-card-featured .g-utility,
+.g-need-card-featured a,
+.g-need-card-featured p:not(.g-utility) {
+  color: var(--g-primary-fg);
+}
+
+.g-mission,
+.g-action-card-dark,
+.g-footer {
+  background: var(--g-section-dark);
+  color: var(--g-section-dark-fg);
+}
+
+.g-mission h2,
+.g-mission .g-kicker,
+.g-action-card-dark h2,
+.g-action-card-dark .g-utility,
+.g-footer .g-brand,
+.g-footer .g-brand small,
+.g-footer-links a {
+  color: var(--g-section-dark-fg);
+}
+
+.g-mission-copy,
+.g-action-card-dark > p:not(.g-utility),
+.g-footer-grid > p {
+  color: color-mix(in srgb, var(--g-section-dark-fg) 80%, transparent);
+}
+
+/* Program art now illustrates the service instead of scattering decorative pills. */
+.g-program-art {
+  display: grid;
+  height: 170px;
+  place-items: center;
+  padding: 1rem;
+}
+
+.g-program-art svg {
+  width: 100%;
+  height: 100%;
+}
+
+.g-program-food .g-program-art { background: var(--g-sky); }
+.g-program-transit .g-program-art { background: var(--g-sun); }
+.g-program-fund .g-program-art { background: var(--g-leaf-soft); }
+
+.g-program-art .g-icon-base,
+.g-program-art .g-icon-hand {
+  fill: var(--g-forest);
+}
+
+.g-program-art .g-icon-line,
+.g-program-art .g-icon-route {
+  fill: none;
+  stroke: var(--g-forest-deep);
+  stroke-width: 9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.g-program-art .g-icon-accent,
+.g-program-art .g-icon-wheel {
+  fill: var(--g-coral);
+}
+
+.g-program-art .g-icon-window {
+  fill: var(--g-cream);
+}
+
+.g-program-fund .g-icon-base {
+  fill: var(--g-sun);
+}
+
+/* The quote is allowed to be the image. */
+.g-story-grid {
+  display: block;
+  max-width: 980px;
+}
+
+.g-story-quote {
+  padding-left: clamp(1.25rem, 4vw, 3rem);
+  border-left: 4px solid var(--g-coral);
+}
+
+.g-story-quote blockquote {
+  max-width: 20ch;
+}
+
+/* Equal action-card anatomy keeps the three thresholds calm and scannable. */
+.g-action-card {
+  display: flex;
+  min-height: 440px;
+  flex-direction: column;
+}
+
+.g-action-card .button {
+  width: fit-content;
+  margin-top: auto;
+}
+
+.g-action-card-warm,
+.g-action-card-warm h2,
+.g-action-card-warm .g-utility,
+.g-action-card-warm > p:not(.g-utility) {
+  color: var(--g-warm-ink);
+}
+
+.g-action-card-warm .g-dark-button {
+  border-color: var(--g-warm-ink);
+  background: var(--g-warm-ink);
+  color: #fff8ed;
+}
+
+.g-light-button {
+  border-color: var(--g-section-dark-fg);
+  background: var(--g-section-dark-fg);
+  color: var(--g-section-dark);
+}
+
+@media (max-width: 720px) {
+  .g-action-card .button {
+    width: 100%;
+  }
+}
+
+/* Keep mission values readable when the atmosphere remaps cream into a surface color. */
+.g-mission .g-values span {
+  border-left-color: var(--g-sun);
+  background: color-mix(in srgb, var(--g-section-dark-fg) 9%, transparent);
+  color: var(--g-section-dark-fg);
+}
+
+/* Shared link inheritance must never erase button foreground contrast. */
+.gathering-site a.g-light-button {
+  color: var(--g-section-dark) !important;
+}

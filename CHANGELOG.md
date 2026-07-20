@@ -1,5 +1,30 @@
 # Changelog
 
+## v0.6.4 — Comprehension & Composition
+
+### Changed
+- Established Chocolate as the flagship’s single canonical atmosphere and removed the flagship theme control.
+- Replaced competing start labels with one consistent, accessible **Start a project** action.
+- Removed the repeated framework directory; the library now compares and the work section proves.
+- Moved framework demonstrations before pricing so value is visible before cost.
+- Rebuilt the flagship trust rail, section markers, founding-client spacing, and framework preview art.
+- Added a public capability bridge explaining how audio, video, events, resources, scheduling, commerce, updates, and gated access can travel across framework spines.
+- Reduced Gathering’s geometric load in favor of one painted community scene and three service-specific illustrations.
+- Refined Ledger around one open-ledger/path metaphor and removed internal collaborator references from public copy.
+- Recast Gathering Commons Dusk around parchment, rose clay, warm charcoal, and structural umber roles.
+- Added baseline, expanded, and documented accessibility language across package scopes.
+
+### Fixed
+- Illegible and inconsistent primary CTA treatments across shared pages.
+- Gathering Day, Night, and Chocolate contrast failures in featured cards, actions, mission values, and supporting text.
+- Misaligned action buttons in Gathering’s three sample pathways.
+- Signal queue and transmission labels that could concatenate titles, duration, and status for assistive technology.
+- Flagship preview compositions that obscured letterforms or suggested unintended objects.
+
+### Architecture
+- Documented the four-layer model: **Framework → Capability → Edition → Client Build**.
+- Clarified that frameworks organize journeys while capabilities provide reusable machinery, preventing clients from having to “Frankenstein” multiple offers together.
+
 ## v0.6.3 — Theme & Identity
 
 ### Changed

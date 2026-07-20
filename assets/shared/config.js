@@ -84,6 +84,7 @@ window.VIRYN_STUDIO_CONFIG = {
         "Basic copy cleanup",
         "Contact or booking path",
         "Basic search and social metadata",
+        "Baseline accessibility checks",
         "One revision cycle",
         "Launch support"
       ]
@@ -102,7 +103,7 @@ window.VIRYN_STUDIO_CONFIG = {
         "Custom page sections",
         "Scheduling, lead capture, or newsletter integration",
         "Analytics setup",
-        "Accessibility review",
+        "Expanded accessibility review",
         "Two revision cycles",
         "Thirty days of post-launch support"
       ]
@@ -120,6 +121,7 @@ window.VIRYN_STUDIO_CONFIG = {
         "Advanced integrations",
         "Content migration",
         "Multiple stakeholder reviews",
+        "Documented accessibility review and remediation scope",
         "Documented handoff and training",
         "Priority support",
         "Individually scoped timeline"

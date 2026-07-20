@@ -702,3 +702,12 @@ body::before {
 /* v0.6.3 — ruthless edit
    The plate is deliberate geometry. No botanical garnish or faux pin survives
    without a functional or compositional role. */
+
+/* Navigation and closing labels retain their function on dark and saffron fields. */
+.nav-links > a.pill-dark {
+  color: var(--cream-bright);
+}
+
+.closing-section .eyebrow {
+  color: var(--ink);
+}

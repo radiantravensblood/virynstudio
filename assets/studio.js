@@ -38,6 +38,12 @@
   }
 
   function initializeTheme() {
+    const lockedTheme = document.documentElement.dataset.themeLock;
+    if (lockedTheme) {
+      applyTheme(lockedTheme, false);
+      return;
+    }
+
     let saved = "";
     try {
       saved = localStorage.getItem("viryn-studio-theme") || "";

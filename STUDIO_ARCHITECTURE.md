@@ -6,6 +6,39 @@
 
 Viryn Studio is the commercial web-design wing of Viryn Systems. Viryn Labs holds longer-horizon product work such as Care-Tech and WardenWear.
 
+## Composition model
+
+Viryn Studio separates four layers that were previously easy to mistake for one another:
+
+### 1. Framework — the journey
+
+A framework defines the primary visitor, the sequence they need, the trust conditions around that journey, and the action the site must make easier. Gathering, Ledger, Signal, and Table are not bundles of mutually exclusive features; they are organizing spines.
+
+### 2. Capability — the machinery
+
+Capabilities are reusable functional modules that may travel across framework spines when the client’s real work requires them:
+
+- audio and podcast presentation;
+- video and curriculum delivery;
+- events and calendaring;
+- resources and downloads;
+- scheduling and intake;
+- commerce, inventory, and hosted payment routes;
+- updates, newsletters, and release scheduling;
+- gated or permissioned access.
+
+A church may use Gathering as its primary journey while drawing on Signal’s audio presentation, Ledger’s learning modules, and Table-like listing or service logic. The client should describe the work they do; the Studio is responsible for composing the right capabilities without forcing them to request several frameworks by name.
+
+### 3. Edition — the studied composition
+
+An Edition applies one primary framework spine, selected capabilities, and domain-specific identity to a focused real-world need. It should teach the Studio a reusable muscle rather than function as a decorative portfolio variant.
+
+### 4. Client Build — the operating reality
+
+A client build replaces synthetic demonstration content with verified content, integrations, permissions, service boundaries, data handling, and an agreed maintenance path. The implementation follows the client’s reality rather than requiring the client to imitate the demonstration.
+
+> The framework holds the journey. Capabilities travel. Editions study a composition. Client builds make it real.
+
 ## One house, four furnished rooms
 
 The framework library stays in one repository while the products share infrastructure and remain portfolio demonstrations.
