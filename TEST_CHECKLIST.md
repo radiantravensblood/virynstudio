@@ -1,4 +1,4 @@
-# Viryn Studio v0.6.5 Manual Test Checklist
+# Viryn Studio v0.6.7 Manual Test Checklist
 
 ## Public paths
 
@@ -117,3 +117,19 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - [ ] `STUDIO_ARCHITECTURE.md` documents Framework → Capability → Edition → Client Build.
 - [ ] Package copy includes baseline accessibility checks for Framework Launch.
 - [ ] No public copy implies that accessibility is available only as a premium upgrade.
+
+
+## v0.6.7 Atelier Fidelity & Joinery checks
+
+- [ ] Gathering, Ledger, and Commons hero captions never overlap their information cards at 320px, 390px, 768px, 1024px, or desktop widths.
+- [ ] Hero images use the narrow-screen `<picture>` source below 700px and do not upscale beyond their supplied source width.
+- [ ] Below-fold Atelier images lazy-load and include intrinsic width and height.
+- [ ] Gathering's pantry, route, and care-fund cards use the hand-inked Studio symbol family rather than legacy flat geometry.
+- [ ] The three Gathering path buttons open working, keyboard-operable, no-storage demonstrations and no longer launch email.
+- [ ] The Gathering dialog closes by button, Escape, and backdrop click without losing page context.
+- [ ] Commons' featured resource shows the memory-map illustration and the toolkit shows used pages with a restrained clip.
+- [ ] Commons remains visually distinct from Gathering: protected-room scale, memory motifs, and quieter caregiver language.
+- [ ] Signal queue and archive text include explicit readable boundaries between title, duration, and status.
+- [ ] Custom Studio symbols render in Chrome, Safari, Firefox, and high-contrast mode.
+- [ ] No dead hidden ledger SVG, plate, sun-disc, or legacy Gathering hero geometry remains in public markup.
+- [ ] Button height, vertical centering, focus ring, and active posture are consistent across flagship and frameworks.

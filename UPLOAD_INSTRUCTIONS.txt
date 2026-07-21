@@ -1,0 +1,17 @@
+Viryn Studio v0.6.7 — Atelier Fidelity & Joinery
+
+PATCH INSTALL
+1. Back up the current repository.
+2. Extract this ZIP.
+3. Upload everything inside the extracted folder to the repository root.
+4. Allow the included files and folders to overwrite their v0.6.6 counterparts.
+5. Keep the directory structure intact, especially:
+   - assets/atelier/v067/
+   - assets/symbols/
+   - assets/shared/
+   - frameworks/
+   - editions/
+6. Commit the upload and wait for GitHub Pages / the custom domain cache to refresh.
+7. Hard-refresh the browser before visual review.
+
+The complete GitHub-ready ZIP is also available if a clean root replacement is preferred.

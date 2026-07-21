@@ -256,27 +256,6 @@
   min-height: 560px;
 }
 
-.g-table-illustration {
-  display: block;
-  filter: drop-shadow(0 30px 45px rgba(24, 48, 41, 0.16));
-}
-
-.g-art-bg { fill: var(--g-sky); }
-.g-art-sun { fill: var(--g-sun); }
-.g-art-cloud { fill: color-mix(in srgb, var(--g-paper) 80%, transparent); }
-.g-art-ground { fill: var(--g-leaf-soft); }
-.g-art-table { fill: var(--g-forest); }
-.g-art-leg { fill: var(--g-forest-deep); }
-.g-art-seat-one { fill: var(--g-coral); }
-.g-art-seat-two { fill: var(--g-sun); }
-.g-art-seat-three { fill: var(--g-leaf); }
-.g-art-seat-four { fill: color-mix(in srgb, var(--g-forest) 70%, var(--g-sun)); }
-.g-art-box { fill: var(--g-cream); }
-.g-art-box-top { fill: color-mix(in srgb, var(--g-sun) 55%, var(--g-cream)); }
-.g-art-bowl { fill: var(--g-coral); }
-.g-art-stem { fill: none; stroke: var(--g-forest-deep); stroke-width: 11; stroke-linecap: round; }
-.g-art-leaf { fill: var(--g-leaf); }
-
 .g-impact-float {
   position: absolute;
   right: -0.5rem;
@@ -477,27 +456,9 @@
   overflow: hidden;
 }
 
-.g-program-art span {
-  position: absolute;
-  display: block;
-  border-radius: 999px;
-}
-
 .g-program-food .g-program-art { background: var(--g-sky); }
-.g-program-food .g-program-art span:nth-child(1) { width: 180px; height: 180px; top: 42px; left: 42px; background: var(--g-sun); }
-.g-program-food .g-program-art span:nth-child(2) { width: 120px; height: 70px; top: 52px; right: 34px; background: var(--g-forest); transform: rotate(18deg); }
-.g-program-food .g-program-art span:nth-child(3) { width: 90px; height: 140px; top: 85px; right: 92px; background: var(--g-coral); transform: rotate(-25deg); }
-
 .g-program-transit .g-program-art { background: var(--g-sun); }
-.g-program-transit .g-program-art span:nth-child(1) { width: 260px; height: 26px; top: 74px; left: 35px; background: var(--g-forest-deep); transform: rotate(-12deg); }
-.g-program-transit .g-program-art span:nth-child(2) { width: 92px; height: 92px; top: 34px; right: 50px; background: var(--g-paper); }
-.g-program-transit .g-program-art span:nth-child(3) { width: 42px; height: 42px; top: 92px; left: 76px; background: var(--g-coral); }
-
 .g-program-fund .g-program-art { background: var(--g-leaf-soft); }
-.g-program-fund .g-program-art span:nth-child(1) { width: 210px; height: 132px; top: 46px; left: 44px; border-radius: 22px; background: var(--g-forest); transform: rotate(-5deg); }
-.g-program-fund .g-program-art span:nth-child(2) { width: 130px; height: 92px; top: 26px; right: 30px; border-radius: 18px; background: var(--g-coral); transform: rotate(9deg); }
-.g-program-fund .g-program-art span:nth-child(3) { width: 74px; height: 74px; top: 88px; right: 80px; background: var(--g-sun); }
-
 .g-program-content {
   padding: 1.6rem;
 }
@@ -1027,19 +988,6 @@ a.g-primary-button {
 }
 
 /* The hero is now one painted scene instead of a pile of unrelated primitives. */
-.g-table-illustration {
-  filter: drop-shadow(0 28px 42px rgba(24, 48, 41, .15));
-}
-
-.g-art-bg { fill: var(--g-sky); }
-.g-art-sun { fill: var(--g-sun); }
-.g-art-ground { fill: var(--g-leaf-soft); }
-.g-art-table { fill: var(--g-forest); }
-.g-art-neighbor-heads { fill: var(--g-coral); }
-.g-art-neighbor-bodies { fill: none; stroke: var(--g-forest-deep); stroke-width: 18; stroke-linecap: round; }
-.g-art-share { fill: var(--g-sun); stroke: var(--g-forest-deep); stroke-width: 5; }
-.g-art-plant { fill: none; stroke: var(--g-leaf); stroke-width: 12; stroke-linecap: round; }
-
 .g-impact-float {
   background: var(--g-paper);
 }
@@ -1099,33 +1047,6 @@ a.g-primary-button {
 .g-program-food .g-program-art { background: var(--g-sky); }
 .g-program-transit .g-program-art { background: var(--g-sun); }
 .g-program-fund .g-program-art { background: var(--g-leaf-soft); }
-
-.g-program-art .g-icon-base,
-.g-program-art .g-icon-hand {
-  fill: var(--g-forest);
-}
-
-.g-program-art .g-icon-line,
-.g-program-art .g-icon-route {
-  fill: none;
-  stroke: var(--g-forest-deep);
-  stroke-width: 9;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.g-program-art .g-icon-accent,
-.g-program-art .g-icon-wheel {
-  fill: var(--g-coral);
-}
-
-.g-program-art .g-icon-window {
-  fill: var(--g-cream);
-}
-
-.g-program-fund .g-icon-base {
-  fill: var(--g-sun);
-}
 
 /* The quote is allowed to be the image. */
 .g-story-grid {
@@ -1189,4 +1110,53 @@ a.g-primary-button {
 /* Shared link inheritance must never erase button foreground contrast. */
 .gathering-site a.g-light-button {
   color: var(--g-section-dark) !important;
+}
+
+/* v0.6.5 — Atelier Pass: community before geometry. */
+.g-hero-painting {
+  position: relative;
+  min-height: 560px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--g-sun) 50%, transparent);
+  border-radius: 1.3rem;
+  background: #1a120d;
+  box-shadow: 0 24px 70px rgba(31, 24, 18, .24);
+}
+
+.g-hero-painting::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 48%, rgba(18, 12, 8, .78));
+  content: "";
+}
+
+.g-hero-painting img {
+  display: block;
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.g-hero-painting > figcaption {
+  position: absolute;
+  right: 1.4rem;
+  bottom: 1.2rem;
+  left: 1.4rem;
+  z-index: 3;
+  color: #fff1d7;
+  font-family: var(--display);
+  font-size: clamp(1.35rem, 2.6vw, 2.2rem);
+  font-style: italic;
+}
+
+.g-hero-painting .g-impact-float {
+  z-index: 4;
+}
+
+@media (max-width: 760px) {
+  .g-hero-painting,
+  .g-hero-painting img { min-height: 390px; height: 390px; }
 }

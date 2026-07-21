@@ -1,309 +1,287 @@
-<!doctype html>
-<html lang="en" data-config="hearth">
+<!DOCTYPE html>
+
+<html data-config="hearth" lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Table is Viryn Studio's hospitality framework for neighborhood restaurants, food trucks, pop-ups, caterers, and private chefs.">
-  <meta property="og:title" content="Table — Viryn Studio Hospitality Framework">
-  <meta property="og:description" content="Hospitality designed from first craving to final service.">
-  <meta property="og:type" content="website">
-  <meta name="theme-color" content="#b9432f">
-  <title>Table — Viryn Studio Hospitality Framework</title>
-  <link rel="stylesheet" href="table.css?v=066">
-  <link rel="stylesheet" href="../../assets/shared/atelier-pass-ii.css?v=066">
-  <script src="../../assets/shared/config.js" defer></script>
-  <script src="table.js" defer></script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Table is Viryn Studio's hospitality framework for neighborhood restaurants, food trucks, pop-ups, caterers, and private chefs." name="description"/>
+<meta content="Table — Viryn Studio Hospitality Framework" property="og:title"/>
+<meta content="Hospitality designed from first craving to final service." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="#b9432f" name="theme-color"/>
+<title>Table — Viryn Studio Hospitality Framework</title>
+<link href="table.css?v=067" rel="stylesheet"/>
+<link href="../../assets/shared/atelier-pass-ii.css?v=067" rel="stylesheet"/><link href="../../assets/shared/atelier-fidelity-joinery.css?v=067" rel="stylesheet"/>
+<script defer="" src="../../assets/shared/config.js"></script>
+<script defer="" src="table.js"></script>
 </head>
 <body class="table-site atelier-page">
-  <a class="skip-link" href="#main">Skip to main content</a>
-
-  <header class="site-header">
-    <div class="shell nav-shell">
-      <a class="brand" href="../../" aria-label="Back to Viryn Studio">
-        <span class="brand-mark" aria-hidden="true">VT</span>
-        <span><b>Viryn</b> Table</span>
-      </a>
-      <nav class="nav-links" id="table-navigation" data-nav-links data-open="false" aria-label="Table navigation">
-        <a href="#configurations">Configurations</a>
-        <a href="#menu-system">Menu system</a>
-        <a href="#service-flow">Service flow</a>
-        <a href="#operations">Operations</a>
-        <a class="pill pill-dark" data-studio-contact href="mailto:siegelumiere@gmail.com">Build with Table</a>
-      </nav>
-      <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="table-navigation">Menu</button>
-    </div>
-  </header>
-
-  <main id="main">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="shell hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">Framework 04 · Hospitality</p>
-          <h1 id="hero-title">The site should feel like the first moment of service.</h1><div class="atelier-hand-rule" aria-hidden="true"><span>✦</span></div>
-          <p class="hero-lede" data-hero-copy>Warm the room before the guest arrives. Hearth gives neighborhood restaurants, cafés, bakeries, and takeout counters a fast path to menu, hours, directions, reservations, and ordering.</p>
-          <div class="action-row">
-            <button class="pill pill-primary" type="button" data-open-flow>Plan a visit</button>
-            <a class="pill pill-ghost" href="#menu-system">Taste the menu system</a>
-          </div>
-          <div class="service-signals" aria-label="Current framework priorities">
-            <span>Mobile-first</span>
-            <span>Fast menu access</span>
-            <span>Clear next action</span>
-            <span>Operationally honest</span>
-          </div>
-        </div>
-
-        <div class="hero-stage atelier-table-stage" aria-label="A warmly lit kitchen where a plate is being finished for service">
-          <img class="atelier-table-painting" src="../../assets/atelier/table.jpg" srcset="../../assets/atelier/table.jpg 1x, ../../assets/atelier/table-2x.jpg 2x" alt="Hands finishing a beautiful plate in a warmly lit working kitchen."/>
-          <article class="order-ticket">
-            <div class="ticket-top">
-              <span data-ticket-label>Neighborhood table</span>
-              <span>OPEN</span>
-            </div>
-            <strong data-ticket-title>Bread, roses & a hot plate.</strong>
-            <dl>
-              <div><dt>Primary action</dt><dd data-ticket-action>Order / reserve</dd></div>
-              <div><dt>Best for</dt><dd data-ticket-fit>Restaurants & cafés</dd></div>
-              <div><dt>Signal</dt><dd data-ticket-signal>Come inside</dd></div>
-            </dl>
-            <div class="ticket-status"><i></i><span>Service architecture ready</span></div>
-          </article>
-          <p class="stage-caption">Concept preview · no live orders or payments. <span>Kitchen note: save me one.</span></p>
-        </div>
-      </div>
-    </section>
-
-    <section class="marquee" aria-label="Table framework statement">
-      <div>
-        <span>Menu</span><i>•</i><span>Order</span><i>•</i><span>Visit</span><i>•</i><span>Reserve</span><i>•</i><span>Cater</span><i>•</i><span>Return</span><i>•</i>
-        <span aria-hidden="true">Menu</span><i aria-hidden="true">•</i><span aria-hidden="true">Order</span><i aria-hidden="true">•</i><span aria-hidden="true">Visit</span><i aria-hidden="true">•</i><span aria-hidden="true">Reserve</span><i aria-hidden="true">•</i><span aria-hidden="true">Cater</span><i aria-hidden="true">•</i><span aria-hidden="true">Return</span><i aria-hidden="true">•</i>
-      </div>
-    </section>
-
-    <section class="section" id="configurations">
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Three rooms, one service spine</p>
-            <h2>Choose the configuration that matches how the food moves.</h2>
-          </div>
-          <p>Table keeps the guest journey clear while adapting the public interface, intake fields, and operational priorities to the business behind it.</p>
-        </div>
-
-        <div class="config-switcher" role="group" aria-label="Choose a Table configuration">
-          <button class="config-button is-active" type="button" data-config-button="hearth" aria-pressed="true">
-            <span>01</span><strong>Hearth</strong><small>Restaurant · café · counter</small>
-          </button>
-          <button class="config-button" type="button" data-config-button="route" aria-pressed="false">
-            <span>02</span><strong>Route</strong><small>Food truck · pop-up · vendor</small>
-          </button>
-          <button class="config-button" type="button" data-config-button="feast" aria-pressed="false">
-            <span>03</span><strong>Feast</strong><small>Catering · private chef · events</small>
-          </button>
-        </div>
-
-        <article class="config-detail" aria-live="polite">
-          <div>
-            <p class="config-number" data-config-number>Configuration 01</p>
-            <h3 data-config-title>Hearth makes the neighborhood table easy to find.</h3>
-            <p data-config-description>For guests who already feel hungry, the website must answer five questions immediately: what is on the menu, when are you open, where are you, can I order, and can I sit down?</p>
-          </div>
-          <ul data-config-features>
-            <li>Readable live menu</li>
-            <li>Hours, maps, and tap-to-call</li>
-            <li>Ordering and reservation links</li>
-            <li>Daily specials and featured plates</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section class="section menu-section" id="menu-system">
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">A menu, not a scavenger hunt</p>
-            <h2>Hungry people should not have to pinch-zoom a PDF.</h2>
-          </div>
-          <p>The demonstration menu is filterable, readable on a phone, and structured so seasonal changes do not require rebuilding the page.</p>
-        </div>
-
-        <div class="menu-toolbar" role="group" aria-label="Filter demonstration menu">
-          <button class="menu-filter is-active" type="button" data-menu-filter="all" aria-pressed="true">All</button>
-          <button class="menu-filter" type="button" data-menu-filter="small" aria-pressed="false">Small plates</button>
-          <button class="menu-filter" type="button" data-menu-filter="main" aria-pressed="false">Mains</button>
-          <button class="menu-filter" type="button" data-menu-filter="side" aria-pressed="false">Sides</button>
-          <button class="menu-filter" type="button" data-menu-filter="drink" aria-pressed="false">Drinks</button>
-        </div>
-
-        <div class="menu-grid" id="menu-grid" aria-live="polite"></div>
-        <p class="fine-print">Synthetic menu content for interface demonstration only. Dietary labels require client review and kitchen verification before launch.</p>
-      </div>
-    </section>
-
-    <section class="section service-section" id="service-flow">
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">Guest pathway</p>
-            <h2>Every request should know what happens next.</h2>
-          </div>
-          <p>A calm public form can feed a disciplined operating record. The surface feels hospitable; the structure underneath prevents details from disappearing into text messages.</p>
-        </div>
-
-        <div class="flow-layout">
-          <div class="flow-steps" role="tablist" aria-label="Hospitality service stages">
-            <button type="button" role="tab" class="flow-step is-active" data-flow-step="inquiry" aria-selected="true"><span>01</span>Inquiry</button>
-            <button type="button" role="tab" class="flow-step" data-flow-step="review" aria-selected="false"><span>02</span>Review</button>
-            <button type="button" role="tab" class="flow-step" data-flow-step="quote" aria-selected="false"><span>03</span>Quote</button>
-            <button type="button" role="tab" class="flow-step" data-flow-step="deposit" aria-selected="false"><span>04</span>Deposit</button>
-            <button type="button" role="tab" class="flow-step" data-flow-step="calendar" aria-selected="false"><span>05</span>Calendar</button>
-            <button type="button" role="tab" class="flow-step" data-flow-step="production" aria-selected="false"><span>06</span>Production</button>
-            <button type="button" role="tab" class="flow-step" data-flow-step="fulfilled" aria-selected="false"><span>07</span>Fulfilled</button>
-          </div>
-
-          <article class="flow-panel" id="flow-panel" role="tabpanel" aria-live="polite">
-            <div class="flow-panel-top">
-              <p class="flow-label" data-flow-label>Guest-facing intake</p>
-              <span class="status-chip" data-flow-status>New</span>
-            </div>
-            <h3 data-flow-title>A structured request enters one working record.</h3>
-            <p data-flow-copy>Date, headcount, location, service type, menu interest, dietary notes, budget, and contact details arrive together instead of scattering across calls and direct messages.</p>
-            <div class="record-grid" data-flow-records>
-              <div><span>Event</span><strong>Family celebration</strong></div>
-              <div><span>Date</span><strong>September 19</strong></div>
-              <div><span>Guests</span><strong>45</strong></div>
-              <div><span>Status</span><strong>Needs review</strong></div>
-            </div>
-          </article>
-        </div>
-
-        <div class="flow-cta">
-          <div>
-            <p class="eyebrow">Try the threshold</p>
-            <h3>Walk through a demonstration intake.</h3>
-            <p>Nothing is submitted or stored. The interaction exists to test the questions, order, and emotional temperature of the flow.</p>
-          </div>
-          <button class="pill pill-dark" type="button" data-open-flow>Open service planner</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="section operations-section" id="operations">
-      <div class="shell">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">The operating view</p>
-            <h2>A dashboard is a window, not the foundation.</h2>
-          </div>
-          <p>Table begins with spreadsheet-shaped data and clear status rules. Once the real workflow is understood, the owner can choose whether the source remains a sheet, moves into a CRM, or becomes custom software.</p>
-        </div>
-
-        <div class="dashboard" aria-label="Synthetic hospitality operations dashboard">
-          <div class="dashboard-bar">
-            <div><i></i><span>Table Service Board</span></div>
-            <span>Demo data · Week 38</span>
-          </div>
-          <div class="metric-grid">
-            <article class="metric-card-primary"><span>Quoted value</span><strong>$7,840</strong><small>Across 05 open proposals</small></article>
-            <article><span>New requests</span><strong>08</strong><small>3 need review today</small></article>
-            <article><span>Deposits due</span><strong>03</strong><small>2 reminders queued</small></article>
-            <article><span>Services booked</span><strong>06</strong><small>Across the next 14 days</small></article>
-          </div>
-          <div class="orders-table" role="table" aria-label="Synthetic hospitality orders">
-            <div class="orders-row orders-head" role="row">
-              <span role="columnheader">Service</span><span role="columnheader">Date</span><span role="columnheader">Value</span><span role="columnheader">Status</span>
-            </div>
-            <div class="orders-row" role="row">
-              <span role="cell"><b>Grant family dinner</b><small>Feast · 45 guests</small></span><span role="cell">Sep 19</span><span role="cell">$1,480</span><span role="cell"><em class="status quote">Quote sent</em></span>
-            </div>
-            <div class="orders-row" role="row">
-              <span role="cell"><b>Canal Street lunch</b><small>Route · preorder window</small></span><span role="cell">Sep 21</span><span role="cell">$620</span><span role="cell"><em class="status paid">Deposit paid</em></span>
-            </div>
-            <div class="orders-row" role="row">
-              <span role="cell"><b>Sunday brunch</b><small>Hearth · 12 seats</small></span><span role="cell">Sep 22</span><span role="cell">$384</span><span role="cell"><em class="status ready">Confirmed</em></span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section closing-section">
-      <div class="shell closing-grid">
-        <div>
-          <p class="eyebrow">Viryn Table</p>
-          <h2>From first craving to final service.</h2>
-        </div>
-        <div>
-          <p>Table is built to learn. Each restaurant, truck, and catering partner can refine the fields, handoffs, and calls to action until the framework fits real service instead of forcing service to fit software.</p>
-          <div class="action-row">
-            <a class="pill pill-primary" data-studio-contact href="mailto:siegelumiere@gmail.com">Start a Table project</a>
-            <a class="pill pill-ghost" href="../../#frameworks">Return to Studio</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div class="shell footer-grid">
-      <p><strong>Viryn Studio.</strong> Let’s Get Familiar.</p>
-      <p>Table is a static framework demonstration. Payments, reservations, order routing, and private customer records require reviewed production services.</p>
-    </div>
-  </footer>
-
-  <dialog class="planner" id="service-planner" aria-labelledby="planner-title">
-    <form method="dialog" class="planner-card" id="planner-form">
-      <button class="planner-close" type="button" data-close-flow aria-label="Close service planner">×</button>
-      <div class="planner-progress" aria-label="Service planner progress"><i data-progress-bar></i></div>
-
-      <section class="planner-step is-active" data-planner-step="1">
-        <p class="eyebrow">Step 1 of 3</p>
-        <h2 id="planner-title">What kind of service are you planning?</h2>
-        <p class="planner-intro" data-planner-intro>Tell the restaurant when and how you hope to arrive.</p>
-        <label>Service type
-          <select name="serviceType" required data-service-type>
-            <option value="">Choose one</option>
-            <option>Dine-in reservation</option>
-            <option>Pickup order</option>
-            <option>Large-group table</option>
-          </select>
-        </label>
-        <div class="field-pair">
-          <label>Date<input type="date" name="date" required></label>
-          <label>Party / guest count<input type="number" name="guests" min="1" max="1000" placeholder="4" required></label>
-        </div>
-        <button class="pill pill-primary planner-next" type="button" data-next-step>Continue</button>
-      </section>
-
-      <section class="planner-step" data-planner-step="2" hidden>
-        <p class="eyebrow">Step 2 of 3</p>
-        <h2>What should the kitchen know?</h2>
-        <label>Menu interest or request<textarea name="menuInterest" rows="4" placeholder="Tell us what caught your eye."></textarea></label>
-        <label>Allergies or dietary notes<textarea name="dietary" rows="3" placeholder="Please share details clearly. The kitchen must confirm accommodations."></textarea></label>
-        <div class="planner-actions"><button class="pill pill-ghost" type="button" data-prev-step>Back</button><button class="pill pill-primary" type="button" data-next-step>Continue</button></div>
-      </section>
-
-      <section class="planner-step" data-planner-step="3" hidden>
-        <p class="eyebrow">Step 3 of 3</p>
-        <h2>Where should the reply go?</h2>
-        <div class="field-pair">
-          <label>Name<input type="text" name="name" autocomplete="name" required></label>
-          <label>Email<input type="email" name="email" autocomplete="email" required></label>
-        </div>
-        <label>Anything else?<textarea name="notes" rows="3" placeholder="Timing, access, delivery, or celebration details."></textarea></label>
-        <label class="consent-check"><input type="checkbox" required> <span>I understand this demonstration does not submit or store my information.</span></label>
-        <div class="planner-actions"><button class="pill pill-ghost" type="button" data-prev-step>Back</button><button class="pill pill-primary" type="submit">Review the path</button></div>
-      </section>
-
-      <section class="planner-step planner-result" data-planner-step="result" hidden>
-        <p class="eyebrow">Demonstration complete</p>
-        <h2>The request has a shape.</h2>
-        <p>A production version could now route this record to a spreadsheet, inbox, calendar, CRM, payment request, or purpose-built dashboard—without making the guest repeat themselves.</p>
-        <div class="summary-card" data-planner-summary></div>
-        <button class="pill pill-dark" type="button" data-close-flow>Close demonstration</button>
-      </section>
-    </form>
-  </dialog>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="shell nav-shell">
+<a aria-label="Back to Viryn Studio" class="brand" href="../../">
+<span aria-hidden="true" class="brand-mark">VT</span>
+<span><b>Viryn</b> Table</span>
+</a>
+<nav aria-label="Table navigation" class="nav-links" data-nav-links="" data-open="false" id="table-navigation">
+<a href="#configurations">Configurations</a>
+<a href="#menu-system">Menu system</a>
+<a href="#service-flow">Service flow</a>
+<a href="#operations">Operations</a>
+<a class="pill pill-dark" data-studio-contact="" href="mailto:siegelumiere@gmail.com">Build with Table</a>
+</nav>
+<button aria-controls="table-navigation" aria-expanded="false" class="nav-toggle" data-nav-toggle="" type="button">Menu</button>
+</div>
+</header>
+<main id="main">
+<section aria-labelledby="hero-title" class="hero">
+<div class="shell hero-grid">
+<div class="hero-copy">
+<p class="eyebrow">Framework 04 · Hospitality</p>
+<h1 id="hero-title">The site should feel like the first moment of service.</h1><div aria-hidden="true" class="atelier-hand-rule"><span>✦</span></div>
+<p class="hero-lede" data-hero-copy="">Warm the room before the guest arrives. Hearth gives neighborhood restaurants, cafés, bakeries, and takeout counters a fast path to menu, hours, directions, reservations, and ordering.</p>
+<div class="action-row">
+<button class="pill pill-primary" data-open-flow="" type="button">Plan a visit</button>
+<a class="pill pill-ghost" href="#menu-system">Taste the menu system</a>
+</div>
+<div aria-label="Current framework priorities" class="service-signals">
+<span>Mobile-first</span>
+<span>Fast menu access</span>
+<span>Clear next action</span>
+<span>Operationally honest</span>
+</div>
+</div>
+<div aria-label="A warmly lit kitchen where a plate is being finished for service" class="hero-stage atelier-table-stage">
+<picture class="atelier-picture atelier-table-painting"><source media="(max-width: 699px)" sizes="92vw" srcset="../../assets/atelier/v067/table-portrait-640.webp 640w, ../../assets/atelier/v067/table-portrait-960.webp 960w" type="image/webp"/><source sizes="(max-width: 1100px) 92vw, 48vw" srcset="../../assets/atelier/v067/table-720.webp 720w, ../../assets/atelier/v067/table-1200.webp 1200w, ../../assets/atelier/v067/table-1800.webp 1800w, ../../assets/atelier/v067/table-2400.webp 2400w" type="image/webp"/><img alt="Hands finishing a beautiful plate in a warmly lit working kitchen." decoding="async" fetchpriority="high" height="373" loading="eager" src="../../assets/atelier/v067/table-1200.webp" width="1200"/></picture>
+<article class="order-ticket">
+<div class="ticket-top">
+<span data-ticket-label="">Neighborhood table</span>
+<span>OPEN</span>
+</div>
+<strong data-ticket-title="">Bread, roses &amp; a hot plate.</strong>
+<dl>
+<div><dt>Primary action</dt><dd data-ticket-action="">Order / reserve</dd></div>
+<div><dt>Best for</dt><dd data-ticket-fit="">Restaurants &amp; cafés</dd></div>
+<div><dt>Signal</dt><dd data-ticket-signal="">Come inside</dd></div>
+</dl>
+<div class="ticket-status"><i></i><span>Service architecture ready</span></div>
+</article>
+<p class="stage-caption">Concept preview · no live orders or payments. <span>Kitchen note: save me one.</span></p>
+</div>
+</div>
+</section>
+<section aria-label="Table framework statement" class="marquee">
+<div>
+<span>Menu</span><i>•</i><span>Order</span><i>•</i><span>Visit</span><i>•</i><span>Reserve</span><i>•</i><span>Cater</span><i>•</i><span>Return</span><i>•</i>
+<span aria-hidden="true">Menu</span><i aria-hidden="true">•</i><span aria-hidden="true">Order</span><i aria-hidden="true">•</i><span aria-hidden="true">Visit</span><i aria-hidden="true">•</i><span aria-hidden="true">Reserve</span><i aria-hidden="true">•</i><span aria-hidden="true">Cater</span><i aria-hidden="true">•</i><span aria-hidden="true">Return</span><i aria-hidden="true">•</i>
+</div>
+</section>
+<section class="section" id="configurations">
+<div class="shell">
+<div class="section-heading">
+<div>
+<p class="eyebrow">Three rooms, one service spine</p>
+<h2>Choose the configuration that matches how the food moves.</h2>
+</div>
+<p>Table keeps the guest journey clear while adapting the public interface, intake fields, and operational priorities to the business behind it.</p>
+</div>
+<div aria-label="Choose a Table configuration" class="config-switcher" role="group">
+<button aria-pressed="true" class="config-button is-active" data-config-button="hearth" type="button">
+<span>01</span><strong>Hearth</strong><small>Restaurant · café · counter</small>
+</button>
+<button aria-pressed="false" class="config-button" data-config-button="route" type="button">
+<span>02</span><strong>Route</strong><small>Food truck · pop-up · vendor</small>
+</button>
+<button aria-pressed="false" class="config-button" data-config-button="feast" type="button">
+<span>03</span><strong>Feast</strong><small>Catering · private chef · events</small>
+</button>
+</div>
+<article aria-live="polite" class="config-detail">
+<div>
+<p class="config-number" data-config-number="">Configuration 01</p>
+<h3 data-config-title="">Hearth makes the neighborhood table easy to find.</h3>
+<p data-config-description="">For guests who already feel hungry, the website must answer five questions immediately: what is on the menu, when are you open, where are you, can I order, and can I sit down?</p>
+</div>
+<ul data-config-features="">
+<li>Readable live menu</li>
+<li>Hours, maps, and tap-to-call</li>
+<li>Ordering and reservation links</li>
+<li>Daily specials and featured plates</li>
+</ul>
+</article>
+</div>
+</section>
+<section class="section menu-section" id="menu-system">
+<div class="shell">
+<div class="section-heading">
+<div>
+<p class="eyebrow">A menu, not a scavenger hunt</p>
+<h2>Hungry people should not have to pinch-zoom a PDF.</h2>
+</div>
+<p>The demonstration menu is filterable, readable on a phone, and structured so seasonal changes do not require rebuilding the page.</p>
+</div>
+<div aria-label="Filter demonstration menu" class="menu-toolbar" role="group">
+<button aria-pressed="true" class="menu-filter is-active" data-menu-filter="all" type="button">All</button>
+<button aria-pressed="false" class="menu-filter" data-menu-filter="small" type="button">Small plates</button>
+<button aria-pressed="false" class="menu-filter" data-menu-filter="main" type="button">Mains</button>
+<button aria-pressed="false" class="menu-filter" data-menu-filter="side" type="button">Sides</button>
+<button aria-pressed="false" class="menu-filter" data-menu-filter="drink" type="button">Drinks</button>
+</div>
+<div aria-live="polite" class="menu-grid" id="menu-grid"></div>
+<p class="fine-print">Synthetic menu content for interface demonstration only. Dietary labels require client review and kitchen verification before launch.</p>
+</div>
+</section>
+<section class="section service-section" id="service-flow">
+<div class="shell">
+<div class="section-heading">
+<div>
+<p class="eyebrow">Guest pathway</p>
+<h2>Every request should know what happens next.</h2>
+</div>
+<p>A calm public form can feed a disciplined operating record. The surface feels hospitable; the structure underneath prevents details from disappearing into text messages.</p>
+</div>
+<div class="flow-layout">
+<div aria-label="Hospitality service stages" class="flow-steps" role="tablist">
+<button aria-selected="true" class="flow-step is-active" data-flow-step="inquiry" role="tab" type="button"><span>01</span>Inquiry</button>
+<button aria-selected="false" class="flow-step" data-flow-step="review" role="tab" type="button"><span>02</span>Review</button>
+<button aria-selected="false" class="flow-step" data-flow-step="quote" role="tab" type="button"><span>03</span>Quote</button>
+<button aria-selected="false" class="flow-step" data-flow-step="deposit" role="tab" type="button"><span>04</span>Deposit</button>
+<button aria-selected="false" class="flow-step" data-flow-step="calendar" role="tab" type="button"><span>05</span>Calendar</button>
+<button aria-selected="false" class="flow-step" data-flow-step="production" role="tab" type="button"><span>06</span>Production</button>
+<button aria-selected="false" class="flow-step" data-flow-step="fulfilled" role="tab" type="button"><span>07</span>Fulfilled</button>
+</div>
+<article aria-live="polite" class="flow-panel" id="flow-panel" role="tabpanel">
+<div class="flow-panel-top">
+<p class="flow-label" data-flow-label="">Guest-facing intake</p>
+<span class="status-chip" data-flow-status="">New</span>
+</div>
+<h3 data-flow-title="">A structured request enters one working record.</h3>
+<p data-flow-copy="">Date, headcount, location, service type, menu interest, dietary notes, budget, and contact details arrive together instead of scattering across calls and direct messages.</p>
+<div class="record-grid" data-flow-records="">
+<div><span>Event</span><strong>Family celebration</strong></div>
+<div><span>Date</span><strong>September 19</strong></div>
+<div><span>Guests</span><strong>45</strong></div>
+<div><span>Status</span><strong>Needs review</strong></div>
+</div>
+</article>
+</div>
+<div class="flow-cta">
+<div>
+<p class="eyebrow">Try the threshold</p>
+<h3>Walk through a demonstration intake.</h3>
+<p>Nothing is submitted or stored. The interaction exists to test the questions, order, and emotional temperature of the flow.</p>
+</div>
+<button class="pill pill-dark" data-open-flow="" type="button">Open service planner</button>
+</div>
+</div>
+</section>
+<section class="section operations-section" id="operations">
+<div class="shell">
+<div class="section-heading">
+<div>
+<p class="eyebrow">The operating view</p>
+<h2>A dashboard is a window, not the foundation.</h2>
+</div>
+<p>Table begins with spreadsheet-shaped data and clear status rules. Once the real workflow is understood, the owner can choose whether the source remains a sheet, moves into a CRM, or becomes custom software.</p>
+</div>
+<div aria-label="Synthetic hospitality operations dashboard" class="dashboard">
+<div class="dashboard-bar">
+<div><i></i><span>Table Service Board</span></div>
+<span>Demo data · Week 38</span>
+</div>
+<div class="metric-grid">
+<article class="metric-card-primary"><span>Quoted value</span><strong>$7,840</strong><small>Across 05 open proposals</small></article>
+<article><span>New requests</span><strong>08</strong><small>3 need review today</small></article>
+<article><span>Deposits due</span><strong>03</strong><small>2 reminders queued</small></article>
+<article><span>Services booked</span><strong>06</strong><small>Across the next 14 days</small></article>
+</div>
+<div aria-label="Synthetic hospitality orders" class="orders-table" role="table">
+<div class="orders-row orders-head" role="row">
+<span role="columnheader">Service</span><span role="columnheader">Date</span><span role="columnheader">Value</span><span role="columnheader">Status</span>
+</div>
+<div class="orders-row" role="row">
+<span role="cell"><b>Grant family dinner</b><small>Feast · 45 guests</small></span><span role="cell">Sep 19</span><span role="cell">$1,480</span><span role="cell"><em class="status quote">Quote sent</em></span>
+</div>
+<div class="orders-row" role="row">
+<span role="cell"><b>Canal Street lunch</b><small>Route · preorder window</small></span><span role="cell">Sep 21</span><span role="cell">$620</span><span role="cell"><em class="status paid">Deposit paid</em></span>
+</div>
+<div class="orders-row" role="row">
+<span role="cell"><b>Sunday brunch</b><small>Hearth · 12 seats</small></span><span role="cell">Sep 22</span><span role="cell">$384</span><span role="cell"><em class="status ready">Confirmed</em></span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section closing-section">
+<div class="shell closing-grid">
+<div>
+<p class="eyebrow">Viryn Table</p>
+<h2>From first craving to final service.</h2>
+</div>
+<div>
+<p>Table is built to learn. Each restaurant, truck, and catering partner can refine the fields, handoffs, and calls to action until the framework fits real service instead of forcing service to fit software.</p>
+<div class="action-row">
+<a class="pill pill-primary" data-studio-contact="" href="mailto:siegelumiere@gmail.com">Start a Table project</a>
+<a class="pill pill-ghost" href="../../#frameworks">Return to Studio</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
+<div class="shell footer-grid">
+<p><strong>Viryn Studio.</strong> Let’s Get Familiar.</p>
+<p>Table is a static framework demonstration. Payments, reservations, order routing, and private customer records require reviewed production services.</p>
+</div>
+</footer>
+<dialog aria-labelledby="planner-title" class="planner" id="service-planner">
+<form class="planner-card" id="planner-form" method="dialog">
+<button aria-label="Close service planner" class="planner-close" data-close-flow="" type="button">×</button>
+<div aria-label="Service planner progress" class="planner-progress"><i data-progress-bar=""></i></div>
+<section class="planner-step is-active" data-planner-step="1">
+<p class="eyebrow">Step 1 of 3</p>
+<h2 id="planner-title">What kind of service are you planning?</h2>
+<p class="planner-intro" data-planner-intro="">Tell the restaurant when and how you hope to arrive.</p>
+<label>Service type
+          <select data-service-type="" name="serviceType" required="">
+<option value="">Choose one</option>
+<option>Dine-in reservation</option>
+<option>Pickup order</option>
+<option>Large-group table</option>
+</select>
+</label>
+<div class="field-pair">
+<label>Date<input name="date" required="" type="date"/></label>
+<label>Party / guest count<input max="1000" min="1" name="guests" placeholder="4" required="" type="number"/></label>
+</div>
+<button class="pill pill-primary planner-next" data-next-step="" type="button">Continue</button>
+</section>
+<section class="planner-step" data-planner-step="2" hidden="">
+<p class="eyebrow">Step 2 of 3</p>
+<h2>What should the kitchen know?</h2>
+<label>Menu interest or request<textarea name="menuInterest" placeholder="Tell us what caught your eye." rows="4"></textarea></label>
+<label>Allergies or dietary notes<textarea name="dietary" placeholder="Please share details clearly. The kitchen must confirm accommodations." rows="3"></textarea></label>
+<div class="planner-actions"><button class="pill pill-ghost" data-prev-step="" type="button">Back</button><button class="pill pill-primary" data-next-step="" type="button">Continue</button></div>
+</section>
+<section class="planner-step" data-planner-step="3" hidden="">
+<p class="eyebrow">Step 3 of 3</p>
+<h2>Where should the reply go?</h2>
+<div class="field-pair">
+<label>Name<input autocomplete="name" name="name" required="" type="text"/></label>
+<label>Email<input autocomplete="email" name="email" required="" type="email"/></label>
+</div>
+<label>Anything else?<textarea name="notes" placeholder="Timing, access, delivery, or celebration details." rows="3"></textarea></label>
+<label class="consent-check"><input required="" type="checkbox"/> <span>I understand this demonstration does not submit or store my information.</span></label>
+<div class="planner-actions"><button class="pill pill-ghost" data-prev-step="" type="button">Back</button><button class="pill pill-primary" type="submit">Review the path</button></div>
+</section>
+<section class="planner-step planner-result" data-planner-step="result" hidden="">
+<p class="eyebrow">Demonstration complete</p>
+<h2>The request has a shape.</h2>
+<p>A production version could now route this record to a spreadsheet, inbox, calendar, CRM, payment request, or purpose-built dashboard—without making the guest repeat themselves.</p>
+<div class="summary-card" data-planner-summary=""></div>
+<button class="pill pill-dark" data-close-flow="" type="button">Close demonstration</button>
+</section>
+</form>
+</dialog>
 </body>
 </html>

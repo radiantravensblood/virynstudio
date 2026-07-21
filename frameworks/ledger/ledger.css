@@ -200,14 +200,6 @@
   place-items: center;
 }
 
-.l-hero-sigil svg { width: min(100%, 560px); filter: drop-shadow(0 22px 60px rgba(0,0,0,.28)); }
-.l-sigil-ring { fill: none; stroke: rgba(215,182,109,.24); stroke-width: 1.6; }
-.l-ring-two { stroke-dasharray: 3 12; }
-.l-ring-three { stroke: rgba(244,234,210,.2); }
-.l-sigil-center { fill: rgba(215,182,109,.12); stroke: var(--l-gold); stroke-width: 2; }
-.l-sigil-path { fill: none; stroke: var(--l-gold); stroke-linecap: round; stroke-width: 5; }
-.l-sigil-node { fill: var(--l-midnight); stroke: var(--l-gold); stroke-width: 4; }
-
 .l-hero-note {
   position: absolute;
   right: 0;
@@ -394,40 +386,6 @@
 .l-hero::before {
   background-image: linear-gradient(rgba(215,182,109,.04) 1px, transparent 1px);
   background-size: 100% 44px;
-}
-
-.l-hero-sigil svg {
-  width: min(100%, 570px);
-}
-
-.l-ledger-page {
-  fill: rgba(244,234,210,.055);
-  stroke: rgba(244,234,210,.38);
-  stroke-width: 2;
-}
-
-.l-ledger-spine,
-.l-ledger-rules {
-  fill: none;
-  stroke: rgba(244,234,210,.22);
-  stroke-width: 2;
-}
-
-.l-ledger-path {
-  fill: none;
-  stroke: var(--l-gold);
-  stroke-width: 8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-}
-
-.l-ledger-markers,
-.l-ledger-note {
-  fill: var(--l-gold);
-}
-
-.l-ledger-note {
-  opacity: .55;
 }
 
 .l-audience-card::after {

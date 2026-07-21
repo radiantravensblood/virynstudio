@@ -162,3 +162,14 @@ The static demonstration models inquiry, human review, quote, deposit, calendar,
 ## Human Hands visual QA (v0.6.2)
 
 Hero compositions use an explicit object hierarchy: ground, supporting geometry, primary artifact, organic accent, micro-detail. Decorative elements may overlap one another, but they may not enter protected copy rectangles, obscure operational information, or create accidental tangent edges. Responsive layouts are art-directed at each breakpoint rather than treated as compressed desktop compositions.
+
+
+## v0.6.7 visual joinery
+
+The Atelier layer uses three visual scales:
+
+1. **Threshold painting** — one emotional center, delivered through art-directed responsive sources.
+2. **Hand-worked spot illustration** — functional modules, services, and small invitations rendered through the shared Studio symbol family.
+3. **Technical diagram** — used only when structure itself must be understood.
+
+Artwork, captions, and information cards must remain separate structural siblings. Absolute positioning may decorate an established safe area, but it may not carry essential copy or interaction.
