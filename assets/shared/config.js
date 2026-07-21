@@ -32,31 +32,40 @@ window.VIRYN_STUDIO_CONFIG = {
 
   frameworks: [
     {
-      id: "signal",
-      name: "Signal",
-      audience: "Musicians, bands, performers, and creative professionals",
-      promise: "Turn releases, private listening rooms, archives, media, and professional access into one stage-ready home.",
-      includes: ["Featured release", "Private listening room", "EPK", "Archive mode"],
-      href: "frameworks/signal/",
-      accent: "plum"
-    },
-    {
       id: "gathering",
       name: "Gathering",
       audience: "Nonprofits, ministries, mutual-aid groups, and community organizations",
-      promise: "Make the mission clear, the next action visible, and the organization easier to trust.",
-      includes: ["Mission and programs", "Volunteer path", "Events", "Donation readiness"],
+      promise: "Bring mission, events, signups, volunteering, and local care into one warm, trustworthy home.",
+      includes: ["Mission and programs", "Events and calendars", "Volunteer paths", "Donation readiness"],
       href: "frameworks/gathering/",
-      accent: "moss"
+      accent: "moss",
+      art: "assets/atelier/gathering.jpg",
+      artAlt: "Neighbors gathered beneath warm lights around a shared community table.",
+      whisper: "Someone saved you a chair."
     },
     {
       id: "ledger",
       name: "Ledger",
-      audience: "Consultants, educators, coaches, and professional services",
-      promise: "Translate expertise into a clear offer that earns the right conversations.",
-      includes: ["Positioning", "Services", "Process", "Lead intake"],
+      audience: "Consultants, educators, trainers, coaches, and knowledge-led practices",
+      promise: "Equip people to turn your knowledge into confident practice through resources, teaching, consultation, and clear next steps.",
+      includes: ["Courses and resources", "Video and curriculum", "Consultation", "Qualified intake"],
       href: "frameworks/ledger/",
-      accent: "ember"
+      accent: "ember",
+      art: "assets/atelier/ledger.jpg",
+      artAlt: "An inviting study filled with open books, practical notes, and warm working light.",
+      whisper: "Margin note: try it your way."
+    },
+    {
+      id: "signal",
+      name: "Signal",
+      audience: "Musicians, bands, performers, and creative professionals",
+      promise: "Give releases, listening rooms, archives, media, and professional access one stage-ready home.",
+      includes: ["Featured release", "Private listening room", "EPK", "Archive mode"],
+      href: "frameworks/signal/",
+      accent: "plum",
+      art: "assets/atelier/signal.jpg",
+      artAlt: "A listening room with a microphone, a turntable, and blue stage light waiting for the first note.",
+      whisper: "The room is already listening."
     },
     {
       id: "table",
@@ -65,7 +74,10 @@ window.VIRYN_STUDIO_CONFIG = {
       promise: "Carry guests from first craving to ordering, booking, visiting, or planning an event without losing the operational thread.",
       includes: ["Live menu", "Visit and order paths", "Catering intake", "Service workflow"],
       href: "frameworks/table/",
-      accent: "gold"
+      accent: "gold",
+      art: "assets/atelier/table.jpg",
+      artAlt: "Hands finishing a beautiful plate in a warmly lit working kitchen.",
+      whisper: "Kitchen note: save me one."
     }
   ],
 
@@ -121,6 +133,7 @@ window.VIRYN_STUDIO_CONFIG = {
         "Advanced integrations",
         "Content migration",
         "Multiple stakeholder reviews",
+        "Three structured revision cycles",
         "Documented accessibility review and remediation scope",
         "Documented handoff and training",
         "Priority support",

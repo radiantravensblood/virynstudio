@@ -1,5 +1,29 @@
 # Changelog
 
+## v0.6.5 — Atelier Pass
+
+### Changed
+- Reintroduced original painterly art direction across the flagship, Gathering, Ledger, Table, and Gathering Commons.
+- Built a new outward-facing flagship hero around the Studio atelier rather than private relational imagery.
+- Added four authored framework paintings and small human invitation notes: a saved chair, a margin note, a listening room, and a kitchen request.
+- Reframed the flagship as **an atelier for a caring internet** while preserving the proven-framework service model.
+- Clarified that Studio Editions are fully realized examples of a framework adapting to a specific real-world need.
+- Rewrote the five-stage process so client decisions and Studio responsibilities are explicit at every step.
+- Repositioned Ledger around equipping people to translate knowledge into resources, teaching, consultation, and confident practice.
+- Replaced the Active Brain Community abstraction with a community-first painting so belonging is the first emotional read.
+- Added three structured revision cycles to the Signature System and mirrored that limit in the FAQ.
+- Added a warm parchment process room, a Studio promise interlude, and a more playful, tactile flagship identity.
+
+### Fixed
+- Public copy that relied on internal metaphors such as “a new muscle,” “midnight and gold,” or unexplained specialist language.
+- Gathering and Ledger hero art that read as diagrams before they read as lived human work.
+- The flagship hero verb changed from “knows” to the more relational and broadly readable “understands.”
+- Table’s hero now shows practiced hospitality while retaining its useful order-ticket interaction.
+
+### Atelier boundary
+- Public Studio art may carry the Viryn eye without turning private devotional or family intimacy into brand collateral.
+- One emotional center, one symbolic language, light as narrative, and ornament only after comprehension.
+
 ## v0.6.4 — Comprehension & Composition
 
 ### Changed

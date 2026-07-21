@@ -1,4 +1,4 @@
-# Viryn Studio v0.6.4 Manual Test Checklist
+# Viryn Studio v0.6.5 Manual Test Checklist
 
 ## Public paths
 
@@ -74,39 +74,6 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - [ ] The flagship homepage renders four framework cards and a Table portfolio card.
 
 
-## v0.6.1 credibility-pass checks
-
-- [ ] The near-top framework directory contains exactly four working shortcuts: Signal, Gathering, Ledger, and Table.
-- [ ] At mobile width, the framework directory scrolls horizontally without causing page-level horizontal overflow.
-- [ ] Table’s plate and decorative leaves remain visually behind the receipt at desktop and mobile widths.
-- [ ] Table’s small concept caption remains visible and does not cover receipt text.
-- [ ] Table uses a plain cream page field rather than a dotted background texture.
-- [ ] The service-flow section retains readable contrast without an abrupt near-black transition.
-- [ ] `$7,840` is presented as the quoted-value metric; metric labels and supporting text use a consistent hierarchy.
-- [ ] Gathering Commons’ three-line hero mantra is fully visible at 320px, 390px, and desktop widths.
-- [ ] Gathering Commons’ primary and secondary hero actions are centered and full-width on small screens.
-
-
-## v0.6.2 Human Hands checks
-- Table: switch Hearth, Route, and Feast; the garnish never covers the ticket heading at desktop or mobile widths.
-- Table: the concept caption reads as secondary fine print and does not compete with the receipt.
-- Table: the service-flow section remains readable in every configuration without an abrupt near-black transition.
-- Table: `$7,840` is visually primary; `08`, `03`, and `06` are supporting metrics.
-- Commons: the complete three-line mantra remains inside the hero safe area at 1440px, 820px, 390px, and 320px widths.
-- Commons: leaves and memory cards do not intersect the mantra.
-- Both pages: no horizontal overflow, clipped copy, or inaccessible focus states.
-
-
-## v0.6.3 Theme & Identity checks
-- [ ] Commons Hearth, Grove, and Dusk each preserve readable labels, body text, controls, borders, and focus states.
-- [ ] Dusk uses a muted rose-clay label accent rather than the previous harsh yellow treatment.
-- [ ] The flagship work grid contains exactly four cards: Gathering, Ledger, Signal, and Table.
-- [ ] The flagship does not contain a redundant Viryn Studio portfolio card.
-- [ ] Gathering and Signal have bespoke preview artwork that remains legible in Day, Night, and Chocolate themes.
-- [ ] Table’s hero contains no plate leaves or receipt pin, and no decorative object intersects the ticket.
-- [ ] At 1440px, 820px, 390px, and 320px, the four-card work grid does not overflow or clip copy.
-
-
 ## v0.6.4 Comprehension & Composition checks
 
 ### Flagship threshold and structure
@@ -118,6 +85,19 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - [ ] Framework demonstrations appear before pricing.
 - [ ] The trust rail uses consistent separators and wraps without isolated or uneven entries.
 - [ ] Founding-client copy uses one text color, line height, paragraph rhythm, and measure.
+
+
+### Atelier Pass (v0.6.5)
+
+- [ ] The flagship hero uses the public atelier painting and no private couple imagery.
+- [ ] The hero CTA remains visible and legible on mobile before the painting.
+- [ ] Gathering, Ledger, Signal, and Table framework cards render their authored images with useful alt text.
+- [ ] Gathering Commons reads as community and belonging before diagnosis or loss.
+- [ ] Ledger plainly communicates teaching, consultation, resources, curriculum, and practice.
+- [ ] Process copy distinguishes client decisions from Studio responsibilities.
+- [ ] Signature System lists three structured revision cycles and the FAQ matches.
+- [ ] Every painterly image has one clear emotional center and no text collision.
+- [ ] Hover motion is removed when `prefers-reduced-motion` is active.
 
 ### Framework authorship and readability
 - [ ] Gathering’s hero presents one community illustration rather than a field of unrelated shapes.

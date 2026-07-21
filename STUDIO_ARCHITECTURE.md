@@ -124,6 +124,21 @@ Signal owns its artist-specific interaction layer in `frameworks/signal/signal.j
 Audio controls remain native HTML5 controls for keyboard and assistive-technology reliability. The five-track queue, track switching, session-only room state, downloads, and listening-note preparation are progressive enhancements.
 
 
+
+## Atelier Pass
+
+The Atelier Pass follows architecture, language, accessibility, and client review. Its final question is not whether the site looks expensive or fashionable, but whether it feels cared for.
+
+Public Studio art follows five constraints:
+
+1. **One emotional center.** Every illustration knows what the visitor should feel first.
+2. **One symbolic language.** Motifs repeat with purpose instead of accumulating as decoration.
+3. **Light is narrative.** Illumination directs attention and emotional sequence.
+4. **Negative space is trusted.** Art does not compensate for unresolved structure.
+5. **Private intimacy stays private.** The Viryn eye may shape public work without turning family or devotional imagery into commercial collateral.
+
+The interface explains. The painting invites. Neither is asked to do the other’s job.
+
 ## Studio Editions
 
 Studio Editions live under `editions/`. They are focused demonstrations that extend a framework around a real-world workflow or community need. Unlike the core framework pages, an Edition may include domain-specific interaction patterns, editorial policies, and a documented production spine.

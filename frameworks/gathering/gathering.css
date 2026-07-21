@@ -1190,3 +1190,52 @@ a.g-primary-button {
 .gathering-site a.g-light-button {
   color: var(--g-section-dark) !important;
 }
+
+/* v0.6.5 — Atelier Pass: community before geometry. */
+.g-hero-painting {
+  position: relative;
+  min-height: 560px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid color-mix(in srgb, var(--g-sun) 50%, transparent);
+  border-radius: 1.3rem;
+  background: #1a120d;
+  box-shadow: 0 24px 70px rgba(31, 24, 18, .24);
+}
+
+.g-hero-painting::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 48%, rgba(18, 12, 8, .78));
+  content: "";
+}
+
+.g-hero-painting img {
+  display: block;
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.g-hero-painting > figcaption {
+  position: absolute;
+  right: 1.4rem;
+  bottom: 1.2rem;
+  left: 1.4rem;
+  z-index: 3;
+  color: #fff1d7;
+  font-family: var(--display);
+  font-size: clamp(1.35rem, 2.6vw, 2.2rem);
+  font-style: italic;
+}
+
+.g-hero-painting .g-impact-float {
+  z-index: 4;
+}
+
+@media (max-width: 760px) {
+  .g-hero-painting,
+  .g-hero-painting img { min-height: 390px; height: 390px; }
+}

@@ -895,3 +895,50 @@ html[data-atmosphere="dusk"] .studio-note .eyebrow {
 html[data-atmosphere="dusk"] .tool-list span {
   color: #e2ad96;
 }
+
+/* v0.6.5 — Atelier Pass: belonging is the first read. */
+.atelier-commons-painting {
+  position: relative;
+  min-height: 560px;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 1.4rem;
+  background: #1b120e;
+}
+
+.atelier-commons-painting::before {
+  content: none;
+}
+
+.atelier-commons-painting::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 43%, rgba(18, 12, 9, .82));
+  content: "";
+}
+
+.atelier-commons-painting img {
+  display: block;
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+}
+
+.atelier-commons-painting .hero-mantra {
+  position: absolute;
+  right: 1.4rem;
+  bottom: 1.2rem;
+  left: 1.4rem;
+  z-index: 3;
+  color: #fff0d7;
+}
+
+.atelier-commons-painting .hero-mantra span + span {
+  color: #f0bf70;
+}
+
+@media (max-width: 760px) {
+  .atelier-commons-painting,
+  .atelier-commons-painting img { min-height: 390px; height: 390px; }
+}

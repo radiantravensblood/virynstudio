@@ -133,8 +133,25 @@
       const article = document.createElement("article");
       article.className = "card framework-card";
 
+      article.append(text("span", String(index + 1).padStart(2, "0"), "card-number"));
+
+      if (item.art) {
+        const figure = document.createElement("figure");
+        figure.className = "framework-card-art";
+        const image = document.createElement("img");
+        image.src = item.art;
+        image.alt = item.artAlt || "";
+        image.loading = index > 1 ? "lazy" : "eager";
+        figure.append(image);
+        if (item.whisper) {
+          const caption = document.createElement("figcaption");
+          caption.textContent = item.whisper;
+          figure.append(caption);
+        }
+        article.append(figure);
+      }
+
       article.append(
-        text("span", String(index + 1).padStart(2, "0"), "card-number"),
         text("span", "", `card-accent ${item.accent || ""}`),
         text("p", item.audience, "utility-label"),
         text("h3", item.name),

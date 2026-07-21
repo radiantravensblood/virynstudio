@@ -463,3 +463,51 @@ a.l-ghost-button {
 .l-kicker {
   color: #b9903f;
 }
+
+/* v0.6.5 — Atelier Pass: equip the visitor before abstracting the method. */
+.l-hero-painting {
+  position: relative;
+  min-height: 600px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(213, 180, 109, .48);
+  border-radius: 1.1rem;
+  background: #0a0d13;
+  box-shadow: 0 26px 80px rgba(0,0,0,.36);
+}
+
+.l-hero-painting::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(180deg, transparent 48%, rgba(7, 9, 14, .88));
+  content: "";
+}
+
+.l-hero-painting > img {
+  display: block;
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+
+.l-hero-painting > figcaption {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.25rem;
+  left: 1.5rem;
+  z-index: 3;
+  color: var(--l-parchment);
+  font-family: var(--display);
+  font-size: clamp(1.45rem, 3vw, 2.45rem);
+  font-style: italic;
+}
+
+.l-hero-painting .l-hero-note {
+  z-index: 4;
+}
+
+@media (max-width: 760px) {
+  .l-hero-painting,
+  .l-hero-painting > img { min-height: 410px; height: 410px; }
+}
