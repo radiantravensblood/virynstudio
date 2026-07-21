@@ -40,6 +40,7 @@ window.VIRYN_STUDIO_CONFIG = {
       href: "frameworks/gathering/",
       accent: "moss",
       art: "assets/atelier/gathering.jpg",
+      art2x: "assets/atelier/gathering-2x.jpg",
       artAlt: "Neighbors gathered beneath warm lights around a shared community table.",
       whisper: "Someone saved you a chair."
     },
@@ -52,6 +53,7 @@ window.VIRYN_STUDIO_CONFIG = {
       href: "frameworks/ledger/",
       accent: "ember",
       art: "assets/atelier/ledger.jpg",
+      art2x: "assets/atelier/ledger-2x.jpg",
       artAlt: "An inviting study filled with open books, practical notes, and warm working light.",
       whisper: "Margin note: try it your way."
     },
@@ -64,6 +66,7 @@ window.VIRYN_STUDIO_CONFIG = {
       href: "frameworks/signal/",
       accent: "plum",
       art: "assets/atelier/signal.jpg",
+      art2x: "assets/atelier/signal-2x.jpg",
       artAlt: "A listening room with a microphone, a turntable, and blue stage light waiting for the first note.",
       whisper: "The room is already listening."
     },
@@ -76,6 +79,7 @@ window.VIRYN_STUDIO_CONFIG = {
       href: "frameworks/table/",
       accent: "gold",
       art: "assets/atelier/table.jpg",
+      art2x: "assets/atelier/table-2x.jpg",
       artAlt: "Hands finishing a beautiful plate in a warmly lit working kitchen.",
       whisper: "Kitchen note: save me one."
     }

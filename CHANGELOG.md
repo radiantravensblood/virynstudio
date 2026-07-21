@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.6.6 — Atelier Pass II: Evidence of Hands
+
+- Added high-density 2x painterly assets and responsive `srcset` delivery for the flagship, framework cards, Gathering, Ledger, Table, and Gathering Commons.
+- Introduced a shared craft layer for button height, spacing, focus behavior, mounted-object details, brass pins, hand-drawn rules, working scraps, and section codas.
+- Moved Gathering's impact card away from its hero caption and made the mobile composition flow in document order.
+- Moved Table's order ticket away from its caption and removed the remaining decorative plate and sun-disc markup.
+- Reworked the Gathering Commons printable toolkit from abstract rectangles into recognizable working papers, tape, a clip, and a pressed leaf.
+- Added restrained symbolic notes to the flagship and framework thresholds without turning private relational imagery into public Studio collateral.
+- Added `ATELIER_DIRECTION.md` as the visual authorship and consent guide for future Studio work.
+
 ## v0.6.5 — Atelier Pass
 
 ### Changed

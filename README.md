@@ -1,5 +1,10 @@
 # Viryn Studio
 
+## v0.6.6 — Atelier Pass II: Evidence of Hands
+
+This release raises the surrounding craft to meet the Atelier paintings. High-density artwork, consistent action controls, safe overlay lanes, working-paper details, and restrained symbolic marks make the public house feel inhabited without sacrificing comprehension. Public Studio imagery faces outward; private devotional imagery remains outside the commercial threshold unless all affected people consent.
+
+
 Viryn Studio is the commercial design and implementation wing of Viryn Systems.
 The repository contains the Studio flagship and four reusable framework mini-sites:
 

@@ -140,6 +140,7 @@
         figure.className = "framework-card-art";
         const image = document.createElement("img");
         image.src = item.art;
+        if (item.art2x) image.srcset = `${item.art} 1x, ${item.art2x} 2x`;
         image.alt = item.artAlt || "";
         image.loading = index > 1 ? "lazy" : "eager";
         figure.append(image);

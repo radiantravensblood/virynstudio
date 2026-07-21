@@ -1,0 +1,11 @@
+Viryn Studio v0.6.6 — Atelier Pass II: Evidence of Hands
+
+1. Extract this ZIP.
+2. Open the extracted folder.
+3. Select everything inside it.
+4. Upload the selection into the repository root.
+5. Allow these files to overwrite the v0.6.5 versions.
+6. Commit the upload and wait for GitHub Pages to refresh.
+7. Hard-refresh virynsystems.online before reviewing.
+
+The patch adds six new 2x painting files and one shared craft stylesheet, so be sure the new files are included rather than only overwriting existing files.
