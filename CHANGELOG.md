@@ -1,19 +1,5 @@
 # Changelog
 
-## v0.6.7 — Atelier Fidelity & Joinery
-
-- Rebuilt Gathering, Ledger, and Gathering Commons hero figures so artwork, captions, and information cards occupy structural lanes instead of overlapping by coordinates.
-- Added art-directed WebP variants for every Atelier painting, including narrow-screen crops, intrinsic dimensions, eager hero delivery, and lazy loading below the fold.
-- Added a shared hand-inked SVG symbol family for Studio, framework, process, and care motifs without relying on platform-dependent Unicode glyphs.
-- Replaced Gathering's remaining flat program geometry with hand-worked pantry, route, and care-fund spot illustrations.
-- Added three no-storage Gathering demonstrations for requesting support, finding a sustainable volunteer role, and understanding a giving flow.
-- Reframed Gathering Commons around memory, orientation, and caregiver recognition with a custom memory-map illustration and a materially rendered kitchen-table toolkit.
-- Reduced the Commons paper clip from dominant decoration to a small functional detail inside a finished illustration.
-- Added a visible human-gesture strip to Ledger and removed its hidden prototype ledger SVG.
-- Repaired Signal title/status boundaries and flagship inline sentence boundaries for assistive extraction.
-- Consolidated shared button anatomy while preserving each framework's color and voice.
-- Removed known dead geometric, plate, sun-disc, hidden-SVG, and prototype illustration CSS.
-
 ## v0.6.6 — Atelier Pass II: Evidence of Hands
 
 - Added high-density 2x painterly assets and responsive `srcset` delivery for the flagship, framework cards, Gathering, Ledger, Table, and Gathering Commons.

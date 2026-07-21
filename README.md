@@ -1,9 +1,5 @@
 # Viryn Studio
 
-## v0.6.7 — Atelier Fidelity & Joinery
-
-This release turns the Atelier direction into durable joinery. Hero art, captions, and information panels now occupy responsive structural lanes; paintings receive art-directed WebP delivery; Gathering gains real no-storage pathway demonstrations; and the remaining geometric artifacts become hand-worked Studio illustrations. Commons now speaks directly to memory and caregiver orientation rather than repeating Gathering's public-table atmosphere.
-
 ## v0.6.6 — Atelier Pass II: Evidence of Hands
 
 This release raises the surrounding craft to meet the Atelier paintings. High-density artwork, consistent action controls, safe overlay lanes, working-paper details, and restrained symbolic marks make the public house feel inhabited without sacrificing comprehension. Public Studio imagery faces outward; private devotional imagery remains outside the commercial threshold unless all affected people consent.
