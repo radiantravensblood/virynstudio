@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en" data-edition="parish">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Prototype for an Aquidneck Island Cooperative Parish interface by Viryn Studio." />
+  <title>Aquidneck Island Cooperative Parish — Parish Edition</title>
+  <link rel="stylesheet" href="parish.css?v=001" />
+  <link rel="stylesheet" href="../../assets/shared/atelier-pass-ii.css?v=066" />
+</head>
+<body class="parish-site atelier-page">
+  <div class="demo-ribbon" role="note">
+    <span>Viryn Studio Edition 02 · Parish · conceptual demonstration</span>
+    <a href="../../">Return to Viryn Studio</a>
+  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-elevated="false">
+    <div class="shell nav-shell">
+      <a class="brand" href="#top" aria-label="Aquidneck Island Cooperative Parish home">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span>
+          <strong>Aquidneck Island</strong>
+          <small>Cooperative Parish</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
+        <a href="#worship">Worship</a>
+        <a href="#this-week">This week</a>
+        <a href="#faith">Faith & formation</a>
+        <a href="#serve">Serve & care</a>
+        <a href="#churches">Our churches</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero shell section-pad">
+      <div class="eyebrow">Viryn Studio · Parish Edition · proof of concept</div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="kicker">Three congregations. One island ministry.</p>
+          <h1>Faith has more than one doorway.</h1>
+          <p class="lede">A shared digital home for worship, formation, service, and care across Calvary, Portsmouth, and St. Paul’s United Methodist churches on Aquidneck Island.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#worship">Find Sunday worship</a>
+            <a class="button button-quiet" href="#start">Start where you are</a>
+          </div>
+        </div>
+
+        <aside class="island-card" aria-label="Parish geography">
+          <div class="island-line" aria-hidden="true">
+            <span class="dot dot-one"></span>
+            <span class="dot dot-two"></span>
+            <span class="dot dot-three"></span>
+          </div>
+          <ol class="island-list">
+            <li><span>North</span><strong>Portsmouth</strong><small>Portsmouth UMC</small></li>
+            <li><span>Center</span><strong>Middletown</strong><small>Calvary UMC</small></li>
+            <li><span>South</span><strong>Newport</strong><small>St. Paul’s UMC</small></li>
+          </ol>
+          <p class="micro">One parish layer. Three distinct congregational identities.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="worship" class="section-tone">
+      <div class="shell section-pad compact-top">
+        <div class="section-heading split-heading">
+          <div>
+            <div class="eyebrow">This Sunday</div>
+            <h2>Choose the threshold that fits.</h2>
+          </div>
+          <p>Each congregation remains itself. The parish interface simply makes the paths legible.</p>
+        </div>
+
+        <div class="service-grid" id="service-grid"></div>
+        <p class="source-note">Prototype times are drawn from the churches’ public sites and should be confirmed before publication.</p>
+      </div>
+    </section>
+
+    <section id="start" class="shell section-pad">
+      <div class="section-heading centered">
+        <div class="eyebrow">Start where you are</div>
+        <h2>You should not need an org chart to find your next step.</h2>
+        <p>Choose what you need today. The parish can orient around people before structure.</p>
+      </div>
+
+      <div class="path-grid" role="list" aria-label="Parish starting paths">
+        <button class="path-card" role="listitem" data-path="visit">
+          <span class="path-number">01</span>
+          <strong>I’m looking for a church.</strong>
+          <small>Compare worship, access, location, and congregation character.</small>
+        </button>
+        <button class="path-card" role="listitem" data-path="explore">
+          <span class="path-number">02</span>
+          <strong>I want to explore faith.</strong>
+          <small>Conversations, sermons, studies, questions, and formation.</small>
+        </button>
+        <button class="path-card" role="listitem" data-path="support">
+          <span class="path-number">03</span>
+          <strong>I need support.</strong>
+          <small>Pastoral care, community resources, prayer, and clear boundaries.</small>
+        </button>
+        <button class="path-card" role="listitem" data-path="serve">
+          <span class="path-number">04</span>
+          <strong>I want to serve.</strong>
+          <small>Garden, meals, local outreach, hospitality, and practical roles.</small>
+        </button>
+        <button class="path-card" role="listitem" data-path="belong">
+          <span class="path-number">05</span>
+          <strong>I’m already part of the parish.</strong>
+          <small>Bulletins, calendars, groups, forms, and parish-wide notices.</small>
+        </button>
+      </div>
+
+      <div class="path-result" id="path-result" aria-live="polite">
+        <span class="result-label">Suggested first step</span>
+        <h3>Pick a doorway above.</h3>
+        <p>The interface will recommend a clear next action without trapping people in a giant navigation tree.</p>
+      </div>
+    </section>
+
+    <section id="this-week" class="section-ink">
+      <div class="shell section-pad">
+        <div class="section-heading split-heading inverse">
+          <div>
+            <div class="eyebrow">One calendar, many scopes</div>
+            <h2>This week across the parish.</h2>
+          </div>
+          <p>An event exists once, then appears wherever its congregation, host site, or parish scope makes it relevant.</p>
+        </div>
+
+        <div class="filter-bar" aria-label="Filter parish events">
+          <div class="filter-group" role="group" aria-label="Filter by congregation">
+            <button class="filter-button active" data-filter-scope="all">All parish</button>
+            <button class="filter-button" data-filter-scope="calvary">Calvary</button>
+            <button class="filter-button" data-filter-scope="portsmouth">Portsmouth</button>
+            <button class="filter-button" data-filter-scope="stpauls">St. Paul’s</button>
+          </div>
+          <div class="filter-group secondary" role="group" aria-label="Filter by type">
+            <button class="filter-button active" data-filter-type="all">Everything</button>
+            <button class="filter-button" data-filter-type="worship">Worship</button>
+            <button class="filter-button" data-filter-type="formation">Formation</button>
+            <button class="filter-button" data-filter-type="service">Service</button>
+            <button class="filter-button" data-filter-type="community">Community</button>
+          </div>
+        </div>
+
+        <div class="event-list" id="event-list"></div>
+      </div>
+    </section>
+
+    <section id="faith" class="shell section-pad">
+      <div class="section-heading split-heading">
+        <div>
+          <div class="eyebrow">Ledger → parish formation</div>
+          <h2>Faith in Conversation.</h2>
+        </div>
+        <p>A living formation library: short conversations, sermons, transcripts, reflection prompts, and the next gathering where a question can continue.</p>
+      </div>
+
+      <div class="conversation-feature">
+        <div class="video-placeholder" aria-label="Prototype video area">
+          <div class="video-icon" aria-hidden="true">▶</div>
+          <small>Prototype editorial series</small>
+          <strong>Can doubt belong to faith?</strong>
+        </div>
+        <div class="conversation-copy">
+          <span class="tag">Conversation · 12 min</span>
+          <h3>Questions do not have to be hidden at the door.</h3>
+          <p>A minister-led conversation can become a starting point rather than a statement of doctrine: video, transcript, a few reflection questions, related Scripture, and an invitation into an actual room with actual people.</p>
+          <div class="resource-links">
+            <button class="text-link" type="button">Read transcript →</button>
+            <button class="text-link" type="button">Reflection prompts →</button>
+            <button class="text-link" type="button">Continue in community →</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="conversation-grid">
+        <article class="conversation-card"><span>01</span><h3>What do Methodists mean by grace?</h3><p>Short-form theology with a human voice and a clear route deeper.</p></article>
+        <article class="conversation-card"><span>02</span><h3>What does belonging ask of us?</h3><p>Membership, covenant, participation, and room for uncertainty.</p></article>
+        <article class="conversation-card"><span>03</span><h3>How does faith become service?</h3><p>Connect formation directly to the garden, meals, care, and local work.</p></article>
+      </div>
+      <p class="source-note">Conversation titles are editorial prototypes only; no views are attributed to parish clergy in this proof.</p>
+    </section>
+
+    <section id="serve" class="section-warm">
+      <div class="shell section-pad">
+        <div class="section-heading split-heading">
+          <div>
+            <div class="eyebrow">Gathering → shared ministry</div>
+            <h2>Let the relationships be visible.</h2>
+          </div>
+          <p>The platform can hold ministry ownership, physical location, participating congregations, schedule, and volunteer needs as separate truths.</p>
+        </div>
+
+        <article class="ministry-case">
+          <div>
+            <span class="tag">Shared ministry pattern</span>
+            <h3>Community Meal</h3>
+            <p>Calvary parishioners prepare and serve the third-Thursday community meal at St. Paul’s in Newport. In a parish model, that does not need to become “a Calvary event” or “a St. Paul’s event.” It can be both—accurately.</p>
+          </div>
+          <dl class="relationship-grid">
+            <div><dt>Serving community</dt><dd>Calvary UMC</dd></div>
+            <div><dt>Host site</dt><dd>St. Paul’s UMC</dd></div>
+            <div><dt>Rhythm</dt><dd>Third Thursday</dd></div>
+            <div><dt>Parish visibility</dt><dd>All congregations</dd></div>
+          </dl>
+        </article>
+
+        <div class="ministry-grid">
+          <article><span class="ministry-icon">✦</span><h3>God’s Community Garden</h3><p>A shared service story rooted at Calvary and connected to free produce distribution in Newport.</p><a href="#this-week">See related gatherings →</a></article>
+          <article><span class="ministry-icon">◌</span><h3>Pastoral care</h3><p>One calm intake threshold can route people to the right clergy or congregation without over-collecting sensitive information.</p><a href="#churches">Meet the congregations →</a></article>
+          <article><span class="ministry-icon">↗</span><h3>Volunteer pathways</h3><p>Filter opportunities by time, location, physical activity, age, accessibility, and training—not by whoever posted a PDF last.</p><a href="#start">Find a way to serve →</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="churches" class="shell section-pad">
+      <div class="section-heading centered">
+        <div class="eyebrow">Three identities, held intact</div>
+        <h2>Meet the congregations.</h2>
+        <p>The parish is connective tissue—not a fourth church.</p>
+      </div>
+      <div class="church-grid" id="church-grid"></div>
+    </section>
+
+    <section class="principle-band">
+      <div class="shell principle-grid">
+        <div class="eyebrow">Parish Edition principle 01</div>
+        <blockquote>Unity without erasure.</blockquote>
+        <p>Shared systems should reduce friction while protecting each congregation’s history, voice, relationships, and ways of gathering.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-grid">
+      <div>
+        <strong>Aquidneck Island Cooperative Parish</strong>
+        <p>Prototype interface · not an official parish publication.</p>
+      </div>
+      <div>
+        <strong><a href="../../">Viryn Studio</a></strong>
+        <p>Gathering × Ledger → Parish Edition 02</p>
+      </div>
+      <div class="footer-note">
+        <span>Built to be untangled.</span>
+        <small>Content and governance relationships require parish review before launch.</small>
+      </div>
+    </div>
+  </footer>
+
+  <script src="parish-content.js"></script>
+  <script src="parish.js"></script>
+</body>
+</html>

@@ -1,0 +1,940 @@
+diff --git a/index.html b/index.html
+--- a/index.html
++++ b/index.html
+@@ -82,7 +82,7 @@
+ <p class="section-kicker">Studio Editions</p>
+ <h2>See what a framework becomes in the wild.</h2><div aria-hidden="true" class="atelier-hand-rule"><span>❦</span></div>
+ </div>
+-<p class="lede">Studio Editions are fully realized example projects that show how one framework adapts to a specific real-world need. Gathering Commons is the first: a caregiver community space built from Gathering and selected capabilities.</p>
++<p class="lede">Studio Editions are fully realized studies of how framework journeys and portable capabilities adapt to a specific real-world need. Gathering Commons studies caregiver community; Parish studies shared ministry across distinct congregations.</p>
+ </div>
+ <article class="edition-feature">
+ <figure class="edition-visual edition-visual-commons">
+@@ -106,6 +106,32 @@
+ </div>
+ </div>
+ </article>
+-<p class="atelier-coda"><span aria-hidden="true">❦</span> One framework. One lived need. A room shaped carefully.</p>
++<article class="edition-feature">
++<figure class="edition-visual" aria-label="Abstract island landscape representing three congregations connected across Aquidneck Island">
++<div class="edition-sun" aria-hidden="true"></div>
++<div class="edition-hill edition-hill-back" aria-hidden="true"></div>
++<div class="edition-hill edition-hill-front" aria-hidden="true"></div>
++<div class="edition-leaf edition-leaf-one" aria-hidden="true"></div>
++<div class="edition-leaf edition-leaf-two" aria-hidden="true"></div>
++<span>Aquidneck<br/>Parish</span>
++</figure>
++<div class="edition-copy">
++<span class="concept-badge">Edition 02 · Parish</span>
++<p class="utility-label">Shared ministry architecture</p>
++<h3>One parish layer without turning three congregations into one generic church.</h3>
++<p>Sunday worship, parish-wide events, shared ministries, formation, resources, and care pathways composed from Gathering and Ledger while protecting congregation identity.</p>
++<ul class="edition-learning-list">
++<li>Need-first parish orientation</li>
++<li>Congregation-scoped calendar filtering</li>
++<li>Shared ministry host and steward relationships</li>
++<li>Ledger-derived faith formation</li>
++</ul>
++<div class="card-actions">
++<a class="button" href="editions/aquidneck-parish/">Enter Parish Edition</a>
++<a class="button button-secondary" data-contact-link="" data-subject="Viryn Studio — Parish Edition inquiry" href="mailto:siegelumiere@gmail.com">Build a ministry system</a>
++</div>
++</div>
++</article>
++<p class="atelier-coda"><span aria-hidden="true">❦</span> Different rooms. Different needs. One attentive architecture.</p>
+ </div>
+ </section>
+diff --git a/STUDIO_ARCHITECTURE.md b/STUDIO_ARCHITECTURE.md
+--- a/STUDIO_ARCHITECTURE.md
++++ b/STUDIO_ARCHITECTURE.md
+@@ -143,9 +143,10 @@
+ 
+ Studio Editions live under `editions/`. They are focused demonstrations that extend a framework around a real-world workflow or community need. Unlike the core framework pages, an Edition may include domain-specific interaction patterns, editorial policies, and a documented production spine.
+ 
+-Current edition:
++Current editions:
+ 
+-- `editions/gathering-commons/` — Active Brain Community
++- `editions/gathering-commons/` — Active Brain Community · Gathering Commons
++- `editions/aquidneck-parish/` — Aquidneck Island Cooperative Parish · Parish
+ 
+ 
+ ## Table hospitality architecture
+diff --git a/assets/shared/studio.css b/assets/shared/studio.css
+--- a/assets/shared/studio.css
++++ b/assets/shared/studio.css
+@@ -1221,5 +1221,6 @@
+ .edition-copy > p:not(.utility-label) { color: var(--muted); font-size: 1.08rem; }
+ .edition-learning-list { columns: 2; margin: 1rem 0 1.25rem; padding-left: 1.15rem; color: var(--muted); }
+ .edition-learning-list li { break-inside: avoid; margin-bottom: 0.45rem; }
++.edition-feature + .edition-feature { margin-top: 1.5rem; }
+ 
+ @media (max-width: 820px) {
+diff --git a/editions/aquidneck-parish/EDITION_NOTES.md b/editions/aquidneck-parish/EDITION_NOTES.md
+new file mode 100644
+--- /dev/null
++++ b/editions/aquidneck-parish/EDITION_NOTES.md
+@@ -0,0 +1,54 @@
++# Studio Edition 02 — Parish
++
++## Demonstration identity
++
++**Aquidneck Island Cooperative Parish** is a proof-of-concept composition for a real three-congregation United Methodist cooperative parish serving Portsmouth, Middletown, and Newport, Rhode Island.
++
++This Edition does not claim to be an official publication of the parish. Publicly visible church information is used to study the interface; governance, ownership, clergy voice, calendar authority, and ministry relationships require parish verification before production use.
++
++## Framework composition
++
++Parish is intentionally compositional rather than a fifth core framework:
++
++- **Gathering** provides worship, events, service, community, and participation journeys.
++- **Ledger** provides formation, conversations, sermons, transcripts, curricula, and downloadable resources.
++- **Parish** adds multi-congregation scope, shared-ministry relationships, host/steward distinctions, and a unified parish orientation layer.
++
++The core principle is **unity without erasure**: shared systems reduce friction without flattening the identity of Calvary UMC, Portsmouth UMC, or St. Paul’s UMC.
++
++## What this edition tests
++
++- One parish layer spanning three distinct congregations
++- Sunday worship comparison without ranking congregations
++- Need-first orientation through “Start where you are”
++- Filterable parish-wide events by congregation and ministry type
++- Shared ministries whose steward, host location, and participating congregations differ
++- “Faith in Conversation” as a Ledger-derived formation pattern
++- Congregation pages that remain autonomous inside a cooperative system
++- Explicit prototype and verification boundaries
++
++## Content boundary
++
++The demonstration contains a mixture of publicly available church information and clearly marked editorial prototype content. Worship times, recurring ministries, addresses, and operational details must be reconfirmed before any client launch.
++
++No prototype conversation title should be interpreted as a statement made or endorsed by parish clergy.
++
++## Suggested production spine
++
++1. **Content source of truth:** small CMS or reviewed structured data store
++2. **Calendar:** one event model with parish/congregation scope, host, steward, recurrence, accessibility, registration, and contact fields
++3. **Formation library:** video/audio, transcript, reflection prompts, related resources, and next gathering
++4. **Church profiles:** verified congregation identity, worship details, accessibility, children/youth information, contact routes, and giving boundaries
++5. **Shared ministries:** distinct fields for ministry steward, physical host, participating congregations, volunteer needs, and parish visibility
++6. **Forms and pastoral care:** separately reviewed privacy, retention, routing, and emergency boundaries before collecting personal information
++
++## Production handoff questions
++
++Rory and Laurie’s parish knowledge should resolve the questions the public websites cannot:
++
++- Which activities are truly parish-wide versus merely cross-congregational?
++- Who owns calendar truth and who may publish changes?
++- Which ministries have a host congregation, a stewarding congregation, or both?
++- How should giving routes remain distinct?
++- Which clergy/staff identities are parish roles versus congregation roles?
++- Which content can be centralized and which must remain congregation-controlled?
+diff --git a/editions/aquidneck-parish/index.html b/editions/aquidneck-parish/index.html
+new file mode 100644
+--- /dev/null
++++ b/editions/aquidneck-parish/index.html
+@@ -0,0 +1,261 @@
++<!DOCTYPE html>
++<html lang="en" data-edition="parish">
++<head>
++  <meta charset="utf-8" />
++  <meta name="viewport" content="width=device-width, initial-scale=1" />
++  <meta name="description" content="Prototype for an Aquidneck Island Cooperative Parish interface by Viryn Studio." />
++  <title>Aquidneck Island Cooperative Parish — Parish Edition</title>
++  <link rel="stylesheet" href="parish.css?v=001" />
++  <link rel="stylesheet" href="../../assets/shared/atelier-pass-ii.css?v=066" />
++</head>
++<body class="parish-site atelier-page">
++  <div class="demo-ribbon" role="note">
++    <span>Viryn Studio Edition 02 · Parish · conceptual demonstration</span>
++    <a href="../../">Return to Viryn Studio</a>
++  </div>
++  <a class="skip-link" href="#main">Skip to content</a>
++
++  <header class="site-header" data-elevated="false">
++    <div class="shell nav-shell">
++      <a class="brand" href="#top" aria-label="Aquidneck Island Cooperative Parish home">
++        <span class="brand-mark" aria-hidden="true">✦</span>
++        <span>
++          <strong>Aquidneck Island</strong>
++          <small>Cooperative Parish</small>
++        </span>
++      </a>
++
++      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
++      <nav id="primary-nav" class="primary-nav" aria-label="Primary navigation">
++        <a href="#worship">Worship</a>
++        <a href="#this-week">This week</a>
++        <a href="#faith">Faith & formation</a>
++        <a href="#serve">Serve & care</a>
++        <a href="#churches">Our churches</a>
++      </nav>
++    </div>
++  </header>
++
++  <main id="main">
++    <section id="top" class="hero shell section-pad">
++      <div class="eyebrow">Viryn Studio · Parish Edition · proof of concept</div>
++      <div class="hero-grid">
++        <div class="hero-copy">
++          <p class="kicker">Three congregations. One island ministry.</p>
++          <h1>Faith has more than one doorway.</h1>
++          <p class="lede">A shared digital home for worship, formation, service, and care across Calvary, Portsmouth, and St. Paul’s United Methodist churches on Aquidneck Island.</p>
++          <div class="hero-actions">
++            <a class="button button-primary" href="#worship">Find Sunday worship</a>
++            <a class="button button-quiet" href="#start">Start where you are</a>
++          </div>
++        </div>
++
++        <aside class="island-card" aria-label="Parish geography">
++          <div class="island-line" aria-hidden="true">
++            <span class="dot dot-one"></span>
++            <span class="dot dot-two"></span>
++            <span class="dot dot-three"></span>
++          </div>
++          <ol class="island-list">
++            <li><span>North</span><strong>Portsmouth</strong><small>Portsmouth UMC</small></li>
++            <li><span>Center</span><strong>Middletown</strong><small>Calvary UMC</small></li>
++            <li><span>South</span><strong>Newport</strong><small>St. Paul’s UMC</small></li>
++          </ol>
++          <p class="micro">One parish layer. Three distinct congregational identities.</p>
++        </aside>
++      </div>
++    </section>
++
++    <section id="worship" class="section-tone">
++      <div class="shell section-pad compact-top">
++        <div class="section-heading split-heading">
++          <div>
++            <div class="eyebrow">This Sunday</div>
++            <h2>Choose the threshold that fits.</h2>
++          </div>
++          <p>Each congregation remains itself. The parish interface simply makes the paths legible.</p>
++        </div>
++
++        <div class="service-grid" id="service-grid"></div>
++        <p class="source-note">Prototype times are drawn from the churches’ public sites and should be confirmed before publication.</p>
++      </div>
++    </section>
++
++    <section id="start" class="shell section-pad">
++      <div class="section-heading centered">
++        <div class="eyebrow">Start where you are</div>
++        <h2>You should not need an org chart to find your next step.</h2>
++        <p>Choose what you need today. The parish can orient around people before structure.</p>
++      </div>
++
++      <div class="path-grid" role="list" aria-label="Parish starting paths">
++        <button class="path-card" role="listitem" data-path="visit">
++          <span class="path-number">01</span>
++          <strong>I’m looking for a church.</strong>
++          <small>Compare worship, access, location, and congregation character.</small>
++        </button>
++        <button class="path-card" role="listitem" data-path="explore">
++          <span class="path-number">02</span>
++          <strong>I want to explore faith.</strong>
++          <small>Conversations, sermons, studies, questions, and formation.</small>
++        </button>
++        <button class="path-card" role="listitem" data-path="support">
++          <span class="path-number">03</span>
++          <strong>I need support.</strong>
++          <small>Pastoral care, community resources, prayer, and clear boundaries.</small>
++        </button>
++        <button class="path-card" role="listitem" data-path="serve">
++          <span class="path-number">04</span>
++          <strong>I want to serve.</strong>
++          <small>Garden, meals, local outreach, hospitality, and practical roles.</small>
++        </button>
++        <button class="path-card" role="listitem" data-path="belong">
++          <span class="path-number">05</span>
++          <strong>I’m already part of the parish.</strong>
++          <small>Bulletins, calendars, groups, forms, and parish-wide notices.</small>
++        </button>
++      </div>
++
++      <div class="path-result" id="path-result" aria-live="polite">
++        <span class="result-label">Suggested first step</span>
++        <h3>Pick a doorway above.</h3>
++        <p>The interface will recommend a clear next action without trapping people in a giant navigation tree.</p>
++      </div>
++    </section>
++
++    <section id="this-week" class="section-ink">
++      <div class="shell section-pad">
++        <div class="section-heading split-heading inverse">
++          <div>
++            <div class="eyebrow">One calendar, many scopes</div>
++            <h2>This week across the parish.</h2>
++          </div>
++          <p>An event exists once, then appears wherever its congregation, host site, or parish scope makes it relevant.</p>
++        </div>
++
++        <div class="filter-bar" aria-label="Filter parish events">
++          <div class="filter-group" role="group" aria-label="Filter by congregation">
++            <button class="filter-button active" data-filter-scope="all">All parish</button>
++            <button class="filter-button" data-filter-scope="calvary">Calvary</button>
++            <button class="filter-button" data-filter-scope="portsmouth">Portsmouth</button>
++            <button class="filter-button" data-filter-scope="stpauls">St. Paul’s</button>
++          </div>
++          <div class="filter-group secondary" role="group" aria-label="Filter by type">
++            <button class="filter-button active" data-filter-type="all">Everything</button>
++            <button class="filter-button" data-filter-type="worship">Worship</button>
++            <button class="filter-button" data-filter-type="formation">Formation</button>
++            <button class="filter-button" data-filter-type="service">Service</button>
++            <button class="filter-button" data-filter-type="community">Community</button>
++          </div>
++        </div>
++
++        <div class="event-list" id="event-list"></div>
++      </div>
++    </section>
++
++    <section id="faith" class="shell section-pad">
++      <div class="section-heading split-heading">
++        <div>
++          <div class="eyebrow">Ledger → parish formation</div>
++          <h2>Faith in Conversation.</h2>
++        </div>
++        <p>A living formation library: short conversations, sermons, transcripts, reflection prompts, and the next gathering where a question can continue.</p>
++      </div>
++
++      <div class="conversation-feature">
++        <div class="video-placeholder" aria-label="Prototype video area">
++          <div class="video-icon" aria-hidden="true">▶</div>
++          <small>Prototype editorial series</small>
++          <strong>Can doubt belong to faith?</strong>
++        </div>
++        <div class="conversation-copy">
++          <span class="tag">Conversation · 12 min</span>
++          <h3>Questions do not have to be hidden at the door.</h3>
++          <p>A minister-led conversation can become a starting point rather than a statement of doctrine: video, transcript, a few reflection questions, related Scripture, and an invitation into an actual room with actual people.</p>
++          <div class="resource-links">
++            <button class="text-link" type="button">Read transcript →</button>
++            <button class="text-link" type="button">Reflection prompts →</button>
++            <button class="text-link" type="button">Continue in community →</button>
++          </div>
++        </div>
++      </div>
++
++      <div class="conversation-grid">
++        <article class="conversation-card"><span>01</span><h3>What do Methodists mean by grace?</h3><p>Short-form theology with a human voice and a clear route deeper.</p></article>
++        <article class="conversation-card"><span>02</span><h3>What does belonging ask of us?</h3><p>Membership, covenant, participation, and room for uncertainty.</p></article>
++        <article class="conversation-card"><span>03</span><h3>How does faith become service?</h3><p>Connect formation directly to the garden, meals, care, and local work.</p></article>
++      </div>
++      <p class="source-note">Conversation titles are editorial prototypes only; no views are attributed to parish clergy in this proof.</p>
++    </section>
++
++    <section id="serve" class="section-warm">
++      <div class="shell section-pad">
++        <div class="section-heading split-heading">
++          <div>
++            <div class="eyebrow">Gathering → shared ministry</div>
++            <h2>Let the relationships be visible.</h2>
++          </div>
++          <p>The platform can hold ministry ownership, physical location, participating congregations, schedule, and volunteer needs as separate truths.</p>
++        </div>
++
++        <article class="ministry-case">
++          <div>
++            <span class="tag">Shared ministry pattern</span>
++            <h3>Community Meal</h3>
++            <p>Calvary parishioners prepare and serve the third-Thursday community meal at St. Paul’s in Newport. In a parish model, that does not need to become “a Calvary event” or “a St. Paul’s event.” It can be both—accurately.</p>
++          </div>
++          <dl class="relationship-grid">
++            <div><dt>Serving community</dt><dd>Calvary UMC</dd></div>
++            <div><dt>Host site</dt><dd>St. Paul’s UMC</dd></div>
++            <div><dt>Rhythm</dt><dd>Third Thursday</dd></div>
++            <div><dt>Parish visibility</dt><dd>All congregations</dd></div>
++          </dl>
++        </article>
++
++        <div class="ministry-grid">
++          <article><span class="ministry-icon">✦</span><h3>God’s Community Garden</h3><p>A shared service story rooted at Calvary and connected to free produce distribution in Newport.</p><a href="#this-week">See related gatherings →</a></article>
++          <article><span class="ministry-icon">◌</span><h3>Pastoral care</h3><p>One calm intake threshold can route people to the right clergy or congregation without over-collecting sensitive information.</p><a href="#churches">Meet the congregations →</a></article>
++          <article><span class="ministry-icon">↗</span><h3>Volunteer pathways</h3><p>Filter opportunities by time, location, physical activity, age, accessibility, and training—not by whoever posted a PDF last.</p><a href="#start">Find a way to serve →</a></article>
++        </div>
++      </div>
++    </section>
++
++    <section id="churches" class="shell section-pad">
++      <div class="section-heading centered">
++        <div class="eyebrow">Three identities, held intact</div>
++        <h2>Meet the congregations.</h2>
++        <p>The parish is connective tissue—not a fourth church.</p>
++      </div>
++      <div class="church-grid" id="church-grid"></div>
++    </section>
++
++    <section class="principle-band">
++      <div class="shell principle-grid">
++        <div class="eyebrow">Parish Edition principle 01</div>
++        <blockquote>Unity without erasure.</blockquote>
++        <p>Shared systems should reduce friction while protecting each congregation’s history, voice, relationships, and ways of gathering.</p>
++      </div>
++    </section>
++  </main>
++
++  <footer class="site-footer">
++    <div class="shell footer-grid">
++      <div>
++        <strong>Aquidneck Island Cooperative Parish</strong>
++        <p>Prototype interface · not an official parish publication.</p>
++      </div>
++      <div>
++        <strong><a href="../../">Viryn Studio</a></strong>
++        <p>Gathering × Ledger → Parish Edition 02</p>
++      </div>
++      <div class="footer-note">
++        <span>Built to be untangled.</span>
++        <small>Content and governance relationships require parish review before launch.</small>
++      </div>
++    </div>
++  </footer>
++
++  <script src="parish-content.js"></script>
++  <script src="parish.js"></script>
++</body>
++</html>
+diff --git a/editions/aquidneck-parish/parish.css b/editions/aquidneck-parish/parish.css
+new file mode 100644
+--- /dev/null
++++ b/editions/aquidneck-parish/parish.css
+@@ -0,0 +1,266 @@
++:root {
++  --ink: #1c2527;
++  --ink-soft: #354346;
++  --paper: #f7f3ea;
++  --paper-deep: #efe8dc;
++  --cream: #fffdf8;
++  --sea: #295f66;
++  --sea-soft: #dbe8e6;
++  --copper: #9a5b3f;
++  --gold: #c49a57;
++  --rose: #8f646c;
++  --moss: #617057;
++  --line: rgba(28, 37, 39, .16);
++  --line-light: rgba(255,255,255,.18);
++  --shadow: 0 22px 60px rgba(28, 37, 39, .10);
++  --radius-lg: 28px;
++  --radius-md: 18px;
++  --shell: min(1180px, calc(100% - 40px));
++}
++
++
++/* Studio Edition shell */
++.demo-ribbon {
++  display: flex;
++  min-height: 38px;
++  align-items: center;
++  justify-content: space-between;
++  gap: 1rem;
++  padding: .45rem max(1rem, calc((100vw - 1180px) / 2));
++  background: #12191a;
++  color: #fffdf8;
++  font-size: .72rem;
++  letter-spacing: .08em;
++  text-transform: uppercase;
++}
++.demo-ribbon a {
++  color: #ddbd89;
++  font-weight: 750;
++  text-underline-offset: .22em;
++}
++.parish-site .site-header { top: 38px; }
++@media (max-width: 720px) {
++  .demo-ribbon { align-items: flex-start; flex-direction: column; gap: .2rem; letter-spacing: .05em; }
++  .parish-site .site-header { top: 58px; }
++}
++
++* { box-sizing: border-box; }
++html { scroll-behavior: smooth; }
++body {
++  margin: 0;
++  background: var(--paper);
++  color: var(--ink);
++  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
++  line-height: 1.55;
++}
++a { color: inherit; }
++button, input { font: inherit; }
++button { color: inherit; }
++
++.skip-link {
++  position: fixed;
++  left: 16px;
++  top: 12px;
++  z-index: 100;
++  background: var(--cream);
++  padding: 10px 14px;
++  border-radius: 10px;
++  transform: translateY(-160%);
++}
++.skip-link:focus { transform: translateY(0); }
++
++.shell { width: var(--shell); margin-inline: auto; }
++.section-pad { padding-block: clamp(72px, 9vw, 132px); }
++.compact-top { padding-top: clamp(58px, 7vw, 90px); }
++
++.site-header {
++  position: sticky;
++  top: 0;
++  z-index: 50;
++  background: rgba(247, 243, 234, .9);
++  backdrop-filter: blur(18px);
++  border-bottom: 1px solid transparent;
++  transition: border-color .2s ease, box-shadow .2s ease;
++}
++.site-header[data-elevated="true"] { border-color: var(--line); box-shadow: 0 6px 30px rgba(28,37,39,.06); }
++.nav-shell { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
++.brand { display: inline-flex; gap: 11px; align-items: center; text-decoration: none; }
++.brand-mark { color: var(--copper); font-size: 1.15rem; }
++.brand span:last-child { display: grid; line-height: 1.05; }
++.brand strong { font-family: Georgia, "Times New Roman", serif; font-size: 1.02rem; font-weight: 600; }
++.brand small { margin-top: 4px; color: var(--ink-soft); letter-spacing: .09em; text-transform: uppercase; font-size: .62rem; }
++.primary-nav { display: flex; gap: 24px; align-items: center; }
++.primary-nav a { text-decoration: none; color: var(--ink-soft); font-size: .9rem; }
++.primary-nav a:hover { color: var(--copper); }
++.nav-toggle { display: none; border: 1px solid var(--line); background: transparent; padding: 8px 11px; border-radius: 999px; }
++
++.eyebrow {
++  color: var(--copper);
++  font-weight: 750;
++  text-transform: uppercase;
++  letter-spacing: .14em;
++  font-size: .72rem;
++}
++.hero { padding-top: clamp(58px, 8vw, 112px); }
++.hero-grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(300px, .65fr); gap: clamp(36px, 8vw, 100px); align-items: center; margin-top: 34px; }
++.kicker { color: var(--sea); font-weight: 700; letter-spacing: .02em; margin: 0 0 10px; }
++h1, h2, h3, blockquote { font-family: Georgia, "Times New Roman", serif; letter-spacing: -.025em; }
++h1 { font-size: clamp(3.3rem, 7.4vw, 7rem); line-height: .94; font-weight: 500; margin: 0; max-width: 880px; }
++.lede { max-width: 760px; font-size: clamp(1.05rem, 1.8vw, 1.28rem); color: var(--ink-soft); margin: 26px 0 0; }
++.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
++.button { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 20px; border-radius: 999px; text-decoration: none; border: 1px solid var(--line); font-weight: 720; transition: transform .18s ease, background .18s ease; }
++.button:hover { transform: translateY(-2px); }
++.button-primary { background: var(--ink); color: var(--cream); border-color: var(--ink); }
++.button-primary:hover { background: var(--sea); border-color: var(--sea); }
++.button-quiet { background: transparent; }
++.button-small { min-height: 42px; padding-inline: 16px; font-size: .88rem; margin-top: 8px; }
++
++.island-card { position: relative; padding: 34px; border: 1px solid var(--line); border-radius: var(--radius-lg); background: rgba(255,255,255,.35); box-shadow: var(--shadow); overflow: hidden; }
++.island-card::before { content: ""; position: absolute; inset: -30% auto auto 45%; width: 70%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(41,95,102,.14), transparent 66%); pointer-events: none; }
++.island-line { position: absolute; left: 49px; top: 61px; bottom: 78px; width: 1px; background: linear-gradient(var(--sea), var(--copper)); }
++.dot { position: absolute; left: -5px; width: 11px; height: 11px; border-radius: 50%; background: var(--paper); border: 2px solid var(--sea); }
++.dot-one { top: 6%; }.dot-two { top: 46%; border-color: var(--gold); }.dot-three { top: 86%; border-color: var(--copper); }
++.island-list { position: relative; list-style: none; margin: 0; padding: 0 0 0 42px; display: grid; gap: 34px; }
++.island-list li { display: grid; }
++.island-list li > span { text-transform: uppercase; letter-spacing: .14em; font-size: .62rem; color: var(--ink-soft); }
++.island-list strong { font-family: Georgia, "Times New Roman", serif; font-size: 1.35rem; font-weight: 500; }
++.island-list small { color: var(--ink-soft); }
++.micro { border-top: 1px solid var(--line); padding-top: 18px; margin: 30px 0 0; color: var(--ink-soft); font-size: .82rem; }
++
++.section-tone { background: var(--cream); border-block: 1px solid var(--line); }
++.section-warm { background: var(--paper-deep); border-block: 1px solid var(--line); }
++.section-ink { background: var(--ink); color: var(--cream); }
++.section-heading { margin-bottom: 40px; }
++.section-heading h2 { font-size: clamp(2.3rem, 5vw, 4.9rem); line-height: .98; margin: 10px 0 0; font-weight: 500; }
++.section-heading > p, .split-heading > p { color: var(--ink-soft); max-width: 560px; }
++.split-heading { display: grid; grid-template-columns: 1.2fr .8fr; gap: 40px; align-items: end; }
++.centered { text-align: center; max-width: 760px; margin-inline: auto; }
++.centered p { margin-inline: auto; }
++.inverse > p { color: rgba(255,255,255,.66); }
++.inverse .eyebrow { color: #ddbd89; }
++
++.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
++.service-card { min-height: 330px; border: 1px solid var(--line); border-radius: var(--radius-md); padding: 26px; display: flex; flex-direction: column; background: var(--paper); position: relative; overflow: hidden; }
++.service-card::after { content: ""; position: absolute; width: 180px; height: 180px; border-radius: 50%; right: -80px; bottom: -90px; opacity: .24; background: var(--sea); }
++.church-portsmouth::after { background: var(--moss); }.church-stpauls::after { background: var(--copper); }
++.service-topline { display: flex; justify-content: space-between; color: var(--ink-soft); font-size: .72rem; text-transform: uppercase; letter-spacing: .12em; }
++.service-card h3 { font-size: 1.75rem; margin: 44px 0 0; font-weight: 500; }
++.service-time { color: var(--sea); font-weight: 750; font-size: 1rem; margin: 8px 0; }
++.service-card > p:not(.service-time) { color: var(--ink-soft); max-width: 34ch; }
++.service-actions { display: flex; gap: 18px; margin-top: auto; position: relative; z-index: 1; }
++.service-actions a { font-weight: 700; font-size: .84rem; text-underline-offset: 4px; }
++.source-note { margin: 18px 0 0; color: var(--ink-soft); font-size: .78rem; }
++
++.path-grid { display: grid; grid-template-columns: repeat(5, 1fr); border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: var(--cream); }
++.path-card { min-height: 240px; text-align: left; border: 0; border-right: 1px solid var(--line); background: transparent; padding: 22px; display: flex; flex-direction: column; cursor: pointer; transition: background .18s ease, transform .18s ease; }
++.path-card:last-child { border-right: 0; }
++.path-card:hover, .path-card.selected { background: var(--sea-soft); }
++.path-number { color: var(--copper); font-size: .72rem; letter-spacing: .12em; }
++.path-card strong { margin-top: auto; font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem; line-height: 1.12; font-weight: 500; }
++.path-card small { margin-top: 10px; color: var(--ink-soft); line-height: 1.4; }
++.path-result { margin: 18px auto 0; max-width: 820px; border: 1px solid var(--line); background: rgba(255,255,255,.35); border-radius: var(--radius-md); padding: 28px; }
++.result-label { color: var(--copper); text-transform: uppercase; letter-spacing: .13em; font-size: .65rem; font-weight: 800; }
++.path-result h3 { margin: 8px 0 5px; font-size: 1.8rem; font-weight: 500; }
++.path-result p { color: var(--ink-soft); margin: 0 0 14px; }
++
++.filter-bar { display: grid; gap: 10px; margin: 26px 0 30px; }
++.filter-group { display: flex; gap: 8px; flex-wrap: wrap; }
++.filter-group.secondary { opacity: .88; }
++.filter-button { border: 1px solid var(--line-light); border-radius: 999px; background: transparent; color: rgba(255,255,255,.74); padding: 8px 13px; cursor: pointer; }
++.filter-button:hover, .filter-button.active { background: var(--cream); color: var(--ink); border-color: var(--cream); }
++.event-list { border-top: 1px solid var(--line-light); }
++.event-row { display: grid; grid-template-columns: 130px minmax(0,1fr) 46px; gap: 26px; align-items: center; padding: 24px 0; border-bottom: 1px solid var(--line-light); }
++.event-badge { color: #ddbd89; text-transform: uppercase; letter-spacing: .11em; font-size: .68rem; }
++.event-body h3 { margin: 0; font-size: 1.5rem; font-weight: 500; }
++.event-body p { margin: 6px 0 0; color: rgba(255,255,255,.66); }
++.event-meta { color: rgba(255,255,255,.88) !important; font-size: .88rem; font-weight: 700; }
++.event-action { width: 42px; height: 42px; border-radius: 50%; border: 1px solid var(--line-light); background: transparent; color: var(--cream); cursor: pointer; }
++.empty-state { padding: 36px 0; display: grid; color: rgba(255,255,255,.72); }
++
++.conversation-feature { display: grid; grid-template-columns: .92fr 1.08fr; gap: 18px; }
++.video-placeholder { min-height: 390px; border-radius: var(--radius-lg); padding: 28px; background: linear-gradient(145deg, var(--sea), #17383d); color: var(--cream); display: flex; flex-direction: column; justify-content: flex-end; box-shadow: var(--shadow); }
++.video-placeholder small { color: rgba(255,255,255,.72); text-transform: uppercase; letter-spacing: .12em; font-size: .66rem; }
++.video-placeholder strong { font-family: Georgia, "Times New Roman", serif; font-size: clamp(2rem, 3.5vw, 3.7rem); font-weight: 500; line-height: 1; max-width: 9ch; margin-top: 8px; }
++.video-icon { margin-bottom: auto; width: 50px; height: 50px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.5); border-radius: 50%; }
++.conversation-copy { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(28px, 5vw, 56px); background: var(--cream); }
++.tag { display: inline-flex; color: var(--copper); font-size: .7rem; text-transform: uppercase; letter-spacing: .11em; font-weight: 800; }
++.conversation-copy h3 { font-size: clamp(2rem, 4vw, 3.7rem); line-height: 1; font-weight: 500; margin: 16px 0; }
++.conversation-copy p { color: var(--ink-soft); }
++.resource-links { display: grid; gap: 8px; margin-top: 28px; }
++.text-link { display: inline-block; width: fit-content; border: 0; background: none; padding: 0; font-weight: 750; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; cursor: pointer; }
++.conversation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 18px; }
++.conversation-card { border: 1px solid var(--line); border-radius: var(--radius-md); padding: 24px; min-height: 220px; }
++.conversation-card > span { color: var(--copper); font-size: .72rem; }
++.conversation-card h3 { margin: 52px 0 10px; font-size: 1.45rem; font-weight: 500; }
++.conversation-card p { margin: 0; color: var(--ink-soft); }
++
++.ministry-case { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(30px, 8vw, 100px); border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(30px, 6vw, 68px); background: var(--cream); box-shadow: var(--shadow); }
++.ministry-case h3 { font-size: clamp(2.7rem, 5vw, 5.2rem); margin: 12px 0; font-weight: 500; }
++.ministry-case p { color: var(--ink-soft); }
++.relationship-grid { margin: 0; display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); border-left: 1px solid var(--line); align-self: center; }
++.relationship-grid > div { padding: 18px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
++.relationship-grid dt { color: var(--ink-soft); font-size: .68rem; text-transform: uppercase; letter-spacing: .11em; }
++.relationship-grid dd { margin: 6px 0 0; font-weight: 750; }
++.ministry-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 18px; }
++.ministry-grid article { padding: 26px; border: 1px solid var(--line); border-radius: var(--radius-md); background: rgba(255,255,255,.32); }
++.ministry-icon { font-size: 1.4rem; color: var(--copper); }
++.ministry-grid h3 { margin: 38px 0 8px; font-size: 1.45rem; font-weight: 500; }
++.ministry-grid p { color: var(--ink-soft); }
++.ministry-grid a { font-weight: 740; font-size: .85rem; text-underline-offset: 4px; }
++
++.church-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
++.church-card { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 28px; min-height: 410px; display: flex; flex-direction: column; position: relative; overflow: hidden; background: var(--cream); }
++.church-card::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 7px; background: var(--sea); }
++.church-card.church-portsmouth::before { background: var(--moss); }.church-card.church-stpauls::before { background: var(--copper); }
++.church-index { color: var(--ink-soft); text-transform: uppercase; letter-spacing: .11em; font-size: .68rem; }
++.church-card h3 { font-size: 2rem; line-height: 1.05; margin: 50px 0 12px; font-weight: 500; }
++.church-card > p { color: var(--ink-soft); }
++.church-card dl { margin: auto 0 24px; border-top: 1px solid var(--line); }
++.church-card dl > div { display: grid; grid-template-columns: 80px 1fr; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--line); }
++.church-card dt { color: var(--ink-soft); font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; }
++.church-card dd { margin: 0; font-size: .86rem; }
++
++.principle-band { background: var(--sea); color: var(--cream); }
++.principle-grid { min-height: 390px; padding-block: 70px; display: grid; grid-template-columns: .45fr 1.1fr .8fr; gap: 50px; align-items: center; }
++.principle-grid .eyebrow { color: #f0d2a3; }
++.principle-grid blockquote { margin: 0; font-size: clamp(3rem, 6vw, 6rem); line-height: .94; }
++.principle-grid p { color: rgba(255,255,255,.72); max-width: 36ch; }
++
++.site-footer { background: #12191a; color: var(--cream); }
++.footer-grid { min-height: 220px; padding-block: 50px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 30px; align-items: end; }
++.footer-grid strong { font-family: Georgia, "Times New Roman", serif; font-weight: 500; }
++.footer-grid p, .footer-grid small { color: rgba(255,255,255,.58); font-size: .8rem; }
++.footer-note { display: grid; text-align: right; }
++.footer-note span { color: #ddbd89; }
++
++@media (max-width: 980px) {
++  .hero-grid, .split-heading, .conversation-feature, .ministry-case, .principle-grid { grid-template-columns: 1fr; }
++  .service-grid, .church-grid, .ministry-grid, .conversation-grid { grid-template-columns: 1fr 1fr; }
++  .path-grid { grid-template-columns: 1fr 1fr; }
++  .path-card { border-bottom: 1px solid var(--line); }
++  .path-card:nth-child(2n) { border-right: 0; }
++  .path-card:last-child { grid-column: 1 / -1; }
++  .principle-grid { gap: 20px; }
++  .principle-grid p { max-width: 60ch; }
++}
++
++@media (max-width: 720px) {
++  :root { --shell: min(100% - 28px, 1180px); }
++  .nav-toggle { display: block; }
++  .primary-nav { display: none; position: absolute; left: 14px; right: 14px; top: 68px; background: var(--cream); border: 1px solid var(--line); border-radius: 18px; padding: 18px; box-shadow: var(--shadow); flex-direction: column; align-items: stretch; }
++  .primary-nav.open { display: flex; }
++  h1 { font-size: clamp(3.15rem, 18vw, 5.1rem); }
++  .service-grid, .church-grid, .ministry-grid, .conversation-grid, .path-grid { grid-template-columns: 1fr; }
++  .path-card, .path-card:nth-child(2n) { border-right: 0; }
++  .path-card:last-child { grid-column: auto; }
++  .event-row { grid-template-columns: 1fr auto; gap: 8px 16px; }
++  .event-badge { grid-column: 1 / -1; }
++  .relationship-grid { grid-template-columns: 1fr; }
++  .footer-grid { grid-template-columns: 1fr; }
++  .footer-note { text-align: left; }
++}
++
++@media (prefers-reduced-motion: reduce) {
++  html { scroll-behavior: auto; }
++  *, *::before, *::after { transition-duration: .001ms !important; animation-duration: .001ms !important; animation-iteration-count: 1 !important; }
++}
+diff --git a/editions/aquidneck-parish/parish.js b/editions/aquidneck-parish/parish.js
+new file mode 100644
+--- /dev/null
++++ b/editions/aquidneck-parish/parish.js
+@@ -0,0 +1,125 @@
++(() => {
++  const content = window.PARISH_CONTENT;
++  const qs = (selector, root = document) => root.querySelector(selector);
++  const qsa = (selector, root = document) => [...root.querySelectorAll(selector)];
++
++  const renderServices = () => {
++    const grid = qs('#service-grid');
++    grid.innerHTML = content.churches.map((church, index) => `
++      <article class="service-card church-${church.id}">
++        <div class="service-topline"><span>0${index + 1}</span><span>${church.city}</span></div>
++        <h3>${church.short}</h3>
++        <p class="service-time">${church.worship}</p>
++        <p>${church.note}</p>
++        <div class="service-actions">
++          <a href="#church-${church.id}">Plan a visit</a>
++          <a href="${church.url}" target="_blank" rel="noreferrer">Current site ↗</a>
++        </div>
++      </article>
++    `).join('');
++  };
++
++  const renderChurches = () => {
++    const grid = qs('#church-grid');
++    grid.innerHTML = content.churches.map((church, index) => `
++      <article id="church-${church.id}" class="church-card church-${church.id}">
++        <div class="church-index">0${index + 1} · ${church.city}</div>
++        <h3>${church.name}</h3>
++        <p>${church.character}</p>
++        <dl>
++          <div><dt>Worship</dt><dd>${church.worship}</dd></div>
++          <div><dt>Find us</dt><dd>${church.address}</dd></div>
++        </dl>
++        <a class="text-link" href="${church.url}" target="_blank" rel="noreferrer">Visit current church site ↗</a>
++      </article>
++    `).join('');
++  };
++
++  let currentScope = 'all';
++  let currentType = 'all';
++
++  const renderEvents = () => {
++    const list = qs('#event-list');
++    const events = content.events.filter(event => {
++      const scopeMatch = currentScope === 'all' || event.scope.includes(currentScope);
++      const typeMatch = currentType === 'all' || event.type === currentType;
++      return scopeMatch && typeMatch;
++    });
++
++    list.innerHTML = events.length ? events.map(event => `
++      <article class="event-row">
++        <div class="event-badge">${event.badge}</div>
++        <div class="event-body">
++          <h3>${event.title}</h3>
++          <p class="event-meta">${event.meta}</p>
++          <p>${event.description}</p>
++        </div>
++        <button class="event-action" type="button" aria-label="Open prototype detail for ${event.title}">→</button>
++      </article>
++    `).join('') : `
++      <div class="empty-state">
++        <strong>No events match this view.</strong>
++        <span>A production calendar can preserve the filter while offering the nearest relevant alternative.</span>
++      </div>
++    `;
++  };
++
++  const activateFilter = (selector, attr, callback) => {
++    qsa(selector).forEach(button => {
++      button.addEventListener('click', () => {
++        qsa(selector).forEach(item => item.classList.remove('active'));
++        button.classList.add('active');
++        callback(button.getAttribute(attr));
++        renderEvents();
++      });
++    });
++  };
++
++  const setupPathChooser = () => {
++    const result = qs('#path-result');
++    qsa('.path-card').forEach(card => {
++      card.addEventListener('click', () => {
++        qsa('.path-card').forEach(item => item.classList.remove('selected'));
++        card.classList.add('selected');
++        const path = content.paths[card.dataset.path];
++        result.innerHTML = `
++          <span class="result-label">Suggested first step</span>
++          <h3>${path.title}</h3>
++          <p>${path.copy}</p>
++          <a class="button button-primary button-small" href="${path.href}">${path.action}</a>
++        `;
++      });
++    });
++  };
++
++  const setupNav = () => {
++    const toggle = qs('.nav-toggle');
++    const nav = qs('#primary-nav');
++    toggle.addEventListener('click', () => {
++      const expanded = toggle.getAttribute('aria-expanded') === 'true';
++      toggle.setAttribute('aria-expanded', String(!expanded));
++      nav.classList.toggle('open', !expanded);
++    });
++    qsa('a', nav).forEach(link => link.addEventListener('click', () => {
++      toggle.setAttribute('aria-expanded', 'false');
++      nav.classList.remove('open');
++    }));
++  };
++
++  const setupHeader = () => {
++    const header = qs('.site-header');
++    const update = () => header.dataset.elevated = String(window.scrollY > 12);
++    update();
++    window.addEventListener('scroll', update, { passive: true });
++  };
++
++  renderServices();
++  renderChurches();
++  renderEvents();
++  setupPathChooser();
++  setupNav();
++  setupHeader();
++
++  activateFilter('[data-filter-scope]', 'data-filter-scope', value => currentScope = value);
++  activateFilter('[data-filter-type]', 'data-filter-type', value => currentType = value);
++})();
+diff --git a/editions/aquidneck-parish/parish-content.js b/editions/aquidneck-parish/parish-content.js
+new file mode 100644
+--- /dev/null
++++ b/editions/aquidneck-parish/parish-content.js
+@@ -0,0 +1,137 @@
++window.PARISH_CONTENT = {
++  churches: [
++    {
++      id: 'calvary',
++      name: 'Calvary United Methodist Church',
++      short: 'Calvary UMC',
++      city: 'Middletown',
++      address: '200 Turner Road · Middletown, RI',
++      worship: '10:30 AM · September–June',
++      note: 'Summer: 10:00 AM sanctuary worship + 8:00 AM Third Beach worship',
++      character: 'Formation, music, community life, missions, and God’s Community Garden.',
++      url: 'https://www.middletownmethodist.com/'
++    },
++    {
++      id: 'portsmouth',
++      name: 'Portsmouth United Methodist Church',
++      short: 'Portsmouth UMC',
++      city: 'Portsmouth',
++      address: '2732 East Main Road · Portsmouth, RI',
++      worship: '10:00 AM Sunday',
++      note: 'Sunday School follows the Children’s Message when in session.',
++      character: 'A long-rooted Methodist community centered on worship, growth, outreach, and service.',
++      url: 'https://www.pumcri.org/'
++    },
++    {
++      id: 'stpauls',
++      name: 'St. Paul’s United Methodist Church',
++      short: 'St. Paul’s UMC',
++      city: 'Newport',
++      address: '12 Marlborough Street · Newport, RI',
++      worship: '10:00 AM Sunday',
++      note: 'Join in person, online, or by phone.',
++      character: 'Contemplative, inclusive worship with strong recovery, justice, and community ministries.',
++      url: 'https://www.stpaulsnewport.net/'
++    }
++  ],
++
++  events: [
++    {
++      title: 'Sunday worship at Calvary',
++      meta: 'Sunday · 10:30 AM · Middletown',
++      description: 'Blended worship with fellowship following the service.',
++      scope: ['calvary'],
++      type: 'worship',
++      badge: 'Calvary'
++    },
++    {
++      title: 'Sunday worship at Portsmouth',
++      meta: 'Sunday · 10:00 AM · Portsmouth',
++      description: 'Sunday worship with children’s programming when in session.',
++      scope: ['portsmouth'],
++      type: 'worship',
++      badge: 'Portsmouth'
++    },
++    {
++      title: 'Sunday worship at St. Paul’s',
++      meta: 'Sunday · 10:00 AM · Newport + online/phone',
++      description: 'Contemplative, Spirit-filled worship with multiple ways to join.',
++      scope: ['stpauls'],
++      type: 'worship',
++      badge: 'St. Paul’s'
++    },
++    {
++      title: 'Meditation Gathering',
++      meta: 'Wednesday · 5:30–6:20 PM · St. Paul’s',
++      description: 'A weekly gathering in Barber Hall.',
++      scope: ['stpauls'],
++      type: 'formation',
++      badge: 'Formation'
++    },
++    {
++      title: 'Spiritual Transformation Group',
++      meta: 'Thursday · 6:15–7:45 PM · St. Paul’s / Zoom',
++      description: 'A weekly small group for spiritual formation and conversation.',
++      scope: ['stpauls'],
++      type: 'formation',
++      badge: 'Formation'
++    },
++    {
++      title: 'Community Meal',
++      meta: 'Third Thursday · hosted at St. Paul’s',
++      description: 'Prepared and served by Calvary parishioners in Newport. A perfect example of one ministry carrying multiple parish relationships.',
++      scope: ['calvary', 'stpauls'],
++      type: 'service',
++      badge: 'Shared ministry'
++    },
++    {
++      title: 'God’s Community Garden',
++      meta: 'Calvary campus · parish and community volunteers',
++      description: 'Grow and harvest produce for food pantries, soup kitchens, and free farm stands across the island.',
++      scope: ['calvary', 'stpauls'],
++      type: 'service',
++      badge: 'Shared ministry'
++    },
++    {
++      title: 'Coffee & fellowship',
++      meta: 'After Sunday worship · congregation-specific',
++      description: 'A simple recurring community rhythm surfaced wherever it applies.',
++      scope: ['calvary', 'portsmouth', 'stpauls'],
++      type: 'community',
++      badge: 'Community'
++    }
++  ],
++
++  paths: {
++    visit: {
++      title: 'Compare this Sunday’s worship.',
++      copy: 'See times, access options, children’s programming, location, and what each congregation feels like before choosing where to begin.',
++      action: 'See Sunday worship',
++      href: '#worship'
++    },
++    explore: {
++      title: 'Begin with one honest question.',
++      copy: 'Open Faith in Conversation, then move naturally into a sermon, transcript, study resource, or in-person formation gathering.',
++      action: 'Explore faith & formation',
++      href: '#faith'
++    },
++    support: {
++      title: 'Find the right kind of care.',
++      copy: 'A production version can distinguish pastoral care, prayer, material support, recovery resources, and emergencies before asking someone to tell their story.',
++      action: 'See care pathways',
++      href: '#serve'
++    },
++    serve: {
++      title: 'Find a role that fits your capacity.',
++      copy: 'Start with the garden, community meals, hospitality, or other ministries—then filter by time, place, accessibility, and physical demands.',
++      action: 'Explore service',
++      href: '#serve'
++    },
++    belong: {
++      title: 'Open the parish dashboard.',
++      copy: 'In production, this becomes the calm home for bulletins, current notices, calendar filters, forms, groups, and practical member resources.',
++      action: 'See this week',
++      href: '#this-week'
++    }
++  }
++};
