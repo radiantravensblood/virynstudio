@@ -35,11 +35,38 @@
         <p>${worship.note}</p>
         <div class="service-actions">
           <a href="#church-${church.id}">Plan a visit</a>
+          ${church.zoomUrl ? `<a href="${church.zoomUrl}" target="_blank" rel="noreferrer">Join on Zoom ↗</a>` : ''}
           <a href="${church.url}" target="_blank" rel="noreferrer">Current site ↗</a>
         </div>
       </article>
     `;
     }).join('');
+  };
+
+  const renderWeeklyResources = () => {
+    const container = qs('#week-resources');
+    if (!container) return;
+
+    const key = window.COOPERATIVE_RHYTHM?.today;
+    const resources = key ? content.weeklyResources?.[key] : null;
+
+    if (!resources?.length) {
+      container.hidden = true;
+      return;
+    }
+
+    container.hidden = false;
+    container.innerHTML = `
+      <div class="week-resources-label">For this Sunday</div>
+      <div class="week-resource-links">
+        ${resources.map((resource) => `
+          <a class="week-resource-link" href="${resource.href}" ${resource.external ? 'target="_blank" rel="noreferrer"' : 'target="_blank" rel="noreferrer"'}>
+            <span>${resource.label}</span>
+            <small>${resource.detail}</small>
+          </a>
+        `).join('')}
+      </div>
+    `;
   };
 
   const renderChurches = () => {
@@ -177,6 +204,7 @@
   };
 
   renderServices();
+  renderWeeklyResources();
   renderChurches();
   renderEvents();
   setupPathChooser();

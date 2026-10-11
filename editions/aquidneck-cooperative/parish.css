@@ -538,3 +538,125 @@ html[data-sunday-mode="true"] .rhythm-kicker::after {
   }
 }
 
+
+
+/* =========================================================
+   Current-resource pass · October 2026
+   Static links only: no embeds, widgets, or third-party runtimes.
+   ========================================================= */
+
+.service-actions {
+  flex-wrap: wrap;
+}
+
+.week-resources {
+  margin: -8px 0 28px;
+}
+
+.week-resources[hidden] {
+  display: none;
+}
+
+.week-resources-label {
+  margin-bottom: 10px;
+  color: var(--ink-soft);
+  font-size: .66rem;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.week-resource-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.week-resource-link {
+  display: grid;
+  gap: 2px;
+  min-width: 180px;
+  padding: 11px 14px;
+  border: 1px solid color-mix(in srgb, var(--liturgical-accent) 22%, var(--line));
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--cream) 88%, transparent);
+  text-decoration: none;
+}
+
+.week-resource-link span {
+  font-size: .82rem;
+  font-weight: 760;
+}
+
+.week-resource-link small {
+  color: var(--ink-soft);
+  font-size: .68rem;
+}
+
+.week-resource-link:hover {
+  border-color: var(--liturgical-accent);
+}
+
+.resource-section {
+  border-bottom: 1px solid var(--line);
+}
+
+.resource-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  gap: 18px;
+}
+
+.resource-card {
+  min-height: 280px;
+  padding: clamp(26px, 4vw, 42px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  background: var(--cream);
+}
+
+.resource-card-featured {
+  background:
+    linear-gradient(125deg, var(--rhythm-aura), transparent 52%),
+    var(--cream);
+  border-color: color-mix(in srgb, var(--liturgical-accent) 20%, var(--line));
+}
+
+.resource-meta {
+  color: var(--copper);
+  font-size: .68rem;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.resource-card h3 {
+  margin: 32px 0 10px;
+  font-size: clamp(2rem, 3.4vw, 3.3rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.resource-card p {
+  max-width: 55ch;
+  color: var(--ink-soft);
+}
+
+.resource-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 18px;
+  margin-top: 28px;
+}
+
+@media (max-width: 820px) {
+  .resource-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .week-resource-links {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

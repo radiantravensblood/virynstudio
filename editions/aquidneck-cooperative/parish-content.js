@@ -21,7 +21,8 @@ window.PARISH_CONTENT = {
         }
       ],
       character: 'Formation, music, community life, missions, and God’s Community Garden.',
-      url: 'https://www.middletownmethodist.com/'
+      url: 'https://www.middletownmethodist.com/',
+      zoomUrl: 'https://us02web.zoom.us/j/2821697807?pwd=aldEN09mTFZ4VlN5Q3lWQi90cmRGQT09'
     },
     {
       id: 'portsmouth',
@@ -46,6 +47,27 @@ window.PARISH_CONTENT = {
       url: 'https://www.stpaulsnewport.net/'
     }
   ],
+
+  weeklyResources: {
+    '2026-10-11': [
+      {
+        label: 'Calvary bulletin',
+        detail: 'Order of worship · October 11',
+        href: 'resources/2026-10/calvary-bulletin-2026-10-11-public.pdf'
+      },
+      {
+        label: 'Worship music',
+        detail: 'Music pages · October 11',
+        href: 'resources/2026-10/calvary-worship-music-2026-10-11.pdf'
+      },
+      {
+        label: 'Join Calvary on Zoom',
+        detail: 'Standing worship link',
+        href: 'https://us02web.zoom.us/j/2821697807?pwd=aldEN09mTFZ4VlN5Q3lWQi90cmRGQT09',
+        external: true
+      }
+    ]
+  },
 
   events: [
     {
@@ -145,8 +167,8 @@ window.PARISH_CONTENT = {
     belong: {
       title: 'Find what you need for the week.',
       copy: 'Find bulletins, current notices, calendars, groups, forms, and practical church resources in one calm place.',
-      action: 'See this week',
-      href: '#this-week'
+      action: 'Open current resources',
+      href: '#resources'
     }
   }
 };
