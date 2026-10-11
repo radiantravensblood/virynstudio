@@ -1,21 +1,28 @@
-Aquidneck Parish — Header Hotfix (drag-and-drop)
+Aquidneck Cooperative — Rhythm Engine Atmosphere Pass 02
 
-This package contains ONE replacement site file:
-  editions/aquidneck-parish/parish.css
+Browser-only install:
+1. Unzip this package.
+2. Open your virynstudio repository in GitHub.
+3. Navigate to editions/aquidneck-cooperative/.
+4. Upload/replace rhythm-engine.js.
+5. Upload rhythm-theme.css beside it.
+6. Commit the upload and wait for GitHub Pages to refresh.
+7. Hard-refresh the live page if Chrome is still showing the older script.
 
-No Terminal required.
+What changes:
+- "Choose the threshold that fits" becomes "Explore our three churches."
+- "Lectionary" becomes "This week's readings."
+- "Next threshold" becomes "Looking ahead."
+- Public "Sunday Mode" and liturgical color words are removed from the card/header copy.
+- Sunday/Saturday-evening/weekday states change emphasis and CTAs.
+- Civil season changes atmosphere; liturgical season changes accent behavior.
+- Current state remains driven by the supplied 2026/2027 worship calendars.
+- Human override seam remains available through window.COOPERATIVE_RHYTHM_OVERRIDE.
 
-To apply:
-1. Open this ZIP.
-2. In your Viryn Studio site/repository, open:
-     editions/aquidneck-parish/
-3. Replace the existing parish.css with the parish.css from this package.
-4. Publish/upload as usual.
-
-What this fixes:
-- Removes the empty gap above the sticky header after the demo ribbon scrolls away.
-- Lets the parish header settle flush against the top of the viewport.
-- Slightly tightens the header after scrolling so it feels intentional rather than detached.
-- Does not change page content, navigation links, parish data, or other Edition files.
-
-Viryn Studio · Parish Edition 02
+Prototype preview helper:
+Append ?rhythmDate=YYYY-MM-DD to the URL to preview another date without changing your computer clock.
+Examples:
+?rhythmDate=2026-11-29  (Advent)
+?rhythmDate=2027-03-26  (Good Friday)
+?rhythmDate=2027-03-28  (Easter)
+?rhythmDate=2027-05-16  (Pentecost)
