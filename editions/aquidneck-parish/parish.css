@@ -38,10 +38,9 @@
   font-weight: 750;
   text-underline-offset: .22em;
 }
-.parish-site .site-header { top: 38px; }
+.parish-site .site-header { top: 0; }
 @media (max-width: 720px) {
   .demo-ribbon { align-items: flex-start; flex-direction: column; gap: .2rem; letter-spacing: .05em; }
-  .parish-site .site-header { top: 58px; }
 }
 
 * { box-sizing: border-box; }
@@ -80,10 +79,11 @@ button { color: inherit; }
   background: rgba(247, 243, 234, .9);
   backdrop-filter: blur(18px);
   border-bottom: 1px solid transparent;
-  transition: border-color .2s ease, box-shadow .2s ease;
+  transition: border-color .2s ease, box-shadow .2s ease, background-color .2s ease;
 }
-.site-header[data-elevated="true"] { border-color: var(--line); box-shadow: 0 6px 30px rgba(28,37,39,.06); }
-.nav-shell { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.site-header[data-elevated="true"] { border-color: var(--line); box-shadow: 0 6px 30px rgba(28,37,39,.06); background: rgba(247, 243, 234, .96); }
+.nav-shell { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; transition: min-height .2s ease; }
+.site-header[data-elevated="true"] .nav-shell { min-height: 62px; }
 .brand { display: inline-flex; gap: 11px; align-items: center; text-decoration: none; }
 .brand-mark { color: var(--copper); font-size: 1.15rem; }
 .brand span:last-child { display: grid; line-height: 1.05; }
