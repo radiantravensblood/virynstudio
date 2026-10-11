@@ -1,28 +1,21 @@
-Aquidneck Cooperative — Rhythm Engine Atmosphere Pass 02
+Aquidneck Cooperative — Rhythm Engine Polish Pass 03
 
-Browser-only install:
-1. Unzip this package.
-2. Open your virynstudio repository in GitHub.
-3. Navigate to editions/aquidneck-cooperative/.
-4. Upload/replace rhythm-engine.js.
-5. Upload rhythm-theme.css beside it.
-6. Commit the upload and wait for GitHub Pages to refresh.
-7. Hard-refresh the live page if Chrome is still showing the older script.
+Browser-upload drop-in. No Terminal required.
 
-What changes:
-- "Choose the threshold that fits" becomes "Explore our three churches."
-- "Lectionary" becomes "This week's readings."
-- "Next threshold" becomes "Looking ahead."
-- Public "Sunday Mode" and liturgical color words are removed from the card/header copy.
-- Sunday/Saturday-evening/weekday states change emphasis and CTAs.
-- Civil season changes atmosphere; liturgical season changes accent behavior.
-- Current state remains driven by the supplied 2026/2027 worship calendars.
-- Human override seam remains available through window.COOPERATIVE_RHYTHM_OVERRIDE.
+Upload the included `editions` folder into the root of the virynstudio repository,
+allowing GitHub to replace these three files:
 
-Prototype preview helper:
-Append ?rhythmDate=YYYY-MM-DD to the URL to preview another date without changing your computer clock.
-Examples:
-?rhythmDate=2026-11-29  (Advent)
-?rhythmDate=2027-03-26  (Good Friday)
-?rhythmDate=2027-03-28  (Easter)
-?rhythmDate=2027-05-16  (Pentecost)
+  editions/aquidneck-cooperative/rhythm-engine.js
+  editions/aquidneck-cooperative/parish-content.js
+  editions/aquidneck-cooperative/parish.js
+
+This pass:
+- hides internal “Beginning Lectionary Year …” metadata from public headings;
+- normalizes Bible display abbreviations without altering source calendar data;
+- converts verse-range hyphens to en dashes in public reading display;
+- makes Calvary’s worship cards and Sunday event date-aware:
+    Jan–Jun + Sep–Dec: 10:30 AM Sunday
+    Jul–Aug: 10:00 AM sanctuary + 8:00 AM Third Beach
+- uses ?rhythmDate=YYYY-MM-DD for both liturgical preview and worship-schedule preview.
+
+The source datasets remain unchanged for provenance.

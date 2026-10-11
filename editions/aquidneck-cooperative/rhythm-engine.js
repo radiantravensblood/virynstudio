@@ -92,6 +92,108 @@
     });
   };
 
+  /*
+   * Source calendars stay verbatim in rhythm-data.js. This public layer removes
+   * planning metadata that clergy need but visitors do not, e.g. “Beginning
+   * Lectionary Year B”. Future internal notes can stay attached without leaking
+   * into headings or the living header.
+   */
+  const publicTitle = (title = "") => title
+    .split(";")
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .filter((part) => !/^Beginning\s+Lec(?:tionary|itonary)\s+Year\b/i.test(part))
+    .join("; ");
+
+  /*
+   * Display abbreviations follow the Bible reference supplied during the
+   * prototype review. The source strings remain untouched for provenance.
+   */
+  const BOOK_DISPLAY = [
+    ["Song of Sol", "Song"],
+    ["Eccles", "Eccles"],
+    ["Exod", "Ex"],
+    ["Matt", "Mt"],
+    ["Mark", "Mk"],
+    ["Luke", "Lk"],
+    ["John", "Jn"],
+    ["1 John", "1 Jn"],
+    ["2 John", "2 Jn"],
+    ["3 John", "3 Jn"],
+    ["1 Kings", "1 Kings"],
+    ["2 Kings", "2 Kings"],
+    ["1 Sam", "1 Sam"],
+    ["2 Sam", "2 Sam"],
+    ["1 Chron", "1 Chron"],
+    ["2 Chron", "2 Chron"],
+    ["1 Cor", "1 Cor"],
+    ["2 Cor", "2 Cor"],
+    ["1 Thess", "1 Thess"],
+    ["2 Thess", "2 Thess"],
+    ["1 Tim", "1 Tim"],
+    ["2 Tim", "2 Tim"],
+    ["1 Pet", "1 Pet"],
+    ["2 Pet", "2 Pet"],
+    ["Philem", "Philem"],
+    ["Jas", "Jas"],
+    ["Rev", "Rev"],
+    ["Acts", "Acts"],
+    ["Rom", "Rom"],
+    ["Gal", "Gal"],
+    ["Eph", "Eph"],
+    ["Phil", "Phil"],
+    ["Col", "Col"],
+    ["Heb", "Heb"],
+    ["Gen", "Gen"],
+    ["Lev", "Lev"],
+    ["Num", "Num"],
+    ["Deut", "Deut"],
+    ["Josh", "Josh"],
+    ["Judg", "Judg"],
+    ["Ruth", "Ruth"],
+    ["Ezra", "Ezra"],
+    ["Neh", "Neh"],
+    ["Esth", "Esther"],
+    ["Job", "Job"],
+    ["Ps", "Ps"],
+    ["Prov", "Prov"],
+    ["Ecc", "Eccles"],
+    ["Isa", "Isa"],
+    ["Jer", "Jer"],
+    ["Lam", "Lam"],
+    ["Ezek", "Ezek"],
+    ["Dan", "Dan"],
+    ["Hos", "Hos"],
+    ["Joel", "Joel"],
+    ["Amos", "Amos"],
+    ["Obad", "Obad"],
+    ["Jon", "Jon"],
+    ["Mic", "Mic"],
+    ["Nahum", "Nahum"],
+    ["Hab", "Hab"],
+    ["Zeph", "Zeph"],
+    ["Hag", "Hag"],
+    ["Zech", "Zech"],
+    ["Mal", "Mal"]
+  ];
+
+  const escapeRegex = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
+  const formatReadings = (value = "") => {
+    let output = value;
+
+    BOOK_DISPLAY
+      .slice()
+      .sort((a, b) => b[0].length - a[0].length)
+      .forEach(([source, display]) => {
+        output = output.replace(new RegExp(`\\b${escapeRegex(source)}\\b`, "g"), display);
+      });
+
+    // Typography only: chapter/verse range hyphens become en dashes.
+    output = output.replace(/(?<=\d)-(?!\s)(?=\d)/g, "–");
+    return output;
+  };
+
   const translateInterfaceLanguage = (dayMode) => {
     const worshipHeading = document.querySelector("#worship .section-heading h2");
     if (worshipHeading) worshipHeading.textContent = "Explore our three churches.";
@@ -137,14 +239,15 @@
   if (focus) {
     const resolvedColor = manualOverride.liturgicalColor || focus.color || "green";
     const resolvedSeason = manualOverride.liturgicalSeason || liturgicalSeason(focus);
+    const displayTitle = publicTitle(focus.title);
 
     html.dataset.liturgicalColor = resolvedColor;
     html.dataset.liturgicalSeason = resolvedSeason;
 
-    setText("[data-rhythm-label]", focus.title);
-    setText("[data-rhythm-title]", focus.title);
+    setText("[data-rhythm-label]", displayTitle);
+    setText("[data-rhythm-title]", displayTitle);
     setText("[data-rhythm-date]", formatDate(focus.date));
-    setText("[data-rhythm-readings]", focus.readings);
+    setText("[data-rhythm-readings]", formatReadings(focus.readings));
 
     document.querySelectorAll(".rhythm-swatch, .rhythm-dot").forEach((node) => {
       node.setAttribute("role", "img");
@@ -160,7 +263,7 @@
 
     setText(
       "[data-rhythm-next]",
-      next ? `${formatDate(next.date)} · ${next.title}` : "The next published observance will appear here."
+      next ? `${formatDate(next.date)} · ${publicTitle(next.title)}` : "The next published observance will appear here."
     );
   }
 
@@ -180,6 +283,8 @@
     liturgicalColor: html.dataset.liturgicalColor,
     dayMode: html.dataset.dayMode,
     focus,
-    next
+    next,
+    publicTitle,
+    formatReadings
   };
 })();

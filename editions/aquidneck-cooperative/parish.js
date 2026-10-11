@@ -3,36 +3,62 @@
   const qs = (selector, root = document) => root.querySelector(selector);
   const qsa = (selector, root = document) => [...root.querySelectorAll(selector)];
 
+  const activeDate = () => {
+    const rhythmDate = window.COOPERATIVE_RHYTHM?.today;
+    if (rhythmDate && /^\d{4}-\d{2}-\d{2}$/.test(rhythmDate)) {
+      return new Date(`${rhythmDate}T12:00:00`);
+    }
+    return new Date();
+  };
+
+  const resolveWorship = (church) => {
+    if (!Array.isArray(church.worshipSchedule) || church.worshipSchedule.length === 0) {
+      return { time: church.worship, note: church.note };
+    }
+
+    const month = activeDate().getMonth() + 1;
+    const rule = church.worshipSchedule.find((item) => item.months?.includes(month));
+    return rule
+      ? { time: rule.time, note: rule.note }
+      : { time: church.worship, note: church.note };
+  };
+
   const renderServices = () => {
     const grid = qs('#service-grid');
-    grid.innerHTML = content.churches.map((church, index) => `
+    grid.innerHTML = content.churches.map((church, index) => {
+      const worship = resolveWorship(church);
+      return `
       <article class="service-card church-${church.id}">
         <div class="service-topline"><span>0${index + 1}</span><span>${church.city}</span></div>
         <h3>${church.short}</h3>
-        <p class="service-time">${church.worship}</p>
-        <p>${church.note}</p>
+        <p class="service-time">${worship.time}</p>
+        <p>${worship.note}</p>
         <div class="service-actions">
           <a href="#church-${church.id}">Plan a visit</a>
           <a href="${church.url}" target="_blank" rel="noreferrer">Current site ↗</a>
         </div>
       </article>
-    `).join('');
+    `;
+    }).join('');
   };
 
   const renderChurches = () => {
     const grid = qs('#church-grid');
-    grid.innerHTML = content.churches.map((church, index) => `
+    grid.innerHTML = content.churches.map((church, index) => {
+      const worship = resolveWorship(church);
+      return `
       <article id="church-${church.id}" class="church-card church-${church.id}">
         <div class="church-index">0${index + 1} · ${church.city}</div>
         <h3>${church.name}</h3>
         <p>${church.character}</p>
         <dl>
-          <div><dt>Worship</dt><dd>${church.worship}</dd></div>
+          <div><dt>Worship</dt><dd>${worship.time}</dd></div>
           <div><dt>Find us</dt><dd>${church.address}</dd></div>
         </dl>
         <a class="text-link" href="${church.url}" target="_blank" rel="noreferrer">Visit current church site ↗</a>
       </article>
-    `).join('');
+    `;
+    }).join('');
   };
 
   let currentScope = 'all';
@@ -50,8 +76,12 @@
       const override = event.override || null;
       const effectiveStatus = override?.status || event.status || "scheduled";
       const statusLabel = effectiveStatus === "cancelled" ? "Cancelled" : effectiveStatus === "changed" ? "Updated" : "";
-      const meta = override?.meta || event.meta;
-      const description = override?.note || event.description;
+      const eventChurch = event.churchId ? content.churches.find((church) => church.id === event.churchId) : null;
+      const worship = eventChurch && event.type === "worship" ? resolveWorship(eventChurch) : null;
+      const dynamicMeta = worship ? `Sunday · ${worship.time.replace(/ Sunday$/, "")} · ${eventChurch.city}` : event.meta;
+      const dynamicDescription = worship?.note || event.description;
+      const meta = override?.meta || dynamicMeta;
+      const description = override?.note || dynamicDescription;
       return `
       <article class="event-row" data-event-status="${effectiveStatus}" data-source="${event.sourceId || "prototype"}">
         <div class="event-badge">${statusLabel ? `${statusLabel} · ` : ""}${event.badge}</div>

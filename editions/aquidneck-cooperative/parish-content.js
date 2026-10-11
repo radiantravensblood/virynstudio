@@ -6,8 +6,20 @@ window.PARISH_CONTENT = {
       short: 'Calvary UMC',
       city: 'Middletown',
       address: '200 Turner Road · Middletown, RI',
-      worship: '10:30 AM · September–June',
-      note: 'Summer: 10:00 AM sanctuary worship + 8:00 AM Third Beach worship',
+      worship: '10:30 AM Sunday',
+      note: 'Blended worship with fellowship following the service.',
+      worshipSchedule: [
+        {
+          months: [1, 2, 3, 4, 5, 6, 9, 10, 11, 12],
+          time: '10:30 AM Sunday',
+          note: 'Blended worship with fellowship following the service.'
+        },
+        {
+          months: [7, 8],
+          time: '10:00 AM sanctuary · 8:00 AM Third Beach',
+          note: 'Summer worship offers two Sunday gatherings.'
+        }
+      ],
       character: 'Formation, music, community life, missions, and God’s Community Garden.',
       url: 'https://www.middletownmethodist.com/'
     },
@@ -38,6 +50,7 @@ window.PARISH_CONTENT = {
   events: [
     {
       title: 'Sunday worship at Calvary',
+      churchId: 'calvary',
       meta: 'Sunday · 10:30 AM · Middletown',
       description: 'Blended worship with fellowship following the service.',
       scope: ['calvary'],
@@ -46,6 +59,7 @@ window.PARISH_CONTENT = {
     },
     {
       title: 'Sunday worship at Portsmouth',
+      churchId: 'portsmouth',
       meta: 'Sunday · 10:00 AM · Portsmouth',
       description: 'Sunday worship with children’s programming when in session.',
       scope: ['portsmouth'],
@@ -54,6 +68,7 @@ window.PARISH_CONTENT = {
     },
     {
       title: 'Sunday worship at St. Paul’s',
+      churchId: 'stpauls',
       meta: 'Sunday · 10:00 AM · Newport + online/phone',
       description: 'Contemplative, Spirit-filled worship with multiple ways to join.',
       scope: ['stpauls'],
@@ -196,4 +211,3 @@ window.PARISH_CONTENT.events = window.PARISH_CONTENT.events.map((event) => ({
   override: event.override || null,
   ...event
 }));
-
