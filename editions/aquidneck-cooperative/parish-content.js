@@ -119,14 +119,14 @@ window.PARISH_CONTENT = {
 
   paths: {
     visit: {
-      title: 'Compare this Sunday’s worship.',
-      copy: 'See times, access options, children’s programming, location, and what each congregation feels like before choosing where to begin.',
+      title: 'Find a place to worship this Sunday.',
+      copy: 'See current times, locations, accessibility information, children’s programming, and ways to connect at each church.',
       action: 'See Sunday worship',
       href: '#worship'
     },
     explore: {
       title: 'Begin with one honest question.',
-      copy: 'Open Faith in Conversation, then move naturally into a sermon, transcript, study resource, or in-person formation gathering.',
+      copy: 'Open Faith in Conversation, then move naturally into Scripture, a transcript, reflection guide, study resource, or in-person formation gathering.',
       action: 'Explore faith & formation',
       href: '#faith'
     },
@@ -143,8 +143,8 @@ window.PARISH_CONTENT = {
       href: '#serve'
     },
     belong: {
-      title: 'Open the cooperative dashboard.',
-      copy: 'In production, this becomes the calm home for bulletins, current notices, calendar filters, forms, groups, and practical member resources.',
+      title: 'Find what you need for the week.',
+      copy: 'Find bulletins, current notices, calendars, groups, forms, and practical church resources in one calm place.',
       action: 'See this week',
       href: '#this-week'
     }
