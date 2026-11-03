@@ -1,0 +1,193 @@
+/* Viryn Studio × Velastra
+   Kernel 0018 external adapter.
+   The interface explains. The painting invites. */
+:root[data-velastra-studio="active"] {
+  --velastra-adapter-present: 1;
+}
+
+[data-velastra-surface] {
+  --velastra-section-space: 1;
+  --velastra-frame-opacity: .45;
+  --velastra-ornament-opacity: .3;
+  --velastra-shadow-blur: 30px;
+  --velastra-layer-offset: 4px;
+  --velastra-card-lift: 2px;
+  --velastra-art-saturation: 1;
+  --velastra-art-contrast: 1;
+  --velastra-art-glow: .1;
+  --velastra-note-angle: 0deg;
+  --velastra-line-inset: 16px;
+  --velastra-rhythm: 1;
+}
+
+[data-velastra-surface] :is(
+  .atelier-hero-art img,
+  .edition-visual img,
+  .preview-surface img,
+  .framework-card-art img
+) {
+  filter:
+    saturate(var(--velastra-art-saturation))
+    contrast(var(--velastra-art-contrast));
+}
+
+[data-velastra-surface] :is(
+  .atelier-hero-art,
+  .edition-feature,
+  .card,
+  .capability-bridge,
+  .process-step
+) {
+  --velastra-local-shadow:
+    0 var(--velastra-layer-offset)
+    var(--velastra-shadow-blur)
+    color-mix(in srgb, #000 24%, transparent);
+}
+
+[data-velastra-surface] :is(
+  .framework-card,
+  .portfolio-card,
+  .price-card,
+  .process-step
+) {
+  box-shadow: var(--velastra-local-shadow);
+}
+
+[data-velastra-surface] :is(
+  .atelier-hand-rule,
+  .atelier-coda::before,
+  .atelier-coda::after
+) {
+  opacity: var(--velastra-ornament-opacity);
+}
+
+[data-velastra-surface] :is(
+  .atelier-scrap,
+  .atelier-margin-note
+) {
+  transform: rotate(var(--velastra-note-angle));
+}
+
+[data-velastra-frame="open"] > .container {
+  position: relative;
+}
+
+[data-velastra-frame="open"] > .container::before {
+  position: absolute;
+  top: calc(var(--velastra-line-inset) * -1);
+  left: var(--velastra-line-inset);
+  width: min(7rem, 18%);
+  border-top: 1px solid
+    color-mix(
+      in srgb,
+      var(--gold) calc(var(--velastra-frame-opacity) * 100%),
+      transparent
+    );
+  content: "";
+  pointer-events: none;
+}
+
+[data-velastra-frame="held"] :is(
+  .card,
+  .edition-feature,
+  .capability-bridge
+) {
+  border-color:
+    color-mix(
+      in srgb,
+      var(--line) 84%,
+      var(--gold)
+    );
+}
+
+[data-velastra-material="ember"] {
+  --velastra-material-accent: var(--ember);
+}
+
+[data-velastra-material="brass"] {
+  --velastra-material-accent: var(--gold);
+}
+
+[data-velastra-material="botanical"] {
+  --velastra-material-accent: var(--moss);
+}
+
+[data-velastra-material="glass"] {
+  --velastra-material-accent: var(--plum);
+}
+
+[data-velastra-material="paper"] {
+  --velastra-material-accent: var(--gold);
+}
+
+[data-velastra-material="stone"] {
+  --velastra-material-accent: var(--muted);
+}
+
+[data-velastra-material="shadow"] {
+  --velastra-material-accent: var(--ink);
+}
+
+.framework-card[data-velastra-framework] {
+  position: relative;
+  isolation: isolate;
+}
+
+.framework-card[data-velastra-framework]::after {
+  position: absolute;
+  inset: auto var(--velastra-line-inset) var(--velastra-line-inset) auto;
+  width: 1.1rem;
+  height: 1.1rem;
+  border-right: 1px solid
+    color-mix(in srgb, var(--velastra-material-accent) 64%, transparent);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--velastra-material-accent) 64%, transparent);
+  content: "";
+  opacity: var(--velastra-ornament-opacity);
+  pointer-events: none;
+}
+
+.framework-card[data-velastra-material="glass"] {
+  background:
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--paper-strong) 90%, transparent),
+      color-mix(in srgb, var(--plum-soft) 18%, var(--paper))
+    );
+}
+
+.framework-card[data-velastra-material="ember"] {
+  background:
+    linear-gradient(
+      145deg,
+      var(--paper-strong),
+      color-mix(in srgb, var(--ember-soft) 16%, var(--paper))
+    );
+}
+
+[data-velastra-typography="operational"] :is(
+  .section-kicker,
+  .utility-label
+) {
+  letter-spacing: .105em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .framework-card[data-velastra-framework] {
+    transition:
+      transform 180ms ease,
+      box-shadow 180ms ease;
+  }
+
+  .framework-card[data-velastra-framework]:hover {
+    transform: translateY(
+      calc(var(--velastra-card-lift) * -1)
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .framework-card[data-velastra-framework] {
+    transition: none !important;
+  }
+}
