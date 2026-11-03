@@ -53,11 +53,12 @@
   box-shadow: var(--velastra-local-shadow);
 }
 
-[data-velastra-surface] :is(
-  .atelier-hand-rule,
-  .atelier-coda::before,
-  .atelier-coda::after
-) {
+[data-velastra-surface] .atelier-hand-rule {
+  opacity: var(--velastra-ornament-opacity);
+}
+
+[data-velastra-surface] .atelier-coda::before,
+[data-velastra-surface] .atelier-coda::after {
   opacity: var(--velastra-ornament-opacity);
 }
 
@@ -77,13 +78,9 @@
   top: calc(var(--velastra-line-inset) * -1);
   left: var(--velastra-line-inset);
   width: min(7rem, 18%);
-  border-top: 1px solid
-    color-mix(
-      in srgb,
-      var(--gold) calc(var(--velastra-frame-opacity) * 100%),
-      transparent
-    );
+  border-top: 1px solid var(--gold);
   content: "";
+  opacity: var(--velastra-frame-opacity);
   pointer-events: none;
 }
 
