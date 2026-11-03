@@ -1,3 +1,12 @@
+## Velastra Adapter v1 — 2026-11-03
+
+- Vendored the Viryn Labs Velastra composer locally; no runtime cross-repository dependency.
+- Added Studio-specific semantic profiles for hero, frameworks, Editions, process, work, pricing, care, about, and FAQ.
+- Added framework-specific meaning for Gathering, Ledger, Signal, and Table.
+- Preserved existing approved Atelier paintings and accessibility structure.
+- Added a read-only `window.VelastraStudio` inspection/test surface.
+- Runtime remains API-free; failure of the adapter leaves the existing Studio intact.
+
 # Changelog
 
 ## v0.6.6 — Atelier Pass II: Evidence of Hands
