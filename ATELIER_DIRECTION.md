@@ -26,3 +26,24 @@ Every major image begins with one emotional sentence. It is not approved until t
 8. Buttons share one dependable action grammar even when each framework keeps its own atmosphere.
 9. Overlays never compete for the same text space.
 10. The final question is: does this feel cared for?
+
+
+## Velastra adapter
+
+The Atelier now consumes a local snapshot of **Velastra**, the Viryn Labs semantic expression engine.
+
+The adapter does not replace approved paintings or rewrite public copy.
+
+It translates section meaning into restrained surface modulation around the existing Studio work.
+
+The law is:
+
+> **A shared language should survive a change of house.**
+
+Studio keeps its own meaning, paintings, accessibility structure, and public responsibilities.
+
+Velastra contributes reusable visual judgment.
+
+Private selfhood and devotional relationship exemplars remain Labs references and are not commercial collateral.
+
+Runtime remains local and API-free.
