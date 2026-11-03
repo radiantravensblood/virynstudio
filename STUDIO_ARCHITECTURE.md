@@ -173,3 +173,28 @@ The Atelier layer uses three visual scales:
 3. **Technical diagram** — used only when structure itself must be understood.
 
 Artwork, captions, and information cards must remain separate structural siblings. Absolute positioning may decorate an established safe area, but it may not carry essential copy or interaction.
+
+
+## Velastra external adapter
+
+The flagship Studio now vendors a local Velastra adapter beneath `assets/shared/velastra/`.
+
+The adapter is intentionally downstream of the existing architecture:
+
+```text
+Studio content / framework truth
+            ↓
+Studio semantic profile
+            ↓
+Velastra visual intent
+            ↓
+local CSS variables + data attributes
+            ↓
+existing Studio interface + approved paintings
+```
+
+The adapter does not fetch Sanctum, require a model, or own Studio content.
+
+Framework cards receive explicit `data-velastra-framework` identifiers from the same configuration object that already renders them. This prevents visual meaning from being inferred from headings, color, or image content.
+
+If Velastra fails to load, the existing Studio remains a complete accessible site.
