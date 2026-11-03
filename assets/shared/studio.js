@@ -132,6 +132,7 @@
     config.frameworks.forEach((item, index) => {
       const article = document.createElement("article");
       article.className = "card framework-card";
+      article.dataset.velastraFramework = item.id;
 
       article.append(text("span", String(index + 1).padStart(2, "0"), "card-number"));
 
