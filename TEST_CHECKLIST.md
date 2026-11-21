@@ -133,3 +133,13 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - [ ] Custom Studio symbols render in Chrome, Safari, Firefox, and high-contrast mode.
 - [ ] No dead hidden ledger SVG, plate, sun-disc, or legacy Gathering hero geometry remains in public markup.
 - [ ] Button height, vertical centering, focus ring, and active posture are consistent across flagship and frameworks.
+
+
+## Cooperative Rhythm content-lifecycle checks
+
+- [ ] `/editions/aquidneck-cooperative/?rhythmDate=2026-11-07` shows the Candy Cane Bazaar resource card as active.
+- [ ] `?rhythmDate=2026-11-08` keeps the Bazaar visible for the one-day grace period.
+- [ ] `?rhythmDate=2026-11-09` removes the Bazaar from the live surface without deleting its linked source files.
+- [ ] `?rhythmDate=2026-10-31` shows the October Chimes; `2026-11-01` is its grace day; `2026-11-02` removes it from Current resources.
+- [ ] When every lifecycle-managed card in Current resources is expired, the empty Current resources section does not render.
+- [ ] `window.COOPERATIVE_RHYTHM.lifecycleState()` returns `upcoming`, `active`, `grace`, and `expired` without changing Scene/worship rhythm data.
