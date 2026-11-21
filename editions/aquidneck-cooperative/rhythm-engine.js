@@ -223,6 +223,61 @@
     }
   };
 
+  const addDaysKey = (iso, days) => {
+    const date = fromDateKey(iso);
+    date.setDate(date.getDate() + days);
+    return dateKey(date);
+  };
+
+  /*
+   * Public information has a lifespan as well as a source.
+   *
+   * Lifecycle dates are inclusive. Event-like content receives a one-day grace
+   * period by default, so material remains useful on the day after an event and
+   * falls out of the live surface the following day. Explicit rhythmExpires
+   * values are treated as the final visible date. Expired content is not
+   * deleted; it is simply removed from the current public surface.
+   */
+  const lifecycleState = (item = {}, at = previewDate()) => {
+    const today = dateKey(at);
+    const start = item.startDate || item.start || null;
+    const end = item.endDate || item.end || null;
+    const explicitExpires = item.expiresOn || item.expires || null;
+    const parsedGrace = Number(item.graceDays);
+    const graceDays = Number.isFinite(parsedGrace) ? Math.max(0, parsedGrace) : 1;
+
+    if (start && today < start) return "upcoming";
+
+    const finalVisibleDate = explicitExpires || (end ? addDaysKey(end, graceDays) : null);
+    if (finalVisibleDate && today > finalVisibleDate) return "expired";
+    if (end && today > end) return "grace";
+    return "active";
+  };
+
+  const applyContentLifecycle = (at = previewDate()) => {
+    document.querySelectorAll("[data-rhythm-lifecycle]").forEach((node) => {
+      const state = lifecycleState({
+        startDate: node.dataset.rhythmStart,
+        endDate: node.dataset.rhythmEnd,
+        expiresOn: node.dataset.rhythmExpires,
+        graceDays: node.dataset.rhythmGraceDays
+      }, at);
+
+      node.dataset.rhythmState = state;
+      node.hidden = state === "expired";
+    });
+
+    document.querySelectorAll("[data-rhythm-collection]").forEach((collection) => {
+      const items = [...collection.querySelectorAll("[data-rhythm-lifecycle]")];
+      const hasVisibleItem = items.some((item) => !item.hidden);
+      const empty = items.length > 0 && !hasVisibleItem;
+      collection.dataset.rhythmEmpty = String(empty);
+
+      const shell = collection.closest("[data-rhythm-hide-when-empty]");
+      if (shell) shell.hidden = empty;
+    });
+  };
+
   const now = previewDate();
   const todayKey = dateKey(now);
   const dayMode = getDayMode(now);
@@ -269,6 +324,8 @@
 
   translateInterfaceLanguage(html.dataset.dayMode);
 
+  applyContentLifecycle(now);
+
   document.querySelectorAll("[data-sunday-primary]").forEach((node) => {
     if (html.dataset.dayMode === "sunday") node.textContent = "Find worship today";
     else if (html.dataset.dayMode === "sunday-eve") node.textContent = "Plan tomorrow’s worship";
@@ -285,6 +342,8 @@
     focus,
     next,
     publicTitle,
-    formatReadings
+    formatReadings,
+    lifecycleState,
+    applyContentLifecycle
   };
 })();

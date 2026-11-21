@@ -77,3 +77,17 @@ The event model now anticipates multiple authorities without requiring all congr
 - manually verified live overrides for cancellations or changes.
 
 Newest authoritative local information may override a planned occurrence without destroying its recurring schedule. Automated extraction must remain review-before-publish.
+
+
+## Public content lifecycle / decay
+
+Freshness now includes **time on surface**, not only source provenance. Any dated public block may opt into the Rhythm Engine lifecycle with an inclusive start/end window.
+
+- `active` — within its advertised window;
+- `grace` — the event has ended but remains visible during the default one-day follow-through;
+- `expired` — removed from the live public surface while the underlying file/content remains available for archival use;
+- `upcoming` — reserved for dated material whose public start has not yet arrived.
+
+Event-like material defaults to **one grace day after its end date** unless a steward explicitly sets another window or a final visible date. The browser's `?rhythmDate=YYYY-MM-DD` preview drives lifecycle state as well as worship rhythm, so staff can review future and expired states without changing the system clock.
+
+The first migrated examples are the October 2026 Calvary Chimes and the November 7 Candy Cane Bazaar. This is intentionally a generic Rhythm Engine contract rather than event-specific cleanup.
