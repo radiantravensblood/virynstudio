@@ -256,15 +256,22 @@
 
   const applyContentLifecycle = (at = previewDate()) => {
     document.querySelectorAll("[data-rhythm-lifecycle]").forEach((node) => {
-      const state = lifecycleState({
-        startDate: node.dataset.rhythmStart,
-        endDate: node.dataset.rhythmEnd,
-        expiresOn: node.dataset.rhythmExpires,
-        graceDays: node.dataset.rhythmGraceDays
-      }, at);
+      const activityId = node.dataset.activityId || null;
+      const activity = activityId && window.COOPERATIVE_ACTIVITY?.find
+        ? window.COOPERATIVE_ACTIVITY.find(activityId)
+        : null;
+
+      const state = activity && window.COOPERATIVE_ACTIVITY?.lifecycleState
+        ? window.COOPERATIVE_ACTIVITY.lifecycleState(activity, at)
+        : lifecycleState({
+            startDate: node.dataset.rhythmStart,
+            endDate: node.dataset.rhythmEnd,
+            expiresOn: node.dataset.rhythmExpires,
+            graceDays: node.dataset.rhythmGraceDays
+          }, at);
 
       node.dataset.rhythmState = state;
-      node.hidden = state === "expired";
+      node.hidden = state === "expired" || state === "unpublished";
     });
 
     document.querySelectorAll("[data-rhythm-collection]").forEach((collection) => {

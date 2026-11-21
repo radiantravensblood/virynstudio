@@ -69,73 +69,265 @@ window.PARISH_CONTENT = {
     ]
   },
 
-  events: [
+  activities: [
     {
-      title: 'Sunday worship at Calvary',
-      churchId: 'calvary',
-      meta: 'Sunday · 10:30 AM · Middletown',
-      description: 'Blended worship with fellowship following the service.',
-      scope: ['calvary'],
-      type: 'worship',
-      badge: 'Calvary'
+      id: 'worship-calvary-weekly',
+      identity: {
+        title: 'Sunday worship at Calvary',
+        kind: 'recurring-gathering',
+        ministryType: 'worship',
+        badge: 'Calvary'
+      },
+      relationships: {
+        scope: ['calvary'],
+        churchId: 'calvary',
+        host: 'calvary',
+        steward: 'calvary'
+      },
+      timing: {
+        timezone: 'America/New_York',
+        recurrence: { frequency: 'weekly', weekday: 'sunday' },
+        scheduleSource: 'church.worshipSchedule'
+      },
+      lifecycle: { mode: 'recurring', graceDays: 0 },
+      status: { state: 'scheduled', override: null },
+      source: { id: 'prototype', authority: 'prototype', reviewed: false },
+      display: {
+        meta: 'Sunday · 10:30 AM · Middletown',
+        description: 'Blended worship with fellowship following the service.'
+      }
     },
     {
-      title: 'Sunday worship at Portsmouth',
-      churchId: 'portsmouth',
-      meta: 'Sunday · 10:00 AM · Portsmouth',
-      description: 'Sunday worship with children’s programming when in session.',
-      scope: ['portsmouth'],
-      type: 'worship',
-      badge: 'Portsmouth'
+      id: 'worship-portsmouth-weekly',
+      identity: {
+        title: 'Sunday worship at Portsmouth',
+        kind: 'recurring-gathering',
+        ministryType: 'worship',
+        badge: 'Portsmouth'
+      },
+      relationships: {
+        scope: ['portsmouth'],
+        churchId: 'portsmouth',
+        host: 'portsmouth',
+        steward: 'portsmouth'
+      },
+      timing: {
+        timezone: 'America/New_York',
+        recurrence: { frequency: 'weekly', weekday: 'sunday' },
+        scheduleSource: 'church.worshipSchedule'
+      },
+      lifecycle: { mode: 'recurring', graceDays: 0 },
+      status: { state: 'scheduled', override: null },
+      source: { id: 'prototype', authority: 'prototype', reviewed: false },
+      display: {
+        meta: 'Sunday · 10:00 AM · Portsmouth',
+        description: 'Sunday worship with children’s programming when in session.'
+      }
     },
     {
-      title: 'Sunday worship at St. Paul’s',
-      churchId: 'stpauls',
-      meta: 'Sunday · 10:00 AM · Newport + online/phone',
-      description: 'Contemplative, Spirit-filled worship with multiple ways to join.',
-      scope: ['stpauls'],
-      type: 'worship',
-      badge: 'St. Paul’s'
+      id: 'worship-stpauls-weekly',
+      identity: {
+        title: 'Sunday worship at St. Paul’s',
+        kind: 'recurring-gathering',
+        ministryType: 'worship',
+        badge: 'St. Paul’s'
+      },
+      relationships: {
+        scope: ['stpauls'],
+        churchId: 'stpauls',
+        host: 'stpauls',
+        steward: 'stpauls'
+      },
+      timing: {
+        timezone: 'America/New_York',
+        recurrence: { frequency: 'weekly', weekday: 'sunday' },
+        scheduleSource: 'church.worshipSchedule'
+      },
+      lifecycle: { mode: 'recurring', graceDays: 0 },
+      status: { state: 'scheduled', override: null },
+      source: { id: 'prototype', authority: 'prototype', reviewed: false },
+      display: {
+        meta: 'Sunday · 10:00 AM · Newport + online/phone',
+        description: 'Contemplative, Spirit-filled worship with multiple ways to join.'
+      }
     },
     {
-      title: 'Meditation Gathering',
-      meta: 'Wednesday · 5:30–6:20 PM · St. Paul’s',
-      description: 'A weekly gathering in Barber Hall.',
-      scope: ['stpauls'],
-      type: 'formation',
-      badge: 'Formation'
+      id: 'stpauls-meditation-weekly',
+      identity: {
+        title: 'Meditation Gathering',
+        kind: 'recurring-gathering',
+        ministryType: 'formation',
+        badge: 'Formation'
+      },
+      relationships: {
+        scope: ['stpauls'],
+        churchId: 'stpauls',
+        host: 'stpauls',
+        steward: 'stpauls'
+      },
+      timing: {
+        timezone: 'America/New_York',
+        startTime: '17:30',
+        endTime: '18:20',
+        recurrence: { frequency: 'weekly', weekday: 'wednesday' }
+      },
+      lifecycle: { mode: 'recurring', graceDays: 0 },
+      status: { state: 'scheduled', override: null },
+      source: { id: 'stpauls-calendar', authority: 'congregational', reviewed: false },
+      display: {
+        meta: 'Wednesday · 5:30–6:20 PM · St. Paul’s',
+        description: 'A weekly gathering in Barber Hall.'
+      }
     },
     {
-      title: 'Spiritual Transformation Group',
-      meta: 'Thursday · 6:15–7:45 PM · St. Paul’s / Zoom',
-      description: 'A weekly small group for spiritual formation and conversation.',
-      scope: ['stpauls'],
-      type: 'formation',
-      badge: 'Formation'
+      id: 'stpauls-spiritual-transformation-weekly',
+      identity: {
+        title: 'Spiritual Transformation Group',
+        kind: 'recurring-gathering',
+        ministryType: 'formation',
+        badge: 'Formation'
+      },
+      relationships: {
+        scope: ['stpauls'],
+        churchId: 'stpauls',
+        host: 'stpauls',
+        steward: 'stpauls'
+      },
+      timing: {
+        timezone: 'America/New_York',
+        startTime: '18:15',
+        endTime: '19:45',
+        recurrence: { frequency: 'weekly', weekday: 'thursday' }
+      },
+      lifecycle: { mode: 'recurring', graceDays: 0 },
+      status: { state: 'scheduled', override: null },
+      source: { id: 'stpauls-calendar', authority: 'congregational', reviewed: false },
+      display: {
+        meta: 'Thursday · 6:15–7:45 PM · St. Paul’s / Zoom',
+        description: 'A weekly small group for spiritual formation and conversation.'
+      }
     },
     {
-      title: 'Community Meal',
-      meta: 'Third Thursday · hosted at St. Paul’s',
-      description: 'Prepared and served by Calvary participants in Newport. A perfect example of one ministry carrying multiple cooperative relationships.',
-      scope: ['calvary', 'stpauls'],
-      type: 'service',
-      badge: 'Shared ministry'
+      id: 'community-meal-third-thursday',
+      identity: {
+        title: 'Community Meal',
+        kind: 'recurring-gathering',
+        ministryType: 'service',
+        badge: 'Shared ministry'
+      },
+      relationships: {
+        scope: ['calvary', 'stpauls'],
+        host: 'stpauls',
+        steward: 'calvary'
+      },
+      timing: {
+        timezone: 'America/New_York',
+        recurrence: { frequency: 'monthly', weekday: 'thursday', ordinal: 3 }
+      },
+      lifecycle: { mode: 'recurring', graceDays: 0 },
+      status: { state: 'scheduled', override: null },
+      source: { id: 'prototype', authority: 'prototype', reviewed: false },
+      display: {
+        meta: 'Third Thursday · hosted at St. Paul’s',
+        description: 'Prepared and served by Calvary participants in Newport. A perfect example of one ministry carrying multiple cooperative relationships.'
+      }
     },
     {
-      title: 'God’s Community Garden',
-      meta: 'Calvary campus · cooperative and community volunteers',
-      description: 'Grow and harvest produce for food pantries, soup kitchens, and free farm stands across the island.',
-      scope: ['calvary', 'stpauls'],
-      type: 'service',
-      badge: 'Shared ministry'
+      id: 'gods-community-garden',
+      identity: {
+        title: 'God’s Community Garden',
+        kind: 'ministry',
+        ministryType: 'service',
+        badge: 'Shared ministry'
+      },
+      relationships: {
+        scope: ['calvary', 'stpauls'],
+        host: 'calvary',
+        steward: 'shared'
+      },
+      timing: {
+        timezone: 'America/New_York',
+        mode: 'perennial'
+      },
+      lifecycle: { mode: 'perennial' },
+      status: { state: 'active', override: null },
+      source: { id: 'prototype', authority: 'prototype', reviewed: false },
+      display: {
+        meta: 'Calvary campus · cooperative and community volunteers',
+        description: 'Grow and harvest produce for food pantries, soup kitchens, and free farm stands across the island.'
+      }
     },
     {
-      title: 'Coffee & fellowship',
-      meta: 'After Sunday worship · congregation-specific',
-      description: 'A simple recurring community rhythm surfaced wherever it applies.',
-      scope: ['calvary', 'portsmouth', 'stpauls'],
-      type: 'community',
-      badge: 'Community'
+      id: 'coffee-fellowship-after-worship',
+      identity: {
+        title: 'Coffee & fellowship',
+        kind: 'recurring-gathering',
+        ministryType: 'community',
+        badge: 'Community'
+      },
+      relationships: {
+        scope: ['calvary', 'portsmouth', 'stpauls'],
+        host: 'congregation-specific',
+        steward: 'congregation-specific'
+      },
+      timing: {
+        timezone: 'America/New_York',
+        recurrence: { frequency: 'weekly', weekday: 'sunday' },
+        relativeTo: 'worship'
+      },
+      lifecycle: { mode: 'recurring', graceDays: 0 },
+      status: { state: 'scheduled', override: null },
+      source: { id: 'prototype', authority: 'prototype', reviewed: false },
+      display: {
+        meta: 'After Sunday worship · congregation-specific',
+        description: 'A simple recurring community rhythm surfaced wherever it applies.'
+      }
+    },
+    {
+      id: 'candy-cane-bazaar-2026',
+      identity: {
+        title: 'Candy Cane Bazaar',
+        kind: 'event',
+        ministryType: 'community',
+        badge: 'Shared event'
+      },
+      relationships: {
+        scope: ['calvary', 'portsmouth'],
+        host: null,
+        steward: 'shared'
+      },
+      timing: {
+        timezone: 'America/New_York',
+        start: '2026-11-07T09:00:00',
+        end: '2026-11-07T14:00:00',
+        recurrence: null
+      },
+      lifecycle: {
+        mode: 'dated',
+        publishOn: '2026-10-01',
+        graceDays: 1
+      },
+      status: { state: 'scheduled', override: null },
+      source: { id: 'calvary-chimes', authority: 'congregational', reviewed: true },
+      display: {
+        meta: 'November 7 · 9:00 AM–2:00 PM',
+        description: 'One shared event, one place for the ways people can participate—whether they are volunteering, baking, or applying as a local artisan.'
+      },
+      actions: [
+        {
+          label: 'Bake table signup',
+          href: 'https://www.signupgenius.com/go/904094FAFAA2EA57-65872680-calvaryportsmouth#/',
+          external: true
+        },
+        {
+          label: 'Vendor invitation',
+          href: 'resources/candy-cane-bazaar/vendor-invitation.pdf'
+        },
+        {
+          label: 'Vendor application & policies',
+          href: 'resources/candy-cane-bazaar/vendor-application-policies.pdf'
+        }
+      ]
     }
   ],
 
@@ -226,10 +418,3 @@ window.PARISH_CONTENT.sources = {
   }
 };
 
-window.PARISH_CONTENT.events = window.PARISH_CONTENT.events.map((event) => ({
-  status: "scheduled",
-  sourceId: event.sourceId || "prototype",
-  freshness: event.freshness || "prototype",
-  override: event.override || null,
-  ...event
-}));

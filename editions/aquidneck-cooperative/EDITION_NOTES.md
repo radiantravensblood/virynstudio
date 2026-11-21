@@ -91,3 +91,27 @@ Freshness now includes **time on surface**, not only source provenance. Any date
 Event-like material defaults to **one grace day after its end date** unless a steward explicitly sets another window or a final visible date. The browser's `?rhythmDate=YYYY-MM-DD` preview drives lifecycle state as well as worship rhythm, so staff can review future and expired states without changing the system clock.
 
 The first migrated examples are the October 2026 Calvary Chimes and the November 7 Candy Cane Bazaar. This is intentionally a generic Rhythm Engine contract rather than event-specific cleanup.
+
+
+## Cooperative Activity Record
+
+The Edition now borrows Table's operating-record principle: **the interface is a view over one authoritative record rather than the record itself.**
+
+The Cooperative translation is `viryn.cooperative.activity.v1`. An Activity Record can carry:
+
+- identity: title, activity kind, ministry type, and public badge;
+- relationships: congregation scope, host, steward, and congregation ownership where applicable;
+- timing: timezone, dated start/end, weekly recurrence, monthly ordinal recurrence, relative timing, or perennial state;
+- lifecycle: recurring/perennial/dated mode, publication window, grace period, and explicit expiry;
+- status: scheduled/active state plus human override;
+- source: source ID, authority level, and review state;
+- display: current public summary copy;
+- actions: registration, document, or external participation links.
+
+The first records cover weekly worship, St. Paul's Wednesday and Thursday formation gatherings, the third-Thursday Community Meal, God's Community Garden, worship-relative coffee/fellowship, and the 2026 Candy Cane Bazaar.
+
+`activity-engine.js` resolves those records against the same active date used by Rhythm. It currently understands weekly recurrence, ordinal monthly recurrence, dated lifecycle/grace, perennial ministries, occurrence exceptions, and manual status overrides.
+
+The November 7 Candy Cane Bazaar is the first **one record / multiple surfaces** proof: its event-list state and its Current resources lifespan both resolve from `candy-cane-bazaar-2026`. The HTML card no longer owns a second copy of its expiry date.
+
+This layer should remain operational rather than doctrinal: local stewards own corrections, exceptions, cancellations, and publication authority.

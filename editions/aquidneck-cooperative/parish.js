@@ -93,7 +93,8 @@
 
   const renderEvents = () => {
     const list = qs('#event-list');
-    const events = content.events.filter(event => {
+    const resolved = window.COOPERATIVE_ACTIVITY?.resolveAll(activeDate()) || [];
+    const events = resolved.filter(event => {
       const scopeMatch = currentScope === 'all' || event.scope.includes(currentScope);
       const typeMatch = currentType === 'all' || event.type === currentType;
       return scopeMatch && typeMatch;
@@ -110,7 +111,7 @@
       const meta = override?.meta || dynamicMeta;
       const description = override?.note || dynamicDescription;
       return `
-      <article class="event-row" data-event-status="${effectiveStatus}" data-source="${event.sourceId || "prototype"}">
+      <article class="event-row" data-activity-id="${event.id}" data-event-status="${effectiveStatus}" data-lifecycle-state="${event.lifecycleState}" data-source="${event.sourceId || "prototype"}">
         <div class="event-badge">${statusLabel ? `${statusLabel} · ` : ""}${event.badge}</div>
         <div class="event-body">
           <h3>${event.title}</h3>
