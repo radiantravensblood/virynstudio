@@ -143,3 +143,16 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - [ ] `?rhythmDate=2026-10-31` shows the October Chimes; `2026-11-01` is its grace day; `2026-11-02` removes it from Current resources.
 - [ ] When every lifecycle-managed card in Current resources is expired, the empty Current resources section does not render.
 - [ ] `window.COOPERATIVE_RHYTHM.lifecycleState()` returns `upcoming`, `active`, `grace`, and `expired` without changing Scene/worship rhythm data.
+
+
+## Cooperative Activity Record checks
+
+- [ ] The cooperative page loads `parish-content.js → activity-engine.js → rhythm-engine.js → parish.js` without console errors.
+- [ ] `window.COOPERATIVE_ACTIVITY.schema` reports `viryn.cooperative.activity.v1`.
+- [ ] `?rhythmDate=2026-11-07` resolves nine live Activity Records and shows Candy Cane Bazaar as active.
+- [ ] `?rhythmDate=2026-11-08` keeps the Bazaar in grace; `2026-11-09` removes it from both resolved live activities and Current resources.
+- [ ] On `?rhythmDate=2026-11-21`, Meditation Gathering resolves its next occurrence to November 25, 2026.
+- [ ] On `?rhythmDate=2026-11-21`, Community Meal resolves its next occurrence to December 17, 2026.
+- [ ] Weekly worship still uses each church's seasonal `worshipSchedule` for displayed time while its Activity Record owns recurrence and relationships.
+- [ ] Event filters still work by congregation and ministry type after migration from flat events to Activity Records.
+- [ ] Activity rows expose `data-activity-id`, lifecycle state, event status, and source provenance without requiring that metadata to be visible copy.
