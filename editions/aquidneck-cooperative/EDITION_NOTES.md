@@ -115,3 +115,23 @@ The first records cover weekly worship, St. Paul's Wednesday and Thursday format
 The November 7 Candy Cane Bazaar is the first **one record / multiple surfaces** proof: its event-list state and its Current resources lifespan both resolve from `candy-cane-bazaar-2026`. The HTML card no longer owns a second copy of its expiry date.
 
 This layer should remain operational rather than doctrinal: local stewards own corrections, exceptions, cancellations, and publication authority.
+
+
+## Cooperative Desk v0.1
+
+A staff-facing stewardship prototype now lives at `/editions/aquidneck-cooperative/desk/`.
+
+Desk deliberately reuses the Island Edition's existing Activity Record spine rather than creating a parallel content system. Its purpose is to test whether church staff can maintain public truth through familiar actions instead of editing website code.
+
+Current prototype surfaces:
+
+- **Today** — upcoming Activity Records, church scope, source provenance, freshness/review signals;
+- **Publish** — plain-language intake plus a structured resource-draft form;
+- **Calendar** — staff view over recurring and dated Activity Records;
+- **Formation** — placeholder architecture for a common formation spine with congregation-specific overlays;
+- **Reports** — aggregate finance integration boundary only; no donor or payment data;
+- **Security review** — explicit trust seams and production requirements.
+
+The role selector is a UX simulation, not authentication. File selection never uploads bytes. Resource drafts are stored only in browser `sessionStorage` and are labeled as prototypes.
+
+Production Desk must move behind real server-side authentication, authorization, validation, audit, file-storage, and public/private projection boundaries. See `desk/DESK_REVIEW.md` for the technical review brief.

@@ -156,3 +156,20 @@ Test at 320px, 375px, 430px, 768px, and desktop width.
 - [ ] Weekly worship still uses each church's seasonal `worshipSchedule` for displayed time while its Activity Record owns recurrence and relationships.
 - [ ] Event filters still work by congregation and ministry type after migration from flat events to Activity Records.
 - [ ] Activity rows expose `data-activity-id`, lifecycle state, event status, and source provenance without requiring that metadata to be visible copy.
+
+
+## Cooperative Desk v0.1 checks
+
+- [ ] `/editions/aquidneck-cooperative/desk/` loads without console errors and clearly states that it is unauthenticated.
+- [ ] Desk reads current `viryn.cooperative.activity.v1` records from the Island Edition rather than maintaining a duplicate event list.
+- [ ] Church scope filters Today and Calendar views without mutating the public Activity Records.
+- [ ] Role preview changes visible navigation but never claims to provide real authorization.
+- [ ] Plain-language intake recognizes common church names/content types and proposes metadata without publishing automatically.
+- [ ] Structured Publish prepares a `viryn.cooperative.resource.v1` draft requiring human review.
+- [ ] Selecting a file does not read, upload, transmit, or persist the file bytes.
+- [ ] Drafts persist only for the browser session and can be removed.
+- [ ] Calendar shows source provenance plus host/steward relationships where available.
+- [ ] Formation communicates a common-spine/local-overlay model without asserting a settled translation or curriculum policy.
+- [ ] Reports contains no real donor, payment, bank, or confidential financial information.
+- [ ] Security Review links to `desk/DESK_REVIEW.md` and names server-side auth, authorization, public/private projection, file handling, audit, and sensitive-domain boundaries.
+- [ ] Desk remains usable at 320px, 390px, 768px, 1024px, and desktop widths.
