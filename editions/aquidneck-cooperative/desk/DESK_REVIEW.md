@@ -34,6 +34,104 @@ The role selector is a UX simulation only. It is not authorization.
 
 The file picker never uploads the selected file. Desk only records its local filename in a browser-session draft.
 
+
+
+## Review posture: what exists today
+
+Before choosing hosting, please classify the system against this matrix.
+
+| Area | Proven in prototype | Simulated only | Missing / production requirement | Prohibited in current static build |
+| --- | --- | --- | --- | --- |
+| Public presentation | Custom Island UI, Rhythm Engine, Activity Records, lifecycle decay | — | production deployment strategy | private data |
+| Staff workflow | Activity visibility, church scope, draft Resource Records, plain-language intake | role-shaped navigation, publish flow | authenticated persistence, approval workflow | real credentials |
+| Authorization | — | role selector and church-scope UX | server-enforced object/action authorization | trusting hidden buttons |
+| File handling | local file selection UX only | upload metadata | validation, malware scanning, object storage, retention, controlled URLs | real confidential uploads |
+| Audit | record shapes include audit intent | prototype timestamp/role labels | append-only actor/action history, recovery, retention | treating browser logs as audit |
+| Finance | boundary and aggregate-report placement | empty reporting cards | secure upstream connector and scoped aggregate projections | donor identity, bank/payment data |
+| Formation | common-spine/local-overlay structure | sample record preview | translation-license policy, editorial governance, review | silent doctrinal normalization |
+| Security | trust seams and threat prompts are documented | all identity/role behavior | sessions, MFA/recovery, CSRF/XSS defenses, secrets management, incident response | claiming GitHub Pages is a secure backend |
+
+The goal of this table is to prevent a hosting product from being mistaken for an architecture. A proposed platform should be evaluated by which missing cells it actually satisfies and which proven behaviors it would force us to abandon.
+
+## Data classification boundary
+
+A production system should assign every field or object a data class before storage, logging, caching, export, or publication.
+
+### PUBLIC
+
+Safe to project to the public site after review.
+
+Examples:
+
+- worship times;
+- public event details;
+- published bulletins/newsletters;
+- public formation resources;
+- public staff/church contact information;
+- denominational calendar references.
+
+May be cached and statically projected where operationally useful.
+
+### INTERNAL
+
+Operational but not inherently confidential.
+
+Examples:
+
+- draft publication state;
+- source-review status;
+- editorial assignments;
+- internal event preparation notes that contain no sensitive personal information;
+- non-sensitive audit metadata.
+
+Requires authenticated access and server-side authorization. Should never leak merely because the public renderer ignores a field.
+
+### CONFIDENTIAL
+
+Information whose disclosure could harm a person or institution.
+
+Examples:
+
+- private staff information;
+- non-public financial reports;
+- private volunteer/contact information;
+- unpublished personnel discussion;
+- internal incident notes.
+
+Requires stronger access boundaries, minimized retention, careful logging, and an explicit reason for entering Desk at all.
+
+### RESTRICTED
+
+Data Desk should not accept in the initial production scope unless a separate security/privacy design explicitly authorizes it.
+
+Examples:
+
+- passwords or recovery secrets;
+- payment card/bank credentials;
+- donor-level giving histories;
+- pastoral-care narratives;
+- medical information;
+- children/youth protected information;
+- highly sensitive identity records.
+
+Default design principle:
+
+> If Desk can accomplish the ministry workflow by referencing the system that already protects Restricted data, Desk should reference it rather than ingest it.
+
+## Platform evaluation test
+
+For any proposed platform—including Google Workspace, a conventional web host, a serverless stack, or a managed CMS—ask the same questions:
+
+1. Which data classes can it safely hold?
+2. Does it enforce authorization at the object/action level or only at the page/file level?
+3. Can private operational records be cleanly separated from public projections?
+4. Can the Activity/Resource/Formation contracts survive the move?
+5. Can staff workflows remain understandable without sacrificing public-site behavior?
+6. What becomes easier to audit, recover, and revoke?
+7. What new trust dependency or vendor constraint is introduced?
+8. If we leave the platform later, which records, files, permissions, and history can be exported intact?
+
+
 ## Current data relationship
 
 Desk reads the same public Activity Records already used by the Island Edition:
