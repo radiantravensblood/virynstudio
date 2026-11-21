@@ -432,6 +432,39 @@ textarea { resize: vertical; min-height: 88px; }
 .security-grid article > span { color: var(--copper); font-size: .7rem; font-weight: 800; }
 .security-grid strong { display: block; margin-top: 10px; }
 .security-grid p { color: var(--ink-soft); font-size: .8rem; line-height: 1.5; }
+.classification-band {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  border-top: 1px solid var(--line);
+  border-left: 1px solid var(--line);
+}
+.classification-band article {
+  min-height: 165px;
+  padding: 18px;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #fbfaf6;
+}
+.classification-band span {
+  color: var(--copper);
+  font-size: .68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.classification-band strong {
+  display: block;
+  margin-top: 8px;
+  font-size: .88rem;
+}
+.classification-band p {
+  margin: 7px 0 0;
+  color: var(--ink-soft);
+  font-size: .76rem;
+  line-height: 1.48;
+}
+
 .review-link {
   display: inline-block;
   margin-top: 22px;
@@ -453,7 +486,8 @@ textarea { resize: vertical; min-height: 88px; }
   .header-controls { justify-content: flex-start; }
   .metric-grid { grid-template-columns: repeat(2,1fr); }
   .source-grid { grid-template-columns: repeat(2,1fr); }
-  .security-grid { grid-template-columns: repeat(2,1fr); }
+  .security-grid,
+  .classification-band { grid-template-columns: repeat(2,1fr); }
 }
 
 @media (max-width: 780px) {
@@ -467,7 +501,8 @@ textarea { resize: vertical; min-height: 88px; }
   .welcome-grid,
   .two-column,
   .source-grid,
-  .security-grid { grid-template-columns: 1fr; }
+  .security-grid,
+  .classification-band { grid-template-columns: 1fr; }
   .activity-row,
   .calendar-row,
   .draft-row { grid-template-columns: 1fr; gap: 7px; }
