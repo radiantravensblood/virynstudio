@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" data-desk="cooperative">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta name="description" content="Prototype stewardship desk for the Aquidneck Island Cooperative Ministry Studio Edition." />
+  <title>Cooperative Desk — Aquidneck Island</title>
+  <link rel="stylesheet" href="desk.css?v=001" />
+</head>
+<body>
+  <div class="prototype-bar" role="note">
+    <strong>Desk v0.1 prototype</strong>
+    <span>No authentication · no server · no real uploads · no financial data</span>
+  </div>
+
+  <div class="desk-shell">
+    <aside class="desk-sidebar">
+      <a class="desk-brand" href="../">
+        <span class="brand-mark" aria-hidden="true">✦</span>
+        <span><strong>Aquidneck Island</strong><small>Cooperative Desk</small></span>
+      </a>
+
+      <nav class="desk-nav" aria-label="Desk sections">
+        <button class="nav-item is-active" data-view-button="home"><span>⌂</span>Today</button>
+        <button class="nav-item" data-view-button="publish"><span>＋</span>Publish</button>
+        <button class="nav-item" data-view-button="calendar"><span>◫</span>Calendar</button>
+        <button class="nav-item" data-view-button="formation"><span>◎</span>Formation</button>
+        <button class="nav-item" data-view-button="reports"><span>▥</span>Reports</button>
+        <button class="nav-item" data-view-button="security"><span>◇</span>Security review</button>
+      </nav>
+
+      <div class="sidebar-note">
+        <strong>Prototype boundary</strong>
+        <p>This page demonstrates workflow and data shape only. A production Desk must move behind a real authenticated application boundary.</p>
+      </div>
+    </aside>
+
+    <div class="desk-workspace">
+      <header class="desk-header">
+        <div>
+          <span class="eyebrow">Stewardship surface</span>
+          <h1 data-view-title>Today</h1>
+        </div>
+
+        <div class="header-controls">
+          <label>
+            <span>Church scope</span>
+            <select id="church-scope">
+              <option value="all">All churches</option>
+              <option value="calvary">Calvary</option>
+              <option value="portsmouth">Portsmouth</option>
+              <option value="stpauls">St. Paul’s</option>
+            </select>
+          </label>
+          <label>
+            <span>Role preview <em>not authentication</em></span>
+            <select id="role-preview">
+              <option value="cooperative-admin">Cooperative admin</option>
+              <option value="church-editor">Church editor</option>
+              <option value="clergy-reviewer">Clergy reviewer</option>
+              <option value="finance-viewer">Finance viewer</option>
+            </select>
+          </label>
+          <a class="public-link" href="../">Open public site ↗</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="desk-view is-active" data-view="home">
+          <div class="welcome-grid">
+            <article class="hero-card">
+              <span class="eyebrow">Good morning</span>
+              <h2>What needs attention?</h2>
+              <p>Desk keeps public information current without asking staff to edit the website itself.</p>
+              <div class="quick-actions">
+                <button data-jump="publish">Upload this week’s material</button>
+                <button data-jump="calendar">Review upcoming events</button>
+              </div>
+            </article>
+
+            <article class="boundary-card">
+              <span class="status-dot"></span>
+              <div>
+                <strong>Static prototype</strong>
+                <p>Nothing entered here leaves this browser tab. Files are never uploaded.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="metric-grid">
+            <article><span>Upcoming</span><strong id="metric-upcoming">—</strong><small>resolved activities</small></article>
+            <article><span>Drafts</span><strong id="metric-drafts">0</strong><small>this session</small></article>
+            <article><span>Needs review</span><strong id="metric-review">—</strong><small>unverified sources</small></article>
+            <article><span>Public freshness</span><strong id="metric-freshness">—</strong><small>current records</small></article>
+          </div>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Coming up</span><h2>Upcoming ministry rhythm</h2></div>
+              <button class="quiet-button" data-jump="calendar">Open calendar</button>
+            </div>
+            <div id="upcoming-list" class="activity-list"></div>
+          </section>
+
+          <section class="panel source-panel">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Sources</span><h2>Where public truth is coming from</h2></div>
+            </div>
+            <div id="source-list" class="source-grid"></div>
+          </section>
+        </section>
+
+        <section class="desk-view" data-view="publish">
+          <div class="two-column">
+            <section class="panel">
+              <div class="panel-heading">
+                <div><span class="eyebrow">Plain-language intake</span><h2>Tell Desk what changed.</h2></div>
+              </div>
+              <p class="panel-lede">Use the same words staff already use. Desk proposes structure; a person approves it.</p>
+              <form id="quick-intake">
+                <label class="field">
+                  <span>Quick note</span>
+                  <textarea id="quick-note" rows="5" placeholder="Example: Calvary Weekly Word for Nov 29, Matthew 13:1–9, publish to the public site."></textarea>
+                </label>
+                <button class="primary-button" type="submit">Interpret note</button>
+              </form>
+              <div id="interpretation-result" class="interpretation-result" hidden></div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-heading">
+                <div><span class="eyebrow">Structured publish</span><h2>Prepare a resource.</h2></div>
+              </div>
+              <form id="publish-form">
+                <div class="field-grid">
+                  <label class="field"><span>Church</span>
+                    <select name="church" required>
+                      <option value="">Choose one</option>
+                      <option value="calvary">Calvary</option>
+                      <option value="portsmouth">Portsmouth</option>
+                      <option value="stpauls">St. Paul’s</option>
+                      <option value="cooperative">Cooperative</option>
+                    </select>
+                  </label>
+                  <label class="field"><span>Content type</span>
+                    <select name="type" required>
+                      <option value="">Choose one</option>
+                      <option>Weekly Word</option>
+                      <option>Weekly Musings</option>
+                      <option>Bulletin</option>
+                      <option>Chimes</option>
+                      <option>Formation guide</option>
+                      <option>Event material</option>
+                      <option>Notice</option>
+                    </select>
+                  </label>
+                </div>
+                <label class="field"><span>Public title</span><input name="title" required placeholder="This week at Calvary" /></label>
+                <div class="field-grid">
+                  <label class="field"><span>Publish date</span><input name="publishDate" type="date" /></label>
+                  <label class="field"><span>Remove after</span><input name="expiresOn" type="date" /></label>
+                </div>
+                <label class="field"><span>Related Scripture <small>optional</small></span><input name="scripture" placeholder="Matthew 25:31–46" /></label>
+                <label class="field"><span>Summary <small>optional</small></span><textarea name="summary" rows="3" placeholder="A short description for the public surface."></textarea></label>
+                <label class="field file-field">
+                  <span>Choose file</span>
+                  <input name="file" type="file" />
+                  <small>Prototype only: the selected file never leaves this device.</small>
+                </label>
+                <div class="form-actions">
+                  <button class="primary-button" type="submit">Prepare draft</button>
+                  <button class="quiet-button" type="reset">Clear</button>
+                </div>
+              </form>
+            </section>
+          </div>
+
+          <section class="panel">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Session queue</span><h2>Drafts waiting for a human.</h2></div>
+              <span class="prototype-chip">Browser session only</span>
+            </div>
+            <div id="draft-list" class="draft-list"></div>
+          </section>
+        </section>
+
+        <section class="desk-view" data-view="calendar">
+          <section class="panel">
+            <div class="panel-heading">
+              <div><span class="eyebrow">Activity Records</span><h2>Upcoming events and recurring ministries</h2></div>
+              <div class="filter-pills" id="calendar-filters">
+                <button class="is-active" data-kind="all">All</button>
+                <button data-kind="worship">Worship</button>
+                <button data-kind="formation">Formation</button>
+                <button data-kind="service">Service</button>
+                <button data-kind="community">Community</button>
+              </div>
+            </div>
+            <div id="calendar-list" class="calendar-list"></div>
+          </section>
+        </section>
+
+        <section class="desk-view" data-view="formation">
+          <div class="two-column">
+            <section class="panel">
+              <div class="panel-heading"><div><span class="eyebrow">Formation Commons</span><h2>Common spine, local voices.</h2></div></div>
+              <p class="panel-lede">A shared formation layer can orient newcomers while allowing each congregation to attach its own teaching, sermons, studies, and questions.</p>
+              <div class="formation-stack">
+                <article><span>01</span><div><strong>Book orientation</strong><p>What kind of text is Matthew? When was it written? What questions does it keep asking?</p></div></article>
+                <article><span>02</span><div><strong>Passage reader</strong><p>Full references, licensed translation text, context, and translation notes where they materially change interpretation.</p></div></article>
+                <article><span>03</span><div><strong>Local overlays</strong><p>Weekly Word, sermon, study guide, clergy reflection, or congregation-specific curriculum linked to the same passage.</p></div></article>
+              </div>
+            </section>
+
+            <section class="panel">
+              <div class="panel-heading"><div><span class="eyebrow">Formation record preview</span><h2>One passage, several doors.</h2></div></div>
+              <dl class="record-preview">
+                <div><dt>Reference</dt><dd>Matthew 25:31–46</dd></div>
+                <div><dt>Common text</dt><dd>Translation selected by license policy</dd></div>
+                <div><dt>Calvary</dt><dd>Weekly Word · local sermon link</dd></div>
+                <div><dt>Portsmouth</dt><dd>Study guide · discussion questions</dd></div>
+                <div><dt>St. Paul’s</dt><dd>Reflection · formation gathering</dd></div>
+              </dl>
+            </section>
+          </div>
+        </section>
+
+        <section class="desk-view" data-view="reports">
+          <div class="report-warning">
+            <strong>Finance boundary</strong>
+            <p>Desk v0.1 does not ingest donor identities, payment credentials, bank data, or real financial records. These cards demonstrate aggregate-report placement only.</p>
+          </div>
+          <div class="metric-grid report-metrics">
+            <article><span>Monthly giving</span><strong>—</strong><small>future aggregate connector</small></article>
+            <article><span>Budget vs actual</span><strong>—</strong><small>future aggregate connector</small></article>
+            <article><span>Designated funds</span><strong>—</strong><small>future aggregate connector</small></article>
+            <article><span>Report freshness</span><strong>—</strong><small>future source timestamp</small></article>
+          </div>
+          <section class="panel">
+            <div class="panel-heading"><div><span class="eyebrow">Design rule</span><h2>Reference the vault. Do not become the vault.</h2></div></div>
+            <p class="panel-lede">Production Desk should receive the minimum aggregate information needed for staff decisions while sensitive donor and payment data stays in the system designed to protect it.</p>
+          </section>
+        </section>
+
+        <section class="desk-view" data-view="security">
+          <section class="panel security-panel">
+            <div class="panel-heading"><div><span class="eyebrow">For technical review</span><h2>Where this prototype must be broken apart.</h2></div></div>
+            <div class="security-grid">
+              <article><span>01</span><strong>Authentication</strong><p>Production needs server-verified sessions, secure recovery, MFA policy, lockout/rate limits, and no secrets in browser code.</p></article>
+              <article><span>02</span><strong>Authorization</strong><p>Church scope and role controls must be enforced on the server. Hiding a button is never permission.</p></article>
+              <article><span>03</span><strong>Publication boundary</strong><p>Private records and public projections should be distinct. Only reviewed fields cross into the public site.</p></article>
+              <article><span>04</span><strong>File handling</strong><p>Uploads need type/size validation, malware scanning, private object storage, controlled URLs, and retention rules.</p></article>
+              <article><span>05</span><strong>Audit & recovery</strong><p>Every publish, override, deletion, permission change, and restore should have an actor, timestamp, prior value, and recoverable history.</p></article>
+              <article><span>06</span><strong>Sensitive domains</strong><p>Finance, pastoral care, children/youth, donor identity, and credentials need stronger separation than ordinary public content.</p></article>
+            </div>
+            <a class="review-link" href="DESK_REVIEW.md">Open the technical review brief →</a>
+          </section>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="../parish-content.js?v=004"></script>
+  <script src="../activity-engine.js?v=002"></script>
+  <script src="desk.js?v=001"></script>
+</body>
+</html>
